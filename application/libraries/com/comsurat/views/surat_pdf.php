@@ -58,9 +58,14 @@ $lap = $data;
 	td.perihal,td.catatan{
 		height: 76px;
 	}
+	.rt > .sm{
+		font-size: 20px;
+		font-weight: bold;
+		/*line-height: 12px;*/
+	}
 </style>
 <div>
-<h4 class="rt">PEMERINTAH KOTA TANGERANG SELATAN<br/>KANTOR ARSIP DAERAH<br/>KARTU KENDALI SURAT <?php echo strtoupper($lap->type_surat)?></h4>
+<h4 class="rt"><div class="sm">PEMERINTAH KOTA TANGERANG SELATAN</div>KANTOR ARSIP DAERAH<br/>KARTU KENDALI SURAT <?php echo strtoupper($lap->type_surat)?></h4>
 <table border="1" width="98%"  cellpadding="8" colspacing="8" class="tbl-view tbl-print">
 
 	<tbody>

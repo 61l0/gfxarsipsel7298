@@ -156,7 +156,7 @@
 				<table border="0" width="20.5cm" cellpadding="3" colspacing="3">
 					<tr>
 						<td valign="middle" align="center" width="1px"><b><i><?php echo ''?></i></b></td>
-						<td align="left" width="13cm"><i>SISTEM INFORMASI ARSIP KOTA TANGERANG</i></td>
+						<td align="left" width="13cm"><i>SISTEM INFORMASI ARSIP KOTA TANGERANG SELATAN</i></td>
 						<td align="right"><i><?php echo date('d/m/Y',time())?></i></td>
 					</tr>
 				</table>
@@ -182,7 +182,7 @@
 					<table border="0" width="20.5cm" cellpadding="3" colspacing="3">
 						<tr>
 							<td valign="middle" align="center" width="30px"><b><i><?php echo $page++?></i></b></td>
-							<td align="left" width="12cm"><i>SISTEM INFORMASI ARSIP KOTA TANGERANG</i></td>
+							<td align="left" width="12cm"><i>SISTEM INFORMASI ARSIP KOTA TANGERANG SELATAN</i></td>
 							<td align="right"><i><?php echo date('d/m/Y',time())?></i></td>
 						</tr>
 					</table>
