@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50616
 File Encoding         : 65001
 
-Date: 2014-07-05 15:11:26
+Date: 2014-07-05 15:17:23
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -57,10 +57,10 @@ INSERT INTO `c_menu` VALUES ('315', '160', '2', '-', '3', 'Group User', 'admin/c
 INSERT INTO `c_menu` VALUES ('316', '160', '0', '-', '4', 'Group Menu', 'admin/com/groupmenu', 'on');
 INSERT INTO `c_menu` VALUES ('386', '368', '0', '-', '2', 'Ganti Password', 'admin/com/userpass', 'on');
 INSERT INTO `c_menu` VALUES ('350', '160', '0', '-', '1', 'User', 'admin/com/user', 'on');
-INSERT INTO `c_menu` VALUES ('359', '0', '0', 'icon-jadwal.png', '6', 'Peminjaman & Pelayanan', 'admin/com/peminjaman', 'on');
+INSERT INTO `c_menu` VALUES ('359', '0', '0', 'icon-jadwal.png', '6', 'Peminjaman / Pelayanan', 'admin/com/peminjaman', 'on');
 INSERT INTO `c_menu` VALUES ('395', '394', '0', '-', '1', 'Grup Pengguna', 'admin/com/groupuser', 'on');
 INSERT INTO `c_menu` VALUES ('362', '0', '0', 'icon-setup.png', '7', 'Catatan SKPD', 'admin/com/catatanadmin', 'on');
-INSERT INTO `c_menu` VALUES ('382', '0', '0', 'icon-program.png', '4', 'Penyerahan & Akuisisi', 'admin/com/penyerahan', 'on');
+INSERT INTO `c_menu` VALUES ('382', '0', '0', 'icon-program.png', '4', 'Penyerahan / Akuisisi', 'admin/com/penyerahan', 'on');
 INSERT INTO `c_menu` VALUES ('377', '368', '0', '-', '1', 'Informasi Pengguna', 'admin/com/infopengguna', 'on');
 INSERT INTO `c_menu` VALUES ('399', '397', '0', '-', '2', 'Daftar Menu Tiap Pengguna', 'admin/com/groupname', 'on');
 INSERT INTO `c_menu` VALUES ('400', '0', '0', 'icon-config.png', '9', 'Pengaturan Pengguna', '-', 'on');
@@ -145,8 +145,8 @@ INSERT INTO `c_menu` VALUES ('548', '540', '0', '-', '3', 'Tahun Arsip', 'admin/
 INSERT INTO `c_menu` VALUES ('549', '540', '0', '-', '4', 'Unit Pengolah', 'admin/com/lap_pencarian_unit_pengolah', 'off');
 INSERT INTO `c_menu` VALUES ('550', '542', '0', '-', '1', 'Pelayanan Bulanan', 'admin/com/lap_pelayanan_bulanan', 'on');
 INSERT INTO `c_menu` VALUES ('551', '542', '0', '-', '2', 'Rekap Data Pelayanan', 'admin/com/lap_pelayanan_rekap', 'on');
-INSERT INTO `c_menu` VALUES ('552', '0', '0', 'icon-program.png', '5', 'Pemusnahan & Retensi', 'admin/com/pemusnahan', 'on');
-INSERT INTO `c_menu` VALUES ('553', '0', '0', 'icon-program.png', '11', 'Surat Masuk &amp;  Keluar', 'admin/com/surat', 'on');
+INSERT INTO `c_menu` VALUES ('552', '0', '0', 'icon-program.png', '5', 'Pemusnahan / Retensi', 'admin/com/pemusnahan', 'on');
+INSERT INTO `c_menu` VALUES ('553', '0', '0', 'icon-program.png', '11', 'Surat Masuk /  Keluar', 'admin/com/surat', 'on');
 INSERT INTO `c_menu` VALUES ('555', '368', '0', '-', '0', 'User Online', 'admin/com/online', 'on');
 INSERT INTO `c_menu` VALUES ('556', '539', '0', '-', '0', 'Surat', '-', 'on');
 INSERT INTO `c_menu` VALUES ('557', '556', '0', '-', '1', 'Surat Masuk', 'admin/com/lap_surat_masuk', 'on');

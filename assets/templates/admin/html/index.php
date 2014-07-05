@@ -211,6 +211,7 @@ function waktu() {
 .h{
 	/*width: 1000px;
 	*/height: 121px;
+	 overflow: hidden;
 	background: transparent url(<?php echo base_url()?>assets/css/metro/images/bg-mnu_04.png) repeat-x -15px 5px;
 }
 .h > .hl {
@@ -242,7 +243,7 @@ function waktu() {
 .h > .hr{
 	/*float: right;*/
 	margin-left: 380px;
-	border: solid 1px #dedede;
+/*	border: solid 1px #dedede;*/
 	width: 65%;
 }
 .h > .hl > .ov-logo{
@@ -254,6 +255,10 @@ function waktu() {
 }
 #navigation{
 	width:100%;
+}
+div.line {
+    margin-left: 127px;
+    margin-top: -2px;
 }
 </style>
 </head>
@@ -273,6 +278,9 @@ function waktu() {
   			<div class="ov-text">
   				<img src="<?php echo base_url()?>assets/css/metro/images/app-company.png"/>
   			</div>
+  		</div>
+  		<div class="line">
+  			<img src="<?php echo base_url()?>assets/css/metro/images/bg-mark.png"/>
   		</div>
   	</div>
   	<div class="hr">
