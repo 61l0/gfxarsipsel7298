@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50616
 File Encoding         : 65001
 
-Date: 2014-07-05 15:17:23
+Date: 2014-07-05 15:18:46
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -146,7 +146,7 @@ INSERT INTO `c_menu` VALUES ('549', '540', '0', '-', '4', 'Unit Pengolah', 'admi
 INSERT INTO `c_menu` VALUES ('550', '542', '0', '-', '1', 'Pelayanan Bulanan', 'admin/com/lap_pelayanan_bulanan', 'on');
 INSERT INTO `c_menu` VALUES ('551', '542', '0', '-', '2', 'Rekap Data Pelayanan', 'admin/com/lap_pelayanan_rekap', 'on');
 INSERT INTO `c_menu` VALUES ('552', '0', '0', 'icon-program.png', '5', 'Pemusnahan / Retensi', 'admin/com/pemusnahan', 'on');
-INSERT INTO `c_menu` VALUES ('553', '0', '0', 'icon-program.png', '11', 'Surat Masuk /  Keluar', 'admin/com/surat', 'on');
+INSERT INTO `c_menu` VALUES ('553', '0', '0', 'icon-program.png', '11', 'Surat Masuk &  Keluar', 'admin/com/surat', 'on');
 INSERT INTO `c_menu` VALUES ('555', '368', '0', '-', '0', 'User Online', 'admin/com/online', 'on');
 INSERT INTO `c_menu` VALUES ('556', '539', '0', '-', '0', 'Surat', '-', 'on');
 INSERT INTO `c_menu` VALUES ('557', '556', '0', '-', '1', 'Surat Masuk', 'admin/com/lap_surat_masuk', 'on');

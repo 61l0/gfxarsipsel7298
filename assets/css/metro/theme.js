@@ -173,7 +173,7 @@ laporan
 		'pemusnahan-retensi': 'icon-trash',
 		'peminjaman-pelayanan': 'icon-hand-right',
 		'catatanskpd': 'icon-list-alt',
-		'suratmasuk-keluar': 'icon-envelope',
+		'suratmasuk&keluar': 'icon-envelope',
 		'laporan': 'icon-bar-chart',
 		'pengaturanpengguna':'icon-group',
 		'pengaturanmenu':'icon-th-list',
