@@ -22,7 +22,7 @@
       </form>
     </div>
   </div>
-  <div class="footer"> &copy; 2010 <a href="http://www.tangerangkota.go.id">www.tangerangkota.go.id</a> All Right Reserved </div>
+  <div class="footer"> &copy; 2010 <a href="http://tangerangselatankota.go.id">tangerangselatankota.go.id</a> All Right Reserved </div>
 </div>
 </body>
 </html>

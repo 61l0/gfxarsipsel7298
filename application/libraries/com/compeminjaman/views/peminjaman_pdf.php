@@ -8,13 +8,13 @@
 		<!-- GAMBAR LOGO  -->
 		<tr id="header" width="100%">
 			<td class="logo" valign="bottom" align="center" width="135px">
-				<img src="<?php echo $base_url?>assets/image/logo_kop.gif" height="105px"/>
+				<img src="<?php echo $base_url?>assets/css/metro/images/lg-tangsel-big.png" height="105px"/>
 			</td>
 		<!-- COMPANY HEADER -->
 			<td class="company"  valign="top" align="center" width="510px">
 				<font face="helvetica" size="11">PEMERINTAH KOTA TANGERANG SELATAN</font>
 				<h3><font face="times" size="25">KANTOR ARSIP DAERAH</font> </h3>
-				<font face="helvetica" size="10">JL. Jend Ahmad Yani, No. 7  Tangerang 15112 (021) - 5589486</font><br/>
+				<font face="helvetica" size="10">Jl. Siliwangi No. 1 Pamulang Tangerang 15112 Tlp. (021)-7470395</font><br/>
 			</td>
 			<td width="130px"></td>
 		</tr>

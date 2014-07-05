@@ -23,10 +23,10 @@
 <br />&nbsp;<br />
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style_body">
 <tr>
-<td width="13%" align="center" valign="middle"><img src="assets/image/logo_kop.gif" alt="corner" style="float:left" width="55" height="55"  /></td>
+<td width="13%" align="center" valign="middle"><img src="assets/css/metro/images/lg-tangsel-big.png" alt="corner" style="float:left" width="55" height="55"  /></td>
 <td width="73%" align="center"><strong>PEMERINTAH KOTA TANGERANG SELATAN  <br />
  KANTOR ARSIP </strong><br />
-	Jl. Jend Ahmad Yani, No. 7  Tangerang 15112 (0)21 5589486</td>
+	Jl. Siliwangi No. 1 Pamulang Tangerang 15112 Tlp. (021)-7470395</td>
 
 </tr>
 </table>
