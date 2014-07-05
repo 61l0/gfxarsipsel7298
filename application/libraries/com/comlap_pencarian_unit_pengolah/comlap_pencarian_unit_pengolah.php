@@ -96,7 +96,7 @@ class comlap_pencarian_unit_pengolah{
 		$this->CI->myexcel_dpa_unit_pengolah->getActiveSheet()->getPageMargins()->setFooter(3);		
 		//------------------
 
-		$this->CI->myexcel_dpa_unit_pengolah->writeRow('A1:Q1','KANTOR ARSIP DAERAH KOTA TANGERANG');
+		$this->CI->myexcel_dpa_unit_pengolah->writeRow('A1:Q1','KANTOR ARSIP DAERAH KOTA TANGERANG SELATAN');
 		$this->CI->myexcel_dpa_unit_pengolah->getActiveSheet()->getStyle('A1:Q1')->applyFromArray($style_header_rka);
 		$this->CI->myexcel_dpa_unit_pengolah->writeRow('A2:Q2','DAFTAR PENCARIAN ARSIP');
 		$this->CI->myexcel_dpa_unit_pengolah->getActiveSheet()->getStyle('A2:Q2')->applyFromArray($style_header_rka);

@@ -101,7 +101,7 @@ class comlaporan_klasifikasi{
 		$this->CI->myexcel_klasifikasi->getActiveSheet()->getPageMargins()->setFooter(3);		
 		//------------------
 
-		$this->CI->myexcel_klasifikasi->writeRow('A1:Q1','KANTOR ARSIP DAERAH KOTA TANGERANG');
+		$this->CI->myexcel_klasifikasi->writeRow('A1:Q1','KANTOR ARSIP DAERAH KOTA TANGERANG SELATAN');
 		$this->CI->myexcel_klasifikasi->getActiveSheet()->getStyle('A1:Q1')->applyFromArray($style_header_rka);
 		$this->CI->myexcel_klasifikasi->writeRow('A2:Q2','REKAPITULASI DATA ARSIP');
 		$this->CI->myexcel_klasifikasi->getActiveSheet()->getStyle('A2:Q2')->applyFromArray($style_header_rka);

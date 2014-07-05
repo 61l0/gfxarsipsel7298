@@ -10,7 +10,7 @@
 	<table border="1" align="center" class="tb-excel" cellpadding="4" colspacing="4" style="border-collapse:collapse" width="98%">
 		<thead>
 			<tr>
-				<th colspan="9" style="border:none;font-weight:bold;text-align:center;font-size:18px;valign:vcenter">KANTOR ARSIP DAERAH KOTA TANGERANG</th>
+				<th colspan="9" style="border:none;font-weight:bold;text-align:center;font-size:18px;valign:vcenter">KANTOR ARSIP DAERAH KOTA TANGERANG SELATAN</th>
 			</tr>
 			<tr>
 				<th colspan="9" style="border:none;font-weight:bold;text-align:center;font-size:14px;valign:vcenter">LAPORAN REKAP PENYERAHAN ARSIP </th>

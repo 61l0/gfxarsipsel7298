@@ -85,7 +85,7 @@ class comlap_pencarian_klasifikasi{
 		$this->CI->myexcel_dpa_klasifikasi->getActiveSheet()->getPageMargins()->setFooter(3);		
 		//------------------
 
-		$this->CI->myexcel_dpa_klasifikasi->writeRow('A1:J1','KANTOR ARSIP DAERAH KOTA TANGERANG');
+		$this->CI->myexcel_dpa_klasifikasi->writeRow('A1:J1','KANTOR ARSIP DAERAH KOTA TANGERANG SELATAN');
 		$this->CI->myexcel_dpa_klasifikasi->getActiveSheet()->getStyle('A1:J1')->applyFromArray($style_header_rka);
 		$this->CI->myexcel_dpa_klasifikasi->writeRow('A2:J2','DAFTAR PENCARIAN ARSIP');
 		$this->CI->myexcel_dpa_klasifikasi->getActiveSheet()->getStyle('A2:J2')->applyFromArray($style_header_rka);

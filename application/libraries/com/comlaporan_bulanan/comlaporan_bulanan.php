@@ -109,7 +109,7 @@ class comlaporan_bulanan{
 		$this->CI->myexcel_bulanan->getActiveSheet()->getPageMargins()->setFooter(3);		
 		//------------------
 
-		$this->CI->myexcel_bulanan->writeRow('A1:Q1','KANTOR ARSIP DAERAH KOTA TANGERANG');
+		$this->CI->myexcel_bulanan->writeRow('A1:Q1','KANTOR ARSIP DAERAH KOTA TANGERANG SELATAN');
 		$this->CI->myexcel_bulanan->getActiveSheet()->getStyle('A1:Q1')->applyFromArray($style_header_rka);
 		$this->CI->myexcel_bulanan->writeRow('A2:Q2','REKAPITULASI DATA ARSIP');
 		$this->CI->myexcel_bulanan->getActiveSheet()->getStyle('A2:Q2')->applyFromArray($style_header_rka);

@@ -107,7 +107,7 @@ class Comlap_pelayanan_rekap{
 		$this->CI->myexcel_pelayanan_rekap->getActiveSheet()->getPageMargins()->setFooter(3);		
 		//------------------
 
-		$this->CI->myexcel_pelayanan_rekap->writeRow('A1:K1','KANTOR ARSIP DAERAH KOTA TANGERANG');
+		$this->CI->myexcel_pelayanan_rekap->writeRow('A1:K1','KANTOR ARSIP DAERAH KOTA TANGERANG SELATAN');
 		$this->CI->myexcel_pelayanan_rekap->getActiveSheet()->getStyle('A1:K1')->applyFromArray($style_header_rka);
 		$this->CI->myexcel_pelayanan_rekap->writeRow('A2:K2','REKAP PELAYANAN ARSIP');
 		$this->CI->myexcel_pelayanan_rekap->getActiveSheet()->getStyle('A2:K2')->applyFromArray($style_header_rka);
