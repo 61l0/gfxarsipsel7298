@@ -1,0 +1,161 @@
+@charset "utf-8";
+/*by.opick 01 Januari 2011*/
+body {
+	background:#000 url(../img/bg.jpg) no-repeat center bottom;	
+	font-family:calibri,arial;
+}
+
+* {
+	margin:0;
+	padding:0;
+}
+
+.page {
+	background:url(../img/bg-page.png) no-repeat;
+	width:663px;
+	height:550px;
+	margin:30px auto auto auto;
+}
+
+.logo-box {
+	width:310px;
+	height:auto;
+	margin-top:100px;
+	text-align:center;	
+	font-family : tahoma,impact,Arial,sans-serif;
+	text-shadow : 1px 1px 1px #000000;
+}
+
+.logo-box img {
+	margin-bottom:5px;
+}
+
+.logo-box strong {
+	color:#f58031;
+	font-size:30px;
+}
+
+
+.logo-box strong.white {
+	color:#fff;
+}
+
+.login-box {
+	width:auto;
+	height:auto;
+	margin:78px 30px auto auto;
+	float:right;
+	color:#03568c;
+	text-shadow:2px 1px 1px #ddd;
+	font-family:calibri,impact,arial;
+	font-size:15px;
+	font-weight:bold;
+	padding-top:20px;
+}
+
+.login-box table {
+	width:300px;
+	float:right;
+	margin-bottom:0;
+}
+
+.login-box table td {
+	padding:0;
+}
+
+
+.login-box img {
+	margin-right:10px;
+}
+
+.login-box .textbox {
+	width:180px;
+	border:solid 1px #76beed;
+	height:23px;
+	color:#006699;
+	font-weight:bold;
+	font-size:15px;
+	font-family:calibri;
+	padding:1px 3px 4px 3px;
+	
+}
+
+.login-box .textbox:focus {
+	border:solid 1px #2e94e1;
+	background:#c9edfa url(../img/bg-text-h.gif) repeat-x;
+}
+
+.login-box table td.title {
+    background: url("../img/key.png") no-repeat scroll 147px 6px transparent;
+    color: #0099CC;
+    font-family: calibri,tahoma;
+    font-size: 14px;
+    font-weight: bold;
+    height: 45px;
+    padding-right: 0;
+    padding-top: 30px;
+    text-align: center;
+    text-shadow: 2px 1px 1px #DDDDDD;	
+}
+
+#button {
+	background:url(../img/bt-login.png) no-repeat;
+	border:none;
+	width:73px;
+	height:27px;
+	cursor:pointer;
+}
+
+#button:hover, #button:focus  {
+	background:url(../img/bt-login-h.png) no-repeat;
+}
+
+
+.footer {
+	clear:both;
+	color:#3A3939;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:12px;
+	margin:245px auto;
+	text-align:left;
+	width:78%;
+}
+
+#notification {
+	clear:both;
+	margin-top:5px;
+	width:auto;
+	text-transform:none;
+	font-family:calibri,arial;
+	font-size:12px;
+	float:left;
+}
+
+#notification .error-box {
+	float:left;
+	width:53px;
+	color:#f35010;
+	margin-top:5px;
+	margin-left:34px;
+	font-weight:bold;
+	font-size:14px;
+	font-family:calibri,arial;
+}
+
+#notification .error-msg {
+	float:right;
+	width:auto;
+	border:solid 1px #f45c1c;
+	background-color:#feffc8;
+	padding:5px 8px;
+	-moz-border-radius:3px;
+	color:#f35010;
+	box-shadow:2px 2px 1px 0px #ccc;
+	margin-left:-7px;
+}
+
+
+#notification .error-msg p {
+	margin:0;
+}
+

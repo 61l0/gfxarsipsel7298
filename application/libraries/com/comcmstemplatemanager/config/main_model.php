@@ -1,0 +1,1 @@
+<?$config['model_main']['table_name'] = 'public_template';$config['model_main']['table_prikey'] = 'id_template';$config['model_main']['query'] = array(    'query_table'=>array(	    'select'=>array('a.*',false),	    'from'=>array($config['model_main']['table_name'].' a'),		'order_by'=>array('a.status','desc'),    ), );?>

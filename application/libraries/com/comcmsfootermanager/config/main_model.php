@@ -1,0 +1,1 @@
+<?$config['model_main']['table_name'] = 'public_footer';$config['model_main']['table_prikey'] = 'id_footer';$config['model_main']['query'] = array(    'query_table'=>array(	    'select'=>array('a.*,'),	    'from'=>array($config['model_main']['table_name'].' a'),		'order_by'=>array('footer_link','asc')    ), );?>

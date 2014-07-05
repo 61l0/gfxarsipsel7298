@@ -1,0 +1,110 @@
+.navigation {
+    clear: both;
+    float: left;
+    width: 100%;
+}
+.navigation ul {
+    float: left;
+    width: 100%;
+	margin:0;
+	padding:0;
+}
+.navigation li {
+    float: left;
+    list-style: none outside none;
+	margin:7px 2px 0 2px;
+	position:relative;
+}
+.navigation li a {
+    color: #FFFFFF;
+    display: block;
+    font-family: calibri,tahoma,arial;
+    font-size: 14px;
+	float:left;
+	padding:7px 20px 7px 20px;		
+	background:url(../img/common/bg-nav.gif) repeat-x;
+	-moz-border-radius:8px 8px 0 0;
+	border-radius:8px 8px 0 0;
+}
+
+.navigation li a:hover {
+    text-decoration: none;
+}
+
+.navigation li a.active {
+	color:#494b46;
+	background:#fff url(../img/common/bg-nav-h.gif) repeat-x;
+}
+
+
+
+
+
+
+/* sub menu */
+
+.navigation ul ul {
+	background-color:#fff;
+	border-left:1px solid #197fa8;
+	display:none;
+	font-size:11px;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:30px;
+	width:165px;
+	z-index:50;
+	text-align:left;
+}
+
+.navigation ul ul li a {
+	color:#fff;
+	text-shadow:1px 1px 1px #333;
+}
+
+.navigation ul ul ul {
+	top:0;
+	left:100%;
+}
+div.navigation li:hover {
+	cursor:pointer;
+	z-index:100;
+}
+div.navigation li:hover ul ul, div.navigation li li:hover ul ul, div.navigation li li li:hover ul ul, div.navigation li li li li:hover ul ul {
+	display:none;
+}
+div.navigation li:hover ul, div.navigation li li:hover ul, div.navigation li li li:hover ul, div.navigation li li li li:hover ul {
+	display:block;
+}
+/* End CSS Drop Down Menu */
+.navigation ul li:hover > a {
+	color:#FFFF99;
+	text-shadow:1px 1px 1px #333;
+}
+
+.navigation ul li:hover > a.active {
+	color:#333;
+	text-shadow:none;
+}
+
+.navigation ul ul li:hover > a {
+	color:#FFFF99;
+}
+.navigation ul ul li {
+	margin:0;
+	background:#197fa8 url(../img/common/bg-nav.gif) repeat-x;
+}
+.navigation ul ul li a {
+	margin:0;
+	width:145px;
+	background:none;
+	-moz-border-radius:0;
+	border-radius:0;
+	padding:8px 10px;
+}
+.navigation ul ul li a:hover {
+	border:medium none;
+	color:#FFFF99;
+	background:none;
+} 

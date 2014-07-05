@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tab-def {
+	clear:both;
+	float:left;
+	width:100%;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.tab-def .bar {
+	clear:both;
+	float:left;
+	padding:4px;
+	border:solid 1px #d1d9e0;	
+	width:99%;
+	background:#eaf3fa;	
+	position:relative;
+	z-index:1;
+}
+
+.tab-def ul {	
+	margin:0 0 7px 0;
+	width:100%;
+	padding:0;
+	list-style:none;
+	float:left;
+	position:relative;
+	z-index:2;	
+}
+
+.tab-def ul li {
+	float:left;
+}
+
+.tab-def ul li a {
+	padding:7px 18px;
+	color:#747376;
+	font-weight:bold;
+	font-size:11px;
+	background:#e8e5ff;
+	border:solid 1px #cbcbcb;
+	border-bottom:solid 1px #d1d9e0;
+	margin:0 2px 0 0;
+	-moz-border-radius:4px 4px 0 0;
+	border-radius:4px 4px 0 0;	
+}
+
+.tab-def ul li a:hover{
+	background:#eaf3fa;
+	border:solid 1px #d1d9e0;
+	color:#52515a;
+}
+
+.tab-def ul li a:focus, .tab-def ul li a.active {
+	background:#eaf3fa;
+	border:solid 1px #d1d9e0;
+	border-bottom:solid 1px #eaf3fa;
+	color:#52515a;
+}
+
+.tab-nav {
+	float:right;
+	font-family:"lucida sans",arial,verdana,tahoma,helvetica,sans-serif;
+	margin:1px -4px 0;
+	padding:0;
+	width:auto;
+}
+.tab-nav ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+
+}
+.tab-nav li {
+	float:right;
+	margin:0;
+	padding:0;
+}
+.tab-nav a {
+	background:#0099CC url(../img/table/bg-form-reg-title.gif) repeat-x;
+	border:1px solid #fff;
+	border-left:none;
+	border-bottom:none;	
+	font-family:calibri;
+	font-size:14px;
+	display:block;
+	font-weight:bold;
+	height:15px;
+	margin:3px 0px 0 0;
+	padding:5px 15px 6px 15px;
+	text-decoration:none;
+	cursor:pointer;
+	color:#fff;
+	text-shadow : 1px 1px 1px #333;
+}
+.tab-nav a:hover {
+	background:#abcac6;
+	color:#fff;
+}
+
+a.tab-nav-active, a.tab-nav-active:hover  {
+	border-top:1px solid #d4e1e7;
+	border-left:1px solid #d4e1e7;
+	border-right:1px solid #d4e1e7;
+	border-bottom:1px solid #fff;
+	-moz-border-radius:5px 5px 0 0;
+	color:#336699;
+	text-shadow:none;
+	display:block;
+	font-weight:bold;
+	background:#fff;
+	text-decoration:none;
+	cursor:default;
+	margin-top:0px;
+	padding-top:8px;
+	padding-bottom:5px;
+}
+
+.tab-nav ul li img {
+	float:left;
+	border:none;
+	margin-right:5px;
+	margin-top:3px;
+}	

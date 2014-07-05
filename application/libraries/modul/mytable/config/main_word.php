@@ -1,0 +1,1 @@
+<?$config['word'] = array(            'header' => array(    		                'caption' => 'Test Dynamic Print',		                ),		    'footer' => array(    		                'caption' => 'girista',		                ),//		    'show_col' => array(//		                    'tahun' => 'tahun',//		                )		);?>

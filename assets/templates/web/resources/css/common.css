@@ -1,0 +1,98 @@
+charset "utf-8";
+/* CSS by. opick april'11 */
+
+* {
+	margin:0;
+	padding:0;
+}
+img {
+	border:none;
+}
+body {
+	margin:0;
+	font-family:Tahoma, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	background:#fff url(../img/common/bg.gif) repeat-x;
+}
+a {
+	text-decoration:none;	
+	color:#a36b08;
+}
+
+a:hover {
+	text-decoration:underline;	
+	color:#CC6600;
+}
+
+.page-break {
+	clear:both;
+	margin-top:5px;
+	height:1px;
+}
+
+.clear {
+	clear:both;
+}
+
+.hr-break {
+	clear:both;
+	border-bottom:solid 1px #999999;
+	height:1px;
+}
+
+.body {
+	margin:auto;
+	padding:0;
+	width:100%;
+	float:left;
+	background:url(../img/common/bg-gedung.jpg) no-repeat bottom right;
+}
+
+.page {
+	width:990px;
+	height:480px;
+	margin:auto;
+}
+
+.header {
+	background:url(../img/common/bg-header.png) no-repeat center;
+	float:left;
+	height:116px;
+	width:100%;
+
+}
+.footer {
+	clear:both;
+	float:left;
+	height:60px;
+	width:100%;
+	background:url(../img/common/bg-footer.gif) repeat-x;
+	position:relative;
+	bottom:0;
+	text-shadow:1px 1px 1px #333;	
+}
+
+.footer-box {
+	width:990px;
+	margin:8px auto;
+	color:#fff;
+	font-size:12px;
+	font-family:calibri;
+}
+
+.footer-left {
+	float:left;
+}
+
+.footer-right {
+	float:right;
+	width:150px;
+	height:40px;
+	padding-left:10px;
+	border-left:solid 1px #88BFC2;
+	background:url(../img/common/bg-sp.png) no-repeat left;
+	color:#e8e8e8;
+	line-height:16px;
+}
+
+

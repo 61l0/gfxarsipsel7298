@@ -1,0 +1,105 @@
+charset "utf-8";
+/* CSS by. opick april'11 */
+
+* {
+	margin:0;
+	padding:0;
+}
+img {
+	border:none;
+}
+body {
+	margin:0;
+	font-family:Calibri, Tahoma, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#808080;
+	font-weight:bold;
+	overflow:hidden;
+}
+a {
+	text-decoration:none;
+	color:#6a6b6b;
+}
+.page-break {
+	clear:both;
+	height:10px;
+}
+
+.body {
+	margin:0;
+	padding:0;
+}
+
+.page {
+	
+}
+
+.header {
+	background:url(../img/common/bg-header.gif) repeat-x;
+	float:left;
+	height:28px;
+	width:100%;
+	border-bottom::solid 1px #000;
+	color:#d7d7d7;
+	font-size:11px;
+}
+
+.header-title {
+	float:left;	
+	margin-top:7px;
+	margin-left:7px;
+	font-weight:bold;
+}
+
+.header-status {
+	float:right;
+	margin-top:7px;
+	margin-right:5px;	
+	font-weight:bold;
+	z-index:2px;
+}
+
+.header-status a {
+	color:#d7d7d7;
+	text-decoration:none;
+}
+
+.header-status a.logout {
+	text-decoration:underline;
+	margin-left:10px;
+}
+
+.header-status a:hover {
+	color:#fff;
+}
+
+.user-status {
+	
+}
+
+.main-content {
+	clear:both;
+	float:left;
+	width:100%;
+	overflow:auto;
+}
+
+
+.footer {
+	clear:both;
+	float:left;
+	height:25px;
+	width:100%;
+	border-top:solid 1px #e3e3e3;
+	background:#000 ;
+	position:absolute;
+	bottom:0;
+	border-bottom::solid 1px #000;
+	color:#D7D7D7;
+	font-weight:bold;
+	text-align:center;
+}
+
+
+
+

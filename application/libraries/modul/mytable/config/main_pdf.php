@@ -1,0 +1,1 @@
+<?$config['pdf'] = array(	        'header' => array(    		                'caption' => 'Test Dynamic Print',		                ),//		    'show_col' => array(//		                    'tahun' => 'tahun',//		                )		);?>

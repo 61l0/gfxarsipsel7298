@@ -1,0 +1,1 @@
+<?$config['model_main']['table_name'] = 'bukutamu_kategori';$config['model_main']['table_prikey'] = 'id_kategori';$config['model_main']['query'] = array(    'query_table'=>array(	    'select'=>array('a.*'),	    'from'=>array($config['model_main']['table_name'].' a'),		'order_by'=>array('a.urutan','asc')    ), );?>

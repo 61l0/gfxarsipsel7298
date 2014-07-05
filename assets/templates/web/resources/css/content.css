@@ -1,0 +1,149 @@
+@charset "utf-8";
+/* CSS Document by Opick'11 */
+
+.content-box {
+	clear:both;
+	width:100%;
+	margin:auto auto 10px auto;
+	background:url(../img/common/bg-page.png) repeat;
+	float:left;
+	border-left:solid 1px #f6f2f2;
+	border-right:solid 1px #f6f2f2;
+	border-bottom:solid 1px #f6f2f2;
+}
+
+.content {
+	clear:both;
+	float:left;
+	width:970px;
+	background:#fff;
+	margin:5px 8px;
+}
+
+/* CSS Document - last edited */ 
+
+.page-link {
+	float:left;
+	width:975px;
+	margin:3px 5px;
+	background:url(../img/common/bg-page-link.gif) repeat-x;
+	-moz-border-radius:0 0 5px 5px;
+	border-radius:0 0 5px 5px;
+	padding-left:5px;
+}
+
+.page-link ul {
+	margin:3px;
+	padding:0;
+	list-style:none;
+}
+
+.page-link ul li {
+	float:left;
+}
+
+.page-link ul li a {
+	background:url(../img/element/side-grey-right.gif) no-repeat 0px 5px;
+	padding:10px 16px;
+	display:block;
+	color:#B7B8B8;
+	font-weight:bold;
+	font-size:11px;
+}
+
+.page-link ul li a:hover {
+	color:#333;
+}
+
+.page-link ul li a.active {
+	font-weight:bold;
+	color:#6F828E;
+}
+
+
+
+.head-content {
+	border-bottom:solid 1px #d4e1e7;
+	padding:0 5px;
+	margin:3px 0 5px;
+	height:30px;
+	color:#333;
+	border-top:solid 1px #f1f1f1;
+	background:#fff url(../img/common/bg-head-content.gif) repeat-x;
+}
+
+.head-content h3 {
+	background:transparent url(../img/element/arrow.png) no-repeat 3px 2px;
+	float:left;
+	font-family:Helvetica,tahoma, calibri,sans-serif;
+	font-size:13px;
+	font-weight:normal;
+	margin:7px 0;
+	padding:1px 0px 3px 20px;
+}
+.head-content a {
+	font-weight:bold;
+	text-decoration:none;
+	color:#000;
+}
+.head-content h3 a:hover {
+	text-decoration:underline;
+}
+
+.left-box {
+	float:left;
+	width:48%;
+	padding:5px;
+	line-height:16px;
+	border-top:solid 1px #e2e2e2;
+	border-left:solid 1px #e2e2e2;
+	border-right:solid 1px #a5a5a5;
+	border-bottom:solid 1px #a5a5a5;
+}
+
+.left-box:hover {
+	border-top:solid 1px #a5a5a5;
+	border-left:solid 1px #a5a5a5;
+	border-right:solid 1px #e2e2e2;
+	border-bottom:solid 1px #e2e2e2;
+}
+
+.left-box h3, .right-box h3, .full-box h3{
+	border-bottom:solid 1px #CCCCCC;
+}
+
+.right-box {
+	float:right;
+	width:48%;
+	padding:5px;
+	line-height:16px;
+	border-top:solid 1px #e2e2e2;
+	border-left:solid 1px #e2e2e2;
+	border-right:solid 1px #a5a5a5;
+	border-bottom:solid 1px #a5a5a5;	
+}
+
+.right-box:hover {
+	border-top:solid 1px #a5a5a5;
+	border-left:solid 1px #a5a5a5;
+	border-right:solid 1px #e2e2e2;
+	border-bottom:solid 1px #e2e2e2;
+}
+
+.full-box {
+	clear:both;
+	width:99%;
+	padding:5px;
+	line-height:16px;
+	border-top:solid 1px #e2e2e2;
+	border-left:solid 1px #e2e2e2;
+	border-right:solid 1px #a5a5a5;
+	border-bottom:solid 1px #a5a5a5;	
+}
+
+.full-box:hover {
+	border-top:solid 1px #a5a5a5;
+	border-left:solid 1px #a5a5a5;
+	border-right:solid 1px #e2e2e2;
+	border-bottom:solid 1px #e2e2e2;
+}

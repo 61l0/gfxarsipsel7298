@@ -1,0 +1,184 @@
+@charset "utf-8";
+/*by.opick 01 Januari 2011*/
+body {
+ /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: -moz-radial-gradient(center, ellipse cover,  #1559b2 0%, #092a4d 100%); /* FF3.6+ */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxNTU5YjIiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDkyYTRkIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#1559b2), color-stop(100%,#092a4d)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #1559b2 0%,#092a4d 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #1559b2 0%,#092a4d 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #1559b2 0%,#092a4d 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #1559b2 0%,#092a4d 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1559b2', endColorstr='#092a4d',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
+	font-family:calibri,arial;
+}
+
+* {
+	margin:0;
+	padding:0;
+}
+.page {
+    /*border: 1px solid #dedede;*/
+    height: 461px;
+    margin: 0 auto;
+    width: 400px;
+}
+.page {
+	/*background:url(../img/back.png) no-repeat center top;
+	background-color: #ffeccf;
+	width:660px;
+	height:450px;
+	margin:30px auto auto auto;
+	border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;*/
+}
+
+.logo-box {
+	width:310px;
+	height:auto;
+	margin-top:100px;
+	text-align:center;	
+	font-family : tahoma,impact,Arial,sans-serif;
+	text-shadow : 1px 1px 1px #000000;
+}
+
+.logo-box img {
+	margin-bottom:5px;
+}
+
+.logo-box strong {
+	color:#f58031;
+	font-size:30px;
+}
+
+
+.logo-box strong.white {
+	color:#fff;
+}
+
+.login-box {
+	width:auto;
+	height:auto;
+	margin:78px 30px auto auto;
+	float:right;
+	color:#03568c;
+	text-shadow:2px 1px 1px #ddd;
+	font-family:calibri,impact,arial;
+	font-size:15px;
+	font-weight:bold;
+	padding-top:20px;
+}
+
+.login-box table {
+	width:300px;
+	float:right;
+	margin-bottom:0;
+}
+
+.login-box table td {
+	padding:0;
+}
+
+
+.login-box img {
+	margin-right:10px;
+}
+
+.login-box .textbox {
+	width:180px;
+	border:solid 1px #76beed;
+	height:23px;
+	color:#006699;
+	font-weight:bold;
+	font-size:15px;
+	font-family:calibri;
+	padding:1px 3px 4px 3px;
+	
+}
+
+.login-box .textbox:focus {
+	border:solid 1px #2e94e1;
+	background:#c9edfa url(../img/bg-text-h.gif) repeat-x;
+}
+
+.login-box table td.title {
+    background: url("../img/key.png") no-repeat scroll 147px 6px transparent;
+    color: #0099CC;
+    font-family: calibri,tahoma;
+    font-size: 14px;
+    font-weight: bold;
+    height: 45px;
+    padding-right: 0;
+    padding-top: 30px;
+    text-align: center;
+    text-shadow: 2px 1px 1px #DDDDDD;	
+}
+
+#button {
+	background:url(../images/bt-login_02.png) no-repeat;
+	border:none;
+	 height: 40px;
+    width: 101px;
+	cursor:pointer;
+}
+
+#button:hover, #button:focus  {
+	background:url(../images/bt-login-hover_02.png) no-repeat;
+}
+
+
+.footer {
+	clear:both;
+	color:#3A3939;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:12px;
+	margin:245px auto;
+	text-align:left;
+	width:78%;
+}
+
+#notification {
+	clear:both;
+	margin-top:5px;
+	width:auto;
+	text-transform:none;
+	font-family:calibri,arial;
+	font-size:12px;
+	float:left;
+}
+
+#notification .error-box {
+	float:left;
+	width:53px;
+	color:#f35010;
+	margin-top:5px;
+	margin-left:34px;
+	font-weight:bold;
+	font-size:14px;
+	font-family:calibri,arial;
+}
+
+#notification .error-msg {
+    background-color: #090a01;
+/*    border: 1px solid #f45c1c;*/
+    border-radius: 5px;
+/*    box-shadow: 2px 2px 1px 0 #ccc;*/
+    color: #f35010;
+    float: right;
+    margin-left: -36px;
+    padding: 6px;
+    width: auto;
+}
+
+
+#notification .error-msg p {
+	margin:0;
+}
+
