@@ -196,7 +196,9 @@ opacity: 0.95;
 	/*width:34px;*/
 }
 .footer{
-
+	 position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 .cl{
@@ -549,7 +551,7 @@ margin-bottom: 3px;background: #fafcfe url(../../templates/admin/resources/img/b
 	font-size: 277%;
 }
 #navigation ul li {
-	margin: 2px;
+	margin: 0 2px !important;
 
 }
 .paging a:hover,.paging i.fa:hover{
@@ -627,7 +629,7 @@ h3.grid-title {
 	margin: 0 auto;
 }
 .main-content{
-	width: 98%;
+	/*width: 98%;*/
 }
 .toolbar-filter{
 	text-align: center;
@@ -832,11 +834,11 @@ overflow: hidden;
         {
            border: 1px dotted #f3f3f3;
     float: left !important;
-    height: 85px;
+    height: 77px;
     margin: 2px !important;
     text-align: center;
     width: 11%;
-    border-radius: 50%;
+    border-radius: 64%;
     padding: 8px 0 0 0 ;
             background: transparent url(images/bg-nav_08.png) repeat center center;
         }
