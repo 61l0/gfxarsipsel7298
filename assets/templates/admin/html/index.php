@@ -209,9 +209,10 @@ function waktu() {
 	clear: both;
 }
 .h{
-	min-width: 1000px;
-	height: 121px;
-	 overflow: hidden;
+	 height: 121px;
+    margin-top: 37px;
+    min-width: 1000px;
+    overflow: hidden;
 	background: transparent url(<?php echo base_url()?>assets/css/metro/images/bg-mnu_04.png) repeat-x -15px 5px;
 }
 .h > .hl {

@@ -167,19 +167,19 @@ opacity: 0.95;
 }
 
 .profileNav{
-	  margin-right: 51px;
-    margin-top: 93px;
+margin-right: 9px;
+    margin-top: -32px;
     position: absolute;
     right: 0;
     text-transform: none;
 }
 
 .calendar {
-    color: #fff;
-    margin-right: 244px;
-    margin-top: 93px;
+     color: #fff;
+    left: 0;
+    margin-left: 19px;
+    margin-top: -30px;
     position: absolute;
-    right: 0;
 }
 
 #navigation{
