@@ -209,8 +209,8 @@ function waktu() {
 	clear: both;
 }
 .h{
-	/*width: 1000px;
-	*/height: 121px;
+	min-width: 1000px;
+	height: 121px;
 	 overflow: hidden;
 	background: transparent url(<?php echo base_url()?>assets/css/metro/images/bg-mnu_04.png) repeat-x -15px 5px;
 }
@@ -284,6 +284,17 @@ div.line {
   		</div>
   	</div>
   	<div class="hr">
+  		<div class="calendar">
+  			<i class="fa icon-calendar"></i>&nbsp;<?=loadCom('comsidebar/comsidebar','getDateToDay');?>&nbsp;<span id="output"></span>
+  		</div>
+  		  <div class="profileNav ">
+  		  	<a href="javascript:;">
+  		  		<i class="fa icon-user"></i>&nbsp;<?=$_SESSION['nama_pengguna'];?>&nbsp;(<?=$group_name;?>)
+  		  	</a>
+  		  	&nbsp;
+  		  	<a href="<?=site_url('login/out');?>" class="logout"><i class="fa icon-hand-right">&nbsp;</i>Logout</a> 
+    	  </div>
+    
   		<div id="navigation" >
 		  <ul class="paging">    
 		    <?=$menu_list;?>
@@ -300,14 +311,7 @@ div.line {
     <div class="header" style="display:none;">
     		
       <div class="header-title"> Arsip Kota Tangerang Selatan - Control Panel </div>
-      <div class="header-status"> <a href="javascript:;">Login sebagai :
-	<?//  dump($_SESSION);?>
-        <?=$_SESSION['nama_pengguna'];?>
-        [<?=$group_name;?>]
-        </a> |
-        <?=loadCom('comsidebar/comsidebar','getDateToDay');?>
-        / <strong id="output"></strong><a href="<?=site_url('login/out');?>" class="logout" style="color:red;font-size:14px;font-weight:bold">Logout</a> </div>
-    </div -->
+    </div>
        <!--e:header-->
     <? include('htmlvar/head_menu.php');?>
     <!--e:navigation-->

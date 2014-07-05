@@ -110,7 +110,7 @@ jQuery(document).ready(function  () {
 
 	$('.header-status').fadeOut();
 
-	$('.header-status a:first').html($('.header-status a:first').html().replace(/\|/,''));
+	// $('.header-status a:first').html($('.header-status a:first').html().replace(/\|/,''));
 
 	// RESETTING CONTENT HEIGHT
 	$('div.content').css('height','auto !important');
