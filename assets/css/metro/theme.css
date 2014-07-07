@@ -31,7 +31,7 @@ tr.grayed{
 background: #9dd53a !important;
 
 }
-.toolbar-filter {
+.toolbar-filter,.toolbar-search {
     border: 1px dashed #9dd53a !important;
     -moz-border-radius:0 !important;
 	-webkit-border-radius:0 !important;
