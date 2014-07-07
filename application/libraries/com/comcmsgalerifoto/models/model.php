@@ -109,7 +109,7 @@ class Model extends CI_Model {
 		if(strlen($_FILES['img_file']['name'])>0){
 			$dir_name = 'galeri_foto';
 			$result = $this->uploadFile($_FILES['img_file'],$id, $dir_name);
-			$path = PATH_BASE.'arsip/assets/media/file/'.$dir_name.'/'.$id.'/_thumbs/';
+			$path = DOC_PATH_ROOT . 'assets/media/file/'.$dir_name.'/'.$id.'/_thumbs/';
 			$config['thumb_marker']='';
 			$config['source_image'] = 'assets/media/file/'.$dir_name.'/'.$id.'/'.$this->upload->file_name;
 			$config['new_image'] = 'assets/media/file/'.$dir_name.'/'.$id.'/_thumbs/thumbs_'.$this->upload->file_name;
@@ -130,9 +130,9 @@ class Model extends CI_Model {
 	
 	function uploadFile($file=false,$id=false,$menu_name=false){
 		$this->load->helper('file');
-		$path2 = PATH_BASE.'arsip/assets/media/file/'.$menu_name.'/'.$id.'/_thumbs/';
+		$path2 = DOC_PATH_ROOT . 'assets/media/file/'.$menu_name.'/'.$id.'/_thumbs/';
 		MakeDir($path2);
-		$config['upload_path'] = PATH_BASE.'arsip/assets/media/file/'.$menu_name.'/'.$id;
+		$config['upload_path'] = DOC_PATH_ROOT . 'assets/media/file/'.$menu_name.'/'.$id;
 		$config['allowed_types'] = 'jpg|png|gif|bmp|jpeg';
 		$config['max_size']	= '2048';
 		$config['remove_spaces']=true;

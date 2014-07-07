@@ -403,7 +403,7 @@ class Compengolahan extends Grid{
 				$dir_name = 'arsip_galery';
 				$result = $this->uploadFile($_FILES['img_file'],$id, $dir_name);
 				// dump($this->CI->db->last_query());
-				$path = PATH_BASE.'arsip/assets/media/file/'.$dir_name.'/'.$id.'/_thumbs/';
+				$path = DOC_PATH_ROOT . 'assets/media/file/'.$dir_name.'/'.$id.'/_thumbs/';
 				// MakeDir($path);
 				$config['thumb_marker']='';
 				$config['source_image'] = 'assets/media/file/'.$dir_name.'/'.$id.'/'.$this->CI->upload->file_name;
@@ -427,10 +427,10 @@ class Compengolahan extends Grid{
 	function uploadFile($file, $id, $menu_name){
 		$this->CI->load->helper('file');
 		// $path = 'arsip/assets/media/file/'.$menu_name.'/'.$id.'/';
-		$path2 = PATH_BASE.'arsip/assets/media/file/'.$menu_name.'/'.$id.'/_thumbs/';
+		$path2 = DOC_PATH_ROOT . 'assets/media/file/'.$menu_name.'/'.$id.'/_thumbs/';
 		// MakeDir($path);
 		MakeDir($path2);
-		$config['upload_path'] = PATH_BASE.'arsip/assets/media/file/'.$menu_name.'/'.$id;
+		$config['upload_path'] = DOC_PATH_ROOT . 'assets/media/file/'.$menu_name.'/'.$id;
 		$config['allowed_types'] = 'jpg|png|gif|bmp|jpeg';
 		$config['max_size']	= '2048';
 		$config['remove_spaces']=true;
