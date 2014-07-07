@@ -7,7 +7,7 @@ class Model_mstunitpengolah extends CI_Model {
 		$this->db->select('b.id_skpd');	
 		$this->db->where('user_id',$id);	
 		$this->db->from('c_user a');	
-		$this->db->join('m_skpd_sotk b','a.id_skpd_sotk=b.id_skpd_sotk');
+		//$this->db->join('m_skpd_sotk b','a.id_skpd_sotk=b.id_skpd_sotk');
 		$data = @$this->db->get()->row()->id_skpd;
 		// dump($this->db->last_query());
 		return $data;
