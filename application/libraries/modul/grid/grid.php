@@ -381,7 +381,7 @@ class Grid extends Modul{
 		    return $dropdown_options;
 		}
 	}
-	function formaction(){
+	function formaction($return=false){
 	    $model_name = 'g1_model';
 	    if(isset($this->params['gridlib']['grid']['opt']['treeGrid'])){
 	        if($this->params['gridlib']['grid']['opt']['treeGrid']){
@@ -399,8 +399,15 @@ class Grid extends Modul{
 		$params['post'] = $this->CI->input->post();
 		$params['post']['oper'] = $this->CI->input->post('oper');
 		$params['post']['colModel'] = $this->get_formpost();
-
 		$responce = $this->CI->$model_name->simpan($params);
+		if( $return )
+		{
+			return array(
+				'post' => $params['post'],
+				'data' => $responce
+			);
+		}
+		
 
 		$this->CI->output->set_header('Contents-Type:application/json');
 		$this->CI->output->set_output(json_encode($responce)); 
