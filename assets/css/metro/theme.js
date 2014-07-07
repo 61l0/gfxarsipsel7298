@@ -540,7 +540,7 @@ function GridChecker(){
 
 		// if( $('#navigation').is(':hidden') )
 		// {
-			var mTop = 194;
+			var mTop = 231;
 			if($('.accordionMenu').css('top')!= mTop+'px' ){
 				$('.accordionMenu').animate({
 					top:mTop
