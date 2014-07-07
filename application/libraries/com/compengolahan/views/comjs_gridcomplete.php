@@ -50,15 +50,14 @@
 			// insImage.append(spImage);
 			// $("tr#"+cl+" td[aria-describedby='"+<?=$class_name;?>grid.id+"_act'] ").append(insImage);	
 
-			if(row.status=='BELUM PENGOLAHAN')
-			{
+		
 			var fnDel = "<?=$class_name;?>grid.btn_grid_del({id_data:"+row.id_data+",oper:'del'});";
 			var insDel = jQuery("<div />").addClass("ui-pg-div ui-inline-edit").css("float","left").css("cursor","pointer").attr("title","Hapus");
 			insDel.mouseover(function(){jQuery(this).addClass('ui-state-hover');}).mouseout(function(){jQuery(this).removeClass('ui-state-hover');});
 			var spDel = jQuery("<span />").addClass("ui-icon ui-icon-trash").attr('onclick',fnDel);
 			insDel.append(spDel);
 			$("tr#"+cl+" td[aria-describedby='"+<?=$class_name;?>grid.id+"_act'] ").append(insDel);
-			}		
+					
 		// }
 	}
 };
