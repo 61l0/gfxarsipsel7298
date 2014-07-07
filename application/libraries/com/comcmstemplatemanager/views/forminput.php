@@ -28,7 +28,7 @@
 				  </div>
 				  <span id="file_view">
 <? 
-				$path = PATH_BASE.'arsip/assets/media/file/template/'.@$data->template_zip;
+				$path = DOC_PATH_ROOT . 'assets/media/file/template/'.@$data->template_zip;
 				$image_thumb = '';
 				if(is_file($path)): 
 					$path = BASE_URL.'assets/media/file/template/'.@$data->template_zip;

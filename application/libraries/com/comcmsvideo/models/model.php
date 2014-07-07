@@ -97,7 +97,7 @@ class Model extends CI_Model {
 				$this->db->from('video');
 				$this->db->where('id_video',$id);
 				$row = $this->db->get()->row();
-				$file_path = PATH_BASE.'arsip/assets/media/file/galeri_video/'.$type.'/';
+				$file_path = DOC_PATH_ROOT . 'assets/media/file/galeri_video/'.$type.'/';
 				$old_file = $file_path.$row->video_file;
 				if(is_file($old_file))unlink($old_file);
 			}
@@ -115,11 +115,11 @@ class Model extends CI_Model {
 	}
 	function uploadFile($file=false,$id=false,$id_kategori=false,$type=false){
 		$this->load->helper('file');
-		$path2 = PATH_BASE.'arsip/assets/media/file/galeri_video/'.$type.'/';
+		$path2 = DOC_PATH_ROOT . 'assets/media/file/galeri_video/'.$type.'/';
 		MakeDir($path2);
 		$upload = '';
 		$name = '';
-		$config['upload_path'] = PATH_BASE.'arsip/assets/media/file/galeri_video/'.$type;
+		$config['upload_path'] = DOC_PATH_ROOT . 'assets/media/file/galeri_video/'.$type;
 		if($type=='video'){
 			$config['allowed_types'] = 'flv|mp4';
 			$upload ='do_upload_non_mime_types';

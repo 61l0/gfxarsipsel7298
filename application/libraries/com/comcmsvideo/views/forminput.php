@@ -38,7 +38,7 @@
 			</td>
 			<td>
 <? 
-				// $path = PATH_BASE.'arsip/assets/media/file/galeri_video/'.@$data->video_file;
+				// $path = DOC_PATH_ROOT . 'assets/media/file/galeri_video/'.@$data->video_file;
 				// $image_thumb = '';
 				// if(is_file($path)): 
 					// $path = BASE_URL.'assets/media/file/galeri_video/'.@$data->video_file;
@@ -53,7 +53,7 @@
 				  </div>
 				  <span id="image_view">
 <? 
-				$path = PATH_BASE.'arsip/assets/media/file/galeri_video/foto/'.@$data->video_image;
+				$path = DOC_PATH_ROOT . 'assets/media/file/galeri_video/foto/'.@$data->video_image;
 				$image_thumb = '';
 				if(is_file($path)): 
 					$path = BASE_URL.'assets/media/file/galeri_video/foto/'.@$data->video_image;

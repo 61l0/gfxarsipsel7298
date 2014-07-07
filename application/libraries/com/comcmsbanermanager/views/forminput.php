@@ -15,7 +15,7 @@
 				  </div><br>
 				  <span id="image_view">
 <? 
-				$path = PATH_BASE.'arsip/assets/media/file/banner/'.@$data->banner_image;
+				$path = DOC_PATH_ROOT . 'assets/media/file/banner/'.@$data->banner_image;
 				$image_thumb = '';
 				if(is_file($path)): 
 					$path = BASE_URL.'assets/media/file/banner/'.@$data->banner_image;

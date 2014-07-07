@@ -394,7 +394,7 @@ class Compengolahan extends Grid{
 		$id_data = $this->CI->input->post('id_data');
 		$this->content['id_data'] = @$id_data;
 		$this->content['data'] = $this->CI->com_model->data_image(@$id_data);
-		
+		//print_r($this->content['data']);
 		$this->CI->load->com($this->lib['class_name'],'view',array('name'=>'formimage','data'=>@$this->content));
 	}	
 	function saveupload(){
@@ -489,7 +489,7 @@ class Compengolahan extends Grid{
 				foreach($res as $rowx){
 					//diganti list gambar dan kotak text area sesuai field galery ky 
 					
-						$path = PATH_BASE.'arsip/assets/media/file/arsip_galery/'.$rowx->id_data.'/'.$rowx->foto;
+						$path = DOC_PATH_ROOT . 'assets/media/file/arsip_galery/'.$rowx->id_data.'/'.$rowx->foto;
 						$image_thumb = '';
 						if(is_file($path)):
 							$path = BASE_URL.'assets/media/file/arsip_galery/'.$rowx->id_data.'/'.$rowx->foto;

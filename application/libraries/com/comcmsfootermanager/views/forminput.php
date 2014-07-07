@@ -28,7 +28,7 @@
 				  </div><br>
 				  <span id="image_view">
 <? 
-				$path = PATH_BASE.'arsip/assets/media/file/footer/'.@$data->footer_image;
+				$path = DOC_PATH_ROOT . 'assets/media/file/footer/'.@$data->footer_image;
 				$image_thumb = '';
 				if(is_file($path)): 
 					$path = BASE_URL.'assets/media/file/footer/'.@$data->footer_image;

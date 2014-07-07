@@ -34,7 +34,7 @@
 				  </div>
 				  <span id="file_view">
 <? 
-				$path = PATH_BASE.'arsip/assets/media/file/peraturan_perundangan/'.@$data->file;
+				$path = DOC_PATH_ROOT . 'assets/media/file/peraturan_perundangan/'.@$data->file;
 				$image_thumb = '';
 				if(is_file($path)): 
 					$path = BASE_URL.'assets/media/file/peraturan_perundangan/'.@$data->file;

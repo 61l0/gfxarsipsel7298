@@ -91,7 +91,7 @@ jQuery(document).ready(function() {
 			  <tr><td colspan="2"><input type="submit" name="save_data" value="Simpan Perubahan" />&nbsp;
 				 <input type="button" value="Keluar" name="cancel" onclick="$('#dialogArea1').dialog('close');" /></td></tr>
 			   <? foreach($data as $rowx){
-					$path = PATH_BASE.'arsip/assets/media/file/galeri_foto/'.@$rowx->id_kategori.'/'.@$rowx->foto;
+					$path = DOC_PATH_ROOT . 'assets/media/file/galeri_foto/'.@$rowx->id_kategori.'/'.@$rowx->foto;
 					$image_thumb = '';
 					if(is_file($path)): 
 						$path = BASE_URL.'assets/media/file/galeri_foto/'.@$rowx->id_kategori.'/'.@$rowx->foto;
