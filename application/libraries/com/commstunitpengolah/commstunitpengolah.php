@@ -75,7 +75,6 @@ class Commstunitpengolah extends Grid{
 		}	
 
 		
-		}
 		echo json_encode($hasil);
 	}	
 	function edit(){
