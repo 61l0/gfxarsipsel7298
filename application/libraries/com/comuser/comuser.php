@@ -29,20 +29,18 @@ class Comuser extends Grid {
 	    
 	    $skpd = array();
 	    $upl = array();	
-	    foreach ( $this->CI->db->select('a.id_skpd_sotk,b.nama_lengkap')
-	    					 ->from('m_skpd_sotk a')
-	   						 ->join('m_skpd b','a.id_skpd=b.id_skpd')
-	    					 ->join('m_sotk c','a.id_aturan_skpd=c.id_aturan_skpd')
-	    					 ->get()->result_object() as $r) {
-	    	$skpd[$r->id_skpd_sotk] = $r->nama_lengkap;
+	    $m_skpd = $this->CI->db->select('a.id_skpd,a.nama_lengkap')
+	    					 ->from('m_skpd  a')
+	    					 ->get()->result_object();
+	    					 
+	    foreach ( $m_skpd as $r) {
+	    	$skpd[$r->id_skpd] = $r->nama_lengkap;
 	    }
-	    foreach($this->CI->db->get('arsip_unit_pengolah')->result_object() as $r){
-	    	$upl[$r->id_unit_pengolah] = $r->name;
-	    }
+	    // foreach($this->CI->db->get('arsip_unit_pengolah')->result_object() as $r){
+	    // 	$upl[$r->id_unit_pengolah] = $r->name;
+	    // }
 		
-		$this->content['aux'] =  array(
-				'skpd_sotk_list' 		=> $skpd,
-				'unit_pengolah_list'	=> $upl);
+		$this->content['aux'] =  array( 'skpd_list'  => $skpd );
 		$conf_view_features = array(
 			'name'=>'comjs_extra',
 			'data'=>$this->content,

@@ -1,0 +1,11 @@
+catatan skpd = tambah upload pdf(opsional)
+tambh validasi
+tombol simpan dignt kirim
+copyright dibuat otomatis thn yg aktif
+
+
+tmbhn pencarian peminjaman mnrt instansi
+tmbhn pencarian pengolahan mnrt instansi
+tmbhn pencarian penyerahan mnrt instansi
+tmbhn pencarian catatan skpd mnrt instansi
+tmbhn pencarian srt msk dn keluar mnrt instansi

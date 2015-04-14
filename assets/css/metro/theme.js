@@ -184,7 +184,7 @@ laporan
 		tabindex+=1;
 		$(this).parent().parent().attr('tabindex',tabindex)
 		var icon = $(this).parent().parent().text().replace(/(\s|\W)*/g,'').replace(/\//,'-').toLowerCase();
-		console.log(icon);
+		// console.log(icon);
 		$(this).replaceWith('<i class="fa '+ icon_nav_list[icon]+'"></i>');
 
 	})
@@ -813,13 +813,13 @@ function DialogLoop(){
  			console.log(id_unit_pengolah)
 
  			try{
-	 			if( typeof window.aux.skpd_sotk_list[id_skpd_sotk] != 'undefined' )
-	 				txt_skpd.val(window.aux.skpd_sotk_list[id_skpd_sotk])
-	 			else
-	 				txt_skpd.val('');
+	 			// if( typeof window.aux.skpd_sotk_list[id_skpd_sotk] != 'undefined' )
+	 			// 	txt_skpd.val(window.aux.skpd_sotk_list[id_skpd_sotk])
+	 			// else
+	 			// 	txt_skpd.val('');
 
-	 			if( typeof window.aux.unit_pengolah_list[id_unit_pengolah] != 'undefined' )
-	 				txt_pengolah.val(window.aux.unit_pengolah_list[id_unit_pengolah])
+	 			if( typeof window.aux.skpd_list[id_unit_pengolah] != 'undefined' )
+	 				txt_pengolah.val(window.aux.skpd_list[id_unit_pengolah])
 	 			else
 	 				txt_pengolah.val('');
 			}

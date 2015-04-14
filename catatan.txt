@@ -1,0 +1,5 @@
+TABEL `c_user`
+
+field yang tidak digunakan : [instansi,id_skpd_sotk]
+
+field pengganti id_skpd     : id_unit_pengolah

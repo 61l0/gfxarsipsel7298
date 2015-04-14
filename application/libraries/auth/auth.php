@@ -93,16 +93,19 @@ class Auth {
 			// echo var_dump($this->CI->db->last_query());
 		foreach ($query->result() as $row)
         	{
-			$section = $row->group_name;
-			$section_type = $row->section_name;
-			$user_id=$row->user_id;
-			$group_id = $row->group_id;
-			$user_name= $row->user_name;
-			$user_password=$row->user_password;
-			$instansi = $row->instansi;
-			$id_skpd_sotk = $row->id_skpd_sotk;
-			$nama_pengguna = $row->nama_pengguna;
-			$status_online = $this->checkOnline($user_id);
+
+			$section 		= $row->group_name;
+			$section_type 	= $row->section_name;
+			$user_id		= $row->user_id;
+			$group_id 		= $row->group_id;
+			$user_name		= $row->user_name;
+			$user_password	= $row->user_password;
+
+			//$instansi 		= $row->instansi;
+			$id_skpd 		= $row->id_unit_pengolah;
+
+			$nama_pengguna 	= $row->nama_pengguna;
+			$status_online 	= $this->checkOnline($user_id);
 			// $count++;
 				if($status_online == 1)
 				{
@@ -122,15 +125,20 @@ class Auth {
 	     	if ($query->num_rows() == 1)
 	     	{
 				//===================== Get skpd query=========================	
-				$this->CI->db->select('d.id_skpd_sotk,d.id_skpd');
-				$this->CI->db->from('m_skpd_sotk d');
-				$this->CI->db->join('m_skpd e','d.id_skpd=e.id_skpd');
-				$this->CI->db->join('m_sotk f','d.id_aturan_skpd=f.id_aturan_skpd');
-				$this->CI->db->where('d.id_skpd_sotk',$id_skpd_sotk);
-				$this->CI->db->where('f.status','on');
-				$skpd = $this->CI->db->get()->row(); 
+				// $this->->db->select('d.id_skpd_sotk,d.id_skpd');
+				// $this->CI->db->from('m_skpd_sotk d');
+				// $this->CI->db->join('m_skpd e','d.id_skpd=e.id_skpd');
+				// $this->CI->db->join('m_sotk f','d.id_aturan_skpd=f.id_aturan_skpd');
+				// $this->CI->db->where('d.id_skpd_sotk',$id_skpd_sotk);
+				// $this->CI->db->where('f.status','on');
+				//$skpd = $this->CI->db->get()->row(); 
+				if($id_skpd)
+				{
+					$skpd = $this->CI->db->where('id_skpd',$id_skpd)->get('m_skpd')->row();
+				}
 			//=============================================================
-				$_SESSION['id_skpd'] 		= @$skpd->id_skpd;
+				$_SESSION['id_skpd'] 		= $id_skpd;
+
 				$_SESSION['section'] 		= $section_type;
 				$_SESSION['nama'] 			= $section;
 				$_SESSION['user_id']		= $user_id;
@@ -145,9 +153,10 @@ class Auth {
 				case 'admin':
 					$_SESSION['admin'] = $section;
 					break;
-				case 'skpd':
+				case 'operator':
 				// die;
-					$_SESSION['skpd'] = $section;
+					$_SESSION['operator'] = $section;
+					$_SESSION['skpd_data'] = $skpd;
 					break;
 				break;
 				default:

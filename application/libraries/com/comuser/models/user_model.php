@@ -11,8 +11,9 @@ class User_model extends CI_Model {
 			$this->db->set('group_id',$this->input->post('group_id'));
 			$this->db->set('user_name',$this->input->post('user_name'));
 			// $this->db->set('user_password',$this->input->post('user_password'));
-			$this->db->set('instansi',$this->input->post('instansi'));
-			$this->db->set('id_skpd_sotk',$this->input->post('id_skpd_sotk'));
+			//$this->db->set('instansi',$this->input->post('instansi'));
+			// $this->db->set('id_skpd_sotk',$this->input->post('id_skpd_sotk'));
+			$this->db->set('id_unit_pengolah',$this->input->post('id_unit_pengolah'));
 			$this->db->set('nama_pengguna',$this->input->post('nama_pengguna'));
 			$this->db->where('user_id',$this->input->post('user_id'));
 			$this->db->update('c_user');
@@ -21,8 +22,9 @@ class User_model extends CI_Model {
 			$this->db->set('group_id',$this->input->post('group_id'));
 			$this->db->set('user_name',$this->input->post('user_name'));
 			$this->db->set('user_password',sha1($this->input->post('user_password')));
-			$this->db->set('instansi',$this->input->post('instansi'));
-			$this->db->set('id_skpd_sotk',$this->input->post('id_skpd_sotk'));
+			// $this->db->set('instansi',$this->input->post('instansi'));
+			// $this->db->set('id_skpd_sotk',$this->input->post('id_skpd_sotk'));
+			$this->db->set('id_unit_pengolah',$this->input->post('id_unit_pengolah'));
 			$this->db->set('nama_pengguna',$this->input->post('nama_pengguna'));
 			$this->db->where('user_id',$this->input->post('user_id'));
 			$this->db->update('c_user');
