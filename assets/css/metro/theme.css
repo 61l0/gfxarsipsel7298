@@ -559,18 +559,15 @@ margin-bottom: 3px;background: #fafcfe url(../../templates/admin/resources/img/b
 }
 
 .paging i.fa{
-	font-size: 277%;
+	font-size: 24px;
 }
 #navigation ul li {
 	margin: 0 2px !important;
 
 }
-.paging a:hover,.paging i.fa:hover{
-	/*color: blue !important;*/
-	/*font-size: 23px;*/
-}
-#navigation{
 
+#navigation{
+	 height: 91px !important;
 }
 #header_caption_content{
 	margin: -63px 0 0;
@@ -739,19 +736,10 @@ ul.subnav-item li{
 	float: left;	
 	border: 1px dashed #9dd53a;
 	margin: 0 0 0 15px;
-	/*border-radius: 4px;*/
 	padding: 2px 2px 3px 2px;
 	margin-bottom: 4em;
 	position: absolute;
 	top: 384px;
-	/*position: fixed;
-	top: 0;*/
-/*
-	-webkit-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
-	-moz-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
-	-ms-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
-	-o-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
-	transition: left .4s ease-in-out, top .4s ease-in-out .4s;*/
 }
 .ui-jqgrid{
 	padding: 2px;
@@ -773,7 +761,6 @@ ul.subnav-item li{
 	padding:0 0 0 26px;
 	height: 33px;
 	line-height: 34px !important;
-	/*border-style: solid;*/
 	font-weight: bold;
 }
 
@@ -843,15 +830,16 @@ overflow: hidden;
     }
         .m-item , ul.paging > li
         {
-           border: 1px dotted #f3f3f3;
+           /*border: 1px dotted #f3f3f3;*/
     float: left !important;
-    height: 77px;
-    margin: 2px !important;
+ /*   height: 77px;
+    margin: 2px !important;*/
     text-align: center;
     width: 11%;
-    border-radius: 64%;
+padding: 17px 3px;
+   /* border-radius: 64%;
     padding: 8px 0 0 0 ;
-            background: transparent url(images/bg-nav_08.png) repeat center center;
+            background: transparent url(images/bg-nav_08.png) repeat center center;*/
         }
 /* END OF TEST */
 
@@ -908,3 +896,25 @@ overflow: hidden;
 /*.paging a span i {
     font-size: 21px !important;
 }*/
+
+/*#navigation .paging li > div {
+    border: 1px solid #cecece;
+    margin: 7px 1px;
+    padding: 2px 4px;
+}
+*/
+#navigation > .paging > li >div {
+    margin: 0 2px;
+}
+
+.menu-553 {
+    width: 75px;
+}
+.h > .hr > .calendar{
+
+}
+.h > .hr > .profileNav{
+
+}	
+
+/*border-style: solid;*/

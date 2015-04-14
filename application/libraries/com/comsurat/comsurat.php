@@ -264,8 +264,12 @@ class Comsurat extends Grid{
 		{
 			$this->CI->load->library('fileupload');
 			
-			$upload_path = 'assets/media/file/attachments/';
-			$result = $this->CI->fileupload->handleUpload(FCPATH . $upload_path);
+			$upload_path = FCPATH . 'assets/media/file/attachments/';
+
+			// echo realpath($upload_path);
+			// die();
+			
+			$result = $this->CI->fileupload->handleUpload( $upload_path);
 
 			// $response = array(
 			// 	'fullpath'	=> '',

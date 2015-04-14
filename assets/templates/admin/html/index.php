@@ -83,11 +83,20 @@ ul#menu li ul li a {cursor:pointer;}
 <script type="text/javascript">
 //jQuery.extend(jQuery.jgrid.defaults, { viewPagerButtons:false });
 function loadFragment(elmContainer,url,postData){
+	var $base_url = '<?=base_url();?>';
+
+	if(url == '-' || url == ($base_url + '-'))
+	{
+		return;
+	}
+	var $default = true;
+
 	if(url == '<?=site_url();?>'){
 		// jQuery(elmContainer).html('Menu ini masih dalam masa konstruksi!');
 		// jQuery(elmContainer).load('<?=site_url('application/views/pages/htmlvar/404.php');?>');
 		jQuery(elmContainer).load('<?=site_url('admin/com/jqhome');?>');
 	}else{
+		$default = false;
 		jQuery(elmContainer).html('');
 		jQuery(elmContainer).load(url,postData,function(){
 		
@@ -107,6 +116,14 @@ function loadFragment(elmContainer,url,postData){
 			// }	
 			
 		});
+	}
+
+	if(!$default)
+	{
+		//var rgxp = new RegExp('/'+base_url+'/','g');
+		var route = '/'+url.split($base_url)[1];
+		//console.log(url);
+		document.location.hash = route;
 	}
 }
 
@@ -326,9 +343,27 @@ div.line {
       </div>
       <!--e:content-box-->
     </div>
+    <div class="ajaxl">
+    	
+    </div>
     <!--e:main-content-->
     <!--content-->
 <?	include('htmlvar/footer.php'); //=htmlVar('footer');?>
 
 <script type="text/javascript" src="<?php echo BASE_URL?>assets/js/jquery/jquery.lightbox-0.5.pack.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL?>assets/js/jquery/jquery.lightbox-0.5.css">
+
+<script type="text/javascript">
+	$('.ajaxl').ajaxStart(function(){
+		// console.log(arguments)
+		$('.loading').show()
+	});
+	$('.ajaxl').ajaxStop(function(){
+		// console.log(arguments)
+		$('.loading').hide()
+
+	});
+	// $('.ajaxl').ajaxStart(function(){
+
+	// });
+</script>

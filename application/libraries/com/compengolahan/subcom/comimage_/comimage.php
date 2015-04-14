@@ -78,7 +78,7 @@ class comimage extends Grid {
 				$result = $this->uploadFile($_FILES['img_file'],$id, $dir_name);
 				// dump($this->CI->db->last_query());
 				$path = PATH_BASE.'modul_indagkop/assets/media/file/'.$dir_name.'/'.$id.'/_thumbs/';
-				// MakeDir($path);
+				MakeDir($path);
 				$config['thumb_marker']='';
 				$config['source_image'] = 'assets/media/file/'.$dir_name.'/'.$id.'/'.$this->CI->upload->file_name;
 				$config['new_image'] = 'assets/media/file/'.$dir_name.'/'.$id.'/_thumbs/thumbs_'.$this->CI->upload->file_name;

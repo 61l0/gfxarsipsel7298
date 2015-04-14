@@ -169,11 +169,11 @@ laporan
 		'beranda' : 'icon-home',
 		'datamaster' : 'icon-hdd' ,
 		'pengolahan': 'icon-retweet',
-		'penyerahan-akuisisi': 'icon-exchange',
-		'pemusnahan-retensi': 'icon-trash',
-		'peminjaman-pelayanan': 'icon-hand-right',
+		'penyerahanakuisisi': 'icon-exchange',
+		'pemusnahanretensi': 'icon-trash',
+		'peminjamanpelayanan': 'icon-hand-right',
 		'catatanskpd': 'icon-list-alt',
-		'suratmasuk&keluar': 'icon-envelope',
+		'suratmasukkeluar': 'icon-envelope',
 		'laporan': 'icon-bar-chart',
 		'pengaturanpengguna':'icon-group',
 		'pengaturanmenu':'icon-th-list',
@@ -183,7 +183,7 @@ laporan
 		//var src = $(this).attr('src').replace(/\.png$/,'').split('/');
 		tabindex+=1;
 		$(this).parent().parent().attr('tabindex',tabindex)
-		var icon = $(this).parent().parent().text().replace(/\s*/g,'').replace(/\//,'-').toLowerCase();
+		var icon = $(this).parent().parent().text().replace(/(\s|\W)*/g,'').replace(/\//,'-').toLowerCase();
 		console.log(icon);
 		$(this).replaceWith('<i class="fa '+ icon_nav_list[icon]+'"></i>');
 
@@ -810,6 +810,7 @@ function DialogLoop(){
 				}).change();
  			},100)
  			
+ 			console.log(id_unit_pengolah)
 
  			try{
 	 			if( typeof window.aux.skpd_sotk_list[id_skpd_sotk] != 'undefined' )

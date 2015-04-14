@@ -34,15 +34,18 @@ class Panel_menu_model extends CI_Model {
 		foreach($data as $row):
 			$child = $this->_getChild($row->id_menu);
 			$active = ($row->id_menu==1) ? 'active' : 'pasive' ;
+				$cls = 'menu-'. $row->id_menu;
+
 			if($hasil['group_name']=="superadmin"){ @$hasil['group_name'] = "admin";}
+
 			if(strlen($child)>0){
 				$menu['menu_list'] .= "<li>
-				<div id=\"mnav".$row->id_menu."\" class=\"".$active."\"><a onclick=\"loadFragment('#main_panel_container','".site_url($row->menu_path)."');return false;\"><span class=\"pmn\">
+				<div class=\"$cls\" id=\"mnav".$row->id_menu."\" class=\"".$active."\"><a onclick=\"loadFragment('#main_panel_container','".site_url($row->menu_path)."');return false;\"><span class=\"pmn\">
 				<img src=\"assets/templates/".@$hasil['group_name']."/resources/img/common/".$row->menu_icon."\" /></span><span class=\"mn\">".$row->menu_name."</span><div class=\"cb\"></div></a></div>";
 				$menu['menu_list'] .= '<ul>'.$child.'</ul>';
 			}else{
 				$menu['menu_list'] .= "<li>
-				<div id=\"mnav".$row->id_menu."\" class=\"".$active."\"><a onclick=\"loadFragment('#main_panel_container','".site_url($row->menu_path)."');getActiveNav(".$row->id_menu.");return false;\"><span class=\"pmn\">
+				<div class=\"$cls\" id=\"mnav".$row->id_menu."\" class=\"".$active."\"><a onclick=\"loadFragment('#main_panel_container','".site_url($row->menu_path)."');getActiveNav(".$row->id_menu.");return false;\"><span class=\"pmn\">
 				<img src=\"assets/templates/".@$hasil['group_name']."/resources/img/common/".$row->menu_icon."\" /></span><span class=\"mn\">".$row->menu_name."</span><div class=\"cb\"></div></a></div>";
 			}
 			$menu['menu_list'] .= '</li>';

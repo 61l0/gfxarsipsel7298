@@ -2,6 +2,7 @@ gf = {
 	content:{
 		load:function(){},
 		fragment:function(elmContainer,url,postData){
+			console.log(url);
 			jQuery(elmContainer).slideUp(1000,function(){
 				jQuery(elmContainer).html('');
 				jQuery(elmContainer).load(url,postData,function(){

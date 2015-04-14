@@ -6,8 +6,13 @@ define('GF_LIBPATH' ,'lib/');
 define('GF_COMPATH' , 'com/');
 define('GF_COM_PREFIX' , 'com');
 define('GF_COM_VIEWPATH' , 'com/com');
+
 define('DOC_PATH_BASE', $_SERVER['DOCUMENT_ROOT'].'/');
-define('DOC_PATH_ROOT', $_SERVER['DOCUMENT_ROOT'].'/arsipsel/');
+
+$this_dir = dirname(__FILE__) . '/../..';
+
+define('DOC_PATH_ROOT', realpath($this_dir) . '/');
+
 define('DOC_PATH_APP' , DOC_PATH_ROOT.'application/');
 define('DOC_PATH_GRID' , DOC_PATH_APP.'libraries/grid/');
 define('CLASSES_PATH' , DOC_PATH_ROOT.'classes/');

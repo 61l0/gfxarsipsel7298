@@ -1,7 +1,28 @@
 <?php
 
 class Test extends CI_Controller{
+	public function MakeDir()
+	{
+		error_reporting(E_ALL);
+		$dir_name = 'test';
+		$id = '2009';
+
+		$path = DOC_PATH_ROOT . 'assets/media/file/'.$dir_name.'/'.$id.'/_thumbs/';
+		//echo $path. "\n";
+		MakeDir($path);
+	}
 	public function index()
+	{
+		echo 'CEK gd function' . "\n";
+
+		if (extension_loaded('gd') && function_exists('gd_info')) {
+		    echo "PHP GD library is installed on your web server";
+		}
+		else {
+		    echo "PHP GD library is NOT installed on your web server";
+		}
+	}
+	public function indexsx()
 	{
 		set_include_path(CLASSES_PATH . 'ExcelWriter');
 
