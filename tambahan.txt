@@ -1,7 +1,7 @@
 catatan skpd = tambah upload pdf(opsional)
 tambh validasi
 tombol simpan dignt kirim
-copyright dibuat otomatis thn yg aktif
+copyright dibuat otomatis thn yg aktif [FIXED]
 
 
 tmbhn pencarian peminjaman mnrt instansi

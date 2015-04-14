@@ -60,7 +60,7 @@
 });					
 		
 </script>
-<h3 class="grid-title"><i class="fa icon-hdd"></i>&nbsp;Master Instansi</h3>
+<h3 class="grid-title"><i class="fa icon-hdd"></i>&nbsp;Master Instansi / SKPD</h3>
 
 <div class="toolbar-grid">
 	 <a href="javascript:;" onclick="<?=$class_name;?>grid.extra.tambah({});">

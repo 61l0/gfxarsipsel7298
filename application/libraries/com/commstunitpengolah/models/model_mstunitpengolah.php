@@ -27,8 +27,8 @@ class Model_mstunitpengolah extends CI_Model {
 				$this->db->set('nama_lengkap',$nama_lengkap);	
 				$this->db->insert('m_skpd');
 				
-				$this->db->set('name',$nama_lengkap);	
-				$this->db->insert('arsip_unit_pengolah');
+				// $this->db->set('name',$nama_lengkap);	
+				// $this->db->insert('arsip_unit_pengolah');
 				
 				
 				$this->responce['rows'] = array('result'=>'succes','message'=>'Data  Berhasil Diinput','oper'=>$oper);
@@ -38,9 +38,9 @@ class Model_mstunitpengolah extends CI_Model {
 				$this->db->set('nama_lengkap',$nama_lengkap);
 				$this->db->update('m_skpd');
 				
-				$this->db->where('id_unit_pengolah',$this->input->post('id_skpd'));				
-				$this->db->set('name',$nama_lengkap);
-				$this->db->update('arsip_unit_pengolah');
+				// $this->db->where('id_unit_pengolah',$this->input->post('id_skpd'));				
+				// $this->db->set('name',$nama_lengkap);
+				// $this->db->update('arsip_unit_pengolah');
 				
 				$this->responce['rows'] = array('result'=>'succes','message'=>'Data  Berhasil Diedit','oper'=>$oper);
 			break;
@@ -48,8 +48,8 @@ class Model_mstunitpengolah extends CI_Model {
 				$this->db->where('id_skpd',$this->input->post('id_skpd'));
 				$this->db->delete('m_skpd');
 				
-				$this->db->where('id_unit_pengolah',$this->input->post('id_skpd'));
-				$this->db->delete('arsip_unit_pengolah');
+				// $this->db->where('id_unit_pengolah',$this->input->post('id_skpd'));
+				// $this->db->delete('arsip_unit_pengolah');
 				$this->responce['rows'] = array('result'=>'succes','message'=>'Data  Berhasil Dihapus','oper'=>$oper);
 			break;
 		}	
