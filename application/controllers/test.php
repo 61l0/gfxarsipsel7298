@@ -1,6 +1,11 @@
 <?php
 
 class Test extends CI_Controller{
+	public function clearlog()
+	{
+		$path = realpath(APPPATH.'logs/');
+		echo $path;
+	}
 	public function MakeDir()
 	{
 		error_reporting(E_ALL);

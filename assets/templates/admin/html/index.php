@@ -278,10 +278,20 @@ div.line {
     margin-left: 127px;
     margin-top: -2px;
 }
+div.hv{
+	height: 121px;
+}
+div.h{
+	position: fixed;
+	margin: 0;
+	top: 0;
+	z-index: 3;
+}
 </style>
 </head>
 <body onLoad="waktu()" >
 <div class="body clearfix">
+<div class="hv"></div>
   <div class="h">
   	<div class="hl">
   		<div class="ov-logo">

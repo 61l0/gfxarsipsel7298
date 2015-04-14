@@ -41,12 +41,12 @@ class Panel_menu_model extends CI_Model {
 			if(strlen($child)>0){
 				$menu['menu_list'] .= "<li>
 				<div class=\"$cls\" id=\"mnav".$row->id_menu."\" class=\"".$active."\"><a onclick=\"loadFragment('#main_panel_container','".site_url($row->menu_path)."');return false;\"><span class=\"pmn\">
-				<img src=\"assets/templates/".@$hasil['group_name']."/resources/img/common/".$row->menu_icon."\" /></span><span class=\"mn\">".$row->menu_name."</span><div class=\"cb\"></div></a></div>";
+				<img class=\"replaced-with-icon\" src=\"assets/templates/".@$hasil['group_name']."/resources/img/common/".$row->menu_icon."\" /></span><span class=\"mn\">".$row->menu_name."</span><div class=\"cb\"></div></a></div>";
 				$menu['menu_list'] .= '<ul>'.$child.'</ul>';
 			}else{
 				$menu['menu_list'] .= "<li>
 				<div class=\"$cls\" id=\"mnav".$row->id_menu."\" class=\"".$active."\"><a onclick=\"loadFragment('#main_panel_container','".site_url($row->menu_path)."');getActiveNav(".$row->id_menu.");return false;\"><span class=\"pmn\">
-				<img src=\"assets/templates/".@$hasil['group_name']."/resources/img/common/".$row->menu_icon."\" /></span><span class=\"mn\">".$row->menu_name."</span><div class=\"cb\"></div></a></div>";
+				<img class=\"replaced-with-icon\" src=\"assets/templates/".@$hasil['group_name']."/resources/img/common/".$row->menu_icon."\" /></span><span class=\"mn\">".$row->menu_name."</span><div class=\"cb\"></div></a></div>";
 			}
 			$menu['menu_list'] .= '</li>';
 		endforeach;

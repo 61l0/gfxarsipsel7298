@@ -12,21 +12,21 @@
 
 	function verbose_log($content,$type="lib",$path="grid")
 	{
-		$data  = "-------------------------------------------------------------------------------------------------------------------". "\r\n";
-	    $data .= date('d/m/Y H:i:s') . "\r\n";
-	   	$data .= $content . "\r\n";
-	   	$data .= "-------------------------------------------------------------------------------------------------------------------". "\r\n\r\n";
+		// $data  = "-------------------------------------------------------------------------------------------------------------------". "\r\n";
+	 //    $data .= date('d/m/Y H:i:s') . "\r\n";
+	 //   	$data .= $content . "\r\n";
+	 //   	$data .= "-------------------------------------------------------------------------------------------------------------------". "\r\n\r\n";
 
-	   	$filename = APPPATH .'logs/'. $type ;
+	 //   	$filename = APPPATH .'logs/'. $type ;
 
-	   	if(!is_dir($filename))
-	   	{
-	   		@mkdir($filename);
-	   	}
+	 //   	if(!is_dir($filename))
+	 //   	{
+	 //   		@mkdir($filename);
+	 //   	}
 
-	   	$filename .= '/' . $path . '.log';
-	   	//die($filename);
-	   	file_put_contents($filename, $data, FILE_APPEND);
+	 //   	$filename .= '/' . $path . '.log';
+	 //   	//die($filename);
+	 //   	file_put_contents($filename, $data, FILE_APPEND);
 	}
 
 	function tgl_srt_to_mysql($date){
@@ -225,24 +225,52 @@
 	}
 	
 	function MakeDir($dir){
-		// "MakeDir($dir) : is called\n";
-		$dir = explode('/', $dir);
-		
-		//print_r($dir);
-		
-		$dir[0]="/";
+		if(!WIN32)
+		{
+			// "MakeDir($dir) : is called\n";
+			$dir = explode('/', $dir);
+			
+			//print_r($dir);
+			
+			$dir[0]="/";
 
-		$tmp = "";
-		foreach($dir as $rec){
-			if(!empty($rec)){
-				$dest = $rec.'/';
-				$tmp .= $dest;
-				if(!is_dir($tmp)){
-		//			echo "mkdir($tmp)";
-					$r = mkdir($tmp);
-		//			echo $r ? '[OK]':'[FAIL]' . "\n";
+			$tmp = "";
+			foreach($dir as $rec){
+				if(!empty($rec)){
+					$dest = $rec.'/';
+					$tmp .= $dest;
+					if(!is_dir($tmp)){
+			//			echo "mkdir($tmp)";
+						$r = mkdir($tmp);
+			//			echo $r ? '[OK]':'[FAIL]' . "\n";
 
+					}
 				}
 			}
 		}
+		else
+		{
+			// echo "MakeDir($dir) : is called\n";
+			// "MakeDir($dir) : is called\n";
+			$dir = explode('/', $dir);
+			
+			//print_r($dir);
+			
+			//$dir[0]="/";
+
+			$tmp = "";
+			foreach($dir as $rec){
+				if(!empty($rec)){
+					$dest = $rec.'/';
+					$tmp .= $dest;
+					if(!is_dir($tmp)){
+						// echo "mkdir($tmp)";
+						$r = mkdir($tmp);
+						// echo $r ? '[OK]':'[FAIL]' . "\n";
+
+					}
+				}
+			}
+		}
+		
 	}

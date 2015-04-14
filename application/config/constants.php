@@ -17,6 +17,8 @@ define('DOC_PATH_APP' , DOC_PATH_ROOT.'application/');
 define('DOC_PATH_GRID' , DOC_PATH_APP.'libraries/grid/');
 define('CLASSES_PATH' , DOC_PATH_ROOT.'classes/');
 define('TEMPLATES_PATH' , DOC_PATH_ROOT.'assets/templates/');
+
+define('WIN32',strtoupper(substr(PHP_OS, 0, 3)) === 'WIN');
 //var_dump(DOC_PATH_ROOT);
 /*
 |--------------------------------------------------------------------------

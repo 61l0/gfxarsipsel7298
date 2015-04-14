@@ -107,19 +107,19 @@ class Auth {
 			$nama_pengguna 	= $row->nama_pengguna;
 			$status_online 	= $this->checkOnline($user_id);
 			// $count++;
-				if($status_online == 1)
-				{
-					$now = time();
-					$old = $this->getLastActivity($user_id);
-					if(!$this->getDiff($old,$now))
-					{
-						$responce = array('result'=>'failed','message'=>"Anda masih tercatat dalam database sebagai user online.\nIni mungkin terjadi karena :\n1. Anda belum \"Logout\" pada waktu terakhir kali Anda login, atau \n2. Ada orang lain yang sedang menggunakan user Anda. \nJika kemungkinan pertama memang benar, Anda hanya perlu menunggu sekitar 10 menit dari \nsejak aktivitas terakhir Anda di sistem. Jika 10 menit berselang namun \nAnda masih tetap tidak bisa login, maka kemungkinan kedua bisa jadi benar. \nJika Anda tidak yakin, silakan hubungi Administrator untuk konfirmasi. \nHal ini penting untuk mengindari adanya pemakaian user oleh orang yang tidak bertanggung jawab.");
-						echo json_encode($responce);
-						die();
-					}else{
-						$this->CI->db->delete('c_online',array('user_id'=>$user_id));
-					}
-				}
+				// if($status_online == 1)
+				// {
+				// 	$now = time();
+				// 	$old = $this->getLastActivity($user_id);
+				// 	if(!$this->getDiff($old,$now))
+				// 	{
+				// 		$responce = array('result'=>'failed','message'=>"Anda masih tercatat dalam database sebagai user online.\nIni mungkin terjadi karena :\n1. Anda belum \"Logout\" pada waktu terakhir kali Anda login, atau \n2. Ada orang lain yang sedang menggunakan user Anda. \nJika kemungkinan pertama memang benar, Anda hanya perlu menunggu sekitar 10 menit dari \nsejak aktivitas terakhir Anda di sistem. Jika 10 menit berselang namun \nAnda masih tetap tidak bisa login, maka kemungkinan kedua bisa jadi benar. \nJika Anda tidak yakin, silakan hubungi Administrator untuk konfirmasi. \nHal ini penting untuk mengindari adanya pemakaian user oleh orang yang tidak bertanggung jawab.");
+				// 		echo json_encode($responce);
+				// 		die();
+				// 	}else{
+				// 		$this->CI->db->delete('c_online',array('user_id'=>$user_id));
+				// 	}
+				// }
         	}
 	
 	     	if ($query->num_rows() == 1)

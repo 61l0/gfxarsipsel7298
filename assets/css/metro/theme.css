@@ -167,19 +167,25 @@ opacity: 0.95;
 }
 
 .profileNav{
-margin-right: 9px;
-    margin-top: -32px;
+ color: #fff;
+    font-size: 71%;
+    font-weight: bold;
+    margin-right: 6px;
+    margin-top: 82px;
     position: absolute;
     right: 0;
-    text-transform: none;
+    text-shadow: 1px -1px 1px #525252;
 }
 
 .calendar {
-     color: #fff;
+    color: #fff;
     left: 0;
-    margin-left: 19px;
-    margin-top: -30px;
+    margin-left: 259px;
+    margin-top: 82px;
     position: absolute;
+    font-size: 71%;
+    font-weight: bold;
+    text-shadow: 1px -1px 1px #525252;
 }
 
 #navigation{
@@ -918,3 +924,6 @@ padding: 17px 3px;
 }	
 
 /*border-style: solid;*/
+img.replaced-with-icon{
+	display: none;
+}
