@@ -73,9 +73,6 @@ class Commstunitpengolah extends Grid{
 				
 				$hasil = $this->CI->model_mstunitpengolah->simpan(@$id_skpd);
 		}	
-
-		
-		
 		echo json_encode($hasil);
 	}	
 	function edit(){
