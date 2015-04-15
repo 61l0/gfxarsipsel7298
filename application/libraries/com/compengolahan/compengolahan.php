@@ -402,7 +402,7 @@ class Compengolahan extends Grid{
 		if(strlen($_FILES['img_file']['name'])>0){
 				$dir_name = 'arsip_galery';
 				$result = $this->uploadFile($_FILES['img_file'],$id, $dir_name);
-				dump($this->CI->db->last_query());
+				//dump($this->CI->db->last_query());
 				$path = DOC_PATH_ROOT . 'assets/media/file/'.$dir_name.'/'.$id.'/_thumbs/';
 				//echo $path;
 				MakeDir($path);

@@ -164,7 +164,9 @@ class Auth {
 			endswitch;
 			
 			// insert user_id to table 'online'
-			$this->CI->db->insert('c_online',array('user_id'=>$user_id));
+			if(!$status_online){
+				$this->CI->db->insert('c_online',array('user_id'=>$user_id));
+			}
 			return TRUE;
 		}
 		else 

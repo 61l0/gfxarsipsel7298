@@ -41,9 +41,9 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = '127.0.0.1';
-$db['default']['username'] = 'root';
-$db['default']['password'] = 'sejati86';
+$db['default']['hostname'] = '192.168.1.1';
+$db['default']['username'] = 'bbd33';
+$db['default']['password'] = 'jingga';
 $db['default']['database'] = "db_arsipsel";
 // $db['default']['database'] = "db_anggaran";
 $db['default']['dbdriver'] = 'mysql';
