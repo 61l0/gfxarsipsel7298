@@ -117,13 +117,13 @@ jQuery(document).ready(function() {
 			  <tr><td colspan="2"><input type="submit" name="save_data" value="Simpan Perubahan" />&nbsp;
 				 <input type="button" value="Keluar" name="cancel" onclick="$('#dialogArea1').dialog('close');" /></td></tr>
 			   <? foreach($data as $rowx){
-					$path = DOC_PATH_ROOT . 'assets/media/file/arsip_galery/'.@$rowx->id_data.'/'.@$rowx->foto;
+					$path_to_file = DOC_PATH_ROOT . 'assets/media/file/arsip_galery/'.@$rowx->id_data.'/'.@$rowx->foto;
 					//echo $path;
 					$image_thumb = '';
 					if(1): 
 						$path = BASE_URL.'assets/media/file/arsip_galery/'.@$rowx->id_data.'/'.@$rowx->foto;
 						
-						$image_thumb .= '<span id="image_'.@$rowx->id_galery.'"><img src="'.(is_file($path)?$path:'assets/image/no_image_preview.jpg').'" width="300">';
+						$image_thumb .= '<span id="image_'.@$rowx->id_galery.'"><img src="'.(is_file($path_to_file)?$path:'assets/image/no_image_preview.jpg').'" width="300">';
 						$image_thumb .= '<br /><a onclick="Remove_Image('.@$rowx->id_galery.');" class="fm-button ui-state-default ui-corner-all fm-button-icon-left"><span class="ui-icon ui-icon-trash"></span>Hapus</a></span>';
 					endif;
 					
