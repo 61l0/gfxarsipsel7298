@@ -3,14 +3,14 @@
 table {
 	font-size:12px;
 	list-style:none;
-	font-family:Tahoma;
+	/*font-family:Tahoma;*/
 	font-weight:bold;
 }
 
 .table-form {
 	float:left;
 	border:solid 1px #CCC;
-	font-family:Calibri, Arial, Helvetica, sans-serif;
+	/*font-family:Calibri, Arial, Helvetica, sans-serif;*/
 	font-size:12px;
 	background-color:#f1f1f1;
 	width:100%;
@@ -57,7 +57,7 @@ table {
 	border-top:solid 1px #d4d4d4;
 	border-left:solid 1px #d4d4d4;
 	border-right:solid 1px #d4d4d4;
-	font-family:Calibri, Arial, Helvetica, sans-serif;
+	/*font-family:Calibri, Arial, Helvetica, sans-serif;*/
 	font-size:12px;
 	background-color:#f0f0f0;
 	padding:0px;
@@ -108,7 +108,7 @@ table {
 .table-form-flat {
 	float:left;
 	border:solid 7px #8cbfec;
-	font-family:Calibri, Tahoma, Arial, Helvetica, sans-serif;
+	/*font-family:Calibri, Tahoma, Arial, Helvetica, sans-serif;*/
 	font-size:12px;
 	background-color:#fff;
 	padding:0px;
@@ -162,7 +162,7 @@ table {
 .table-search th {
 	text-align:left;
 	font-size:12px;
-	font-family:Calibri, Tahoma, Helvetica,Arial,sans-serif;
+	/*font-family:Calibri, Tahoma, Helvetica,Arial,sans-serif;*/
 	background:url(../img/table/bg-th-brown.gif) repeat-x;
 	height:30px;
 	-moz-border-radius-topleft:5px;
@@ -174,7 +174,7 @@ table {
 	padding:2px 10px;
 	color:#555;
 	font-weight:bold;
-	font-family:Calibri, Tahoma, Helvetica,Arial,sans-serif;
+	/*font-family:Calibri, Tahoma, Helvetica,Arial,sans-serif;*/
 }
 .table-search .bt-submit {
 	font-size:11px;
@@ -395,7 +395,7 @@ table {
 	clear:both;
 	float:left;
 	width:100%;
-	font-family:Lucida Grande, Lucida Sans, Arial, sans-serif;
+	/*font-family:Lucida Grande, Lucida Sans, Arial, sans-serif;*/
 }
 
 #table-jqgrid-box .title{
@@ -427,7 +427,7 @@ table {
 	border-left:solid 1px #d5d5d5;
 	padding:0;
 	margin:0;
-	font-family:Lucida Grande, Lucida Sans, Arial, sans-serif;
+	/*font-family:Lucida Grande, Lucida Sans, Arial, sans-serif;*/
 }
 .table-jqgrid tr.title, .table-jqgrid tr.title:hover {
 	text-align:left;
@@ -1070,7 +1070,7 @@ table {
 	width:auto;
 	height:18px;
 	padding:7px 5px;
-	font-family:tahoma,arial;
+	/*font-family:tahoma,arial;*/
 	font-size:14px;
 	font-weight:bold;
 	color:#fff;
@@ -1092,7 +1092,7 @@ table {
 
 .form-reg-searc-box strong {
 	color:#004951;
-	font-family:tahoma,arial;
+	/*font-family:tahoma,arial;*/
 	font-weight:bold;
 	font-size:23px;
 }
@@ -1100,7 +1100,7 @@ table {
 .form-reg-searc-box .text {
 	width:305px;
 	height:33px;	
-	font-family:tahoma;
+	/*font-family:tahoma;*/
 	font-weight:bold;
 	font-size:26px;
 	color:#c91051;
@@ -1126,7 +1126,7 @@ table {
 	width:auto;
 	height:18px;
 	padding:7px 5px;
-	font-family:tahoma,arial;
+	/*font-family:tahoma,arial;*/
 	font-size:14px;
 	font-weight:bold;
 	color:#fff;
@@ -1234,7 +1234,7 @@ table {
 	background:#f5faf9;
 	float:left;
 	width:100%;
-	font-family:calibri;
+	/*font-family:calibri;*/
 }
 
 .form-reg-data .title {
@@ -1242,7 +1242,7 @@ table {
 	width:auto;
 	height:18px;
 	padding:7px 5px;
-	font-family:tahoma,arial;
+	/*font-family:tahoma,arial;*/
 	font-size:14px;
 	font-weight:bold;
 	color:#fff;
@@ -1338,14 +1338,8 @@ table {
 	text-decoration:none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+.ui-dialog .ui-dialog-titlebar a {
+    background: none repeat scroll 0 0 #7f7f7f;
+    margin: 9px 0 -1px 6px;
+    padding-top: 4px;
+}

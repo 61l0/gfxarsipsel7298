@@ -78,8 +78,8 @@ h3.accordionSection {
 }
 
 .ui-jqdialog-title{
-	text-transform: uppercase;
-	font-weight: bold;
+	/*text-transform: uppercase;
+	font-weight: bold;*/
 }
 .ui-jqgrid tr.ui-state-highlight{
 background: #4096ee; /* Old browsers */
@@ -130,7 +130,8 @@ select,div.uploader, .ui-autocomplete-input, .wijmo-wijtextbox.ui-widget, input.
 	-khtml-border-radius: 0 !important; 
 }
 .ui-dialog {
-    border: dashed 1px #9dd53a;
+     border: 1px solid green;
+    border-radius: 0;
     box-shadow: none !important;
 }
 .page .header, .footer{
@@ -952,7 +953,7 @@ h3.grid-title{
 	color: midnightblue;
 }
 .toolbar-grid {
-    margin: 37px 0 0 !important;
+    margin: 37px 23px 5px 4px !important;
     position: fixed;
     right: 0;
 }
@@ -1006,5 +1007,11 @@ h1{
 
 }
 .bt-blue-common, input[type="button"], .ui-jqdialog-titlebar, .ui-dialog .ui-dialog-titlebar, .ui-jqgrid .ui-state-default, .ui-accordion .ui-accordion-header, .ui-accordion .ui-accordion-header.ui-state-active, .ui-accordion .ui-accordion-header.ui-state-hover, .ui-accordion .ui-accordion-header.ui-state-focus, .ui-accordion-right .ui-accordion-header, .ui-accordion-left .ui-accordion-header, .ui-accordion-right .ui-accordion-header.ui-state-active, .ui-accordion-left .ui-accordion-header.ui-state-active, .ui-accordion-right .ui-accordion-header.ui-state-hover, .ui-accordion-left .ui-accordion-header.ui-state-hover, .ui-accordion-right .ui-accordion-header.ui-state-focus, .ui-accordion-left .ui-accordion-header.ui-state-focus, .ui-slider .ui-slider-handle, .ui-tabs .ui-widget-header, div.selector span, div.uploader span.action, .ui-expander .ui-expander-header, .ui-expander .ui-expander-header.ui-state-active, .ui-expander .ui-expander-header.ui-state-hover, .ui-expander .ui-expander-header.ui-state-focus, .ui-expander-left .ui-expander-header, .ui-expander-left .ui-expander-header.ui-state-active, .ui-expander-left .ui-expander-header.ui-state-hover, .ui-expander-left .ui-expander-header.ui-state-focus, .ui-expander-right .ui-expander-header, .ui-expander-right .ui-expander-header.ui-state-active, .ui-expander-right .ui-expander-header.ui-state-hover, .ui-expander-right .ui-expander-header.ui-state-focus{
-	background: midnightblue;
+	/*background: midnightblue;*/
+}
+.ui-jqdialog{
+	font-family: Raleway;
+}
+.EditTable td input, .EditTable td select, .EditTable td textarea{
+	font-family: Roboto;
 }
