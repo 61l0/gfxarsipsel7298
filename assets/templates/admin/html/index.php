@@ -13,6 +13,8 @@
 
 <link rel="stylesheet"  type="text/css" href="<?=base_url().'assets/templates/admin/resources/load.style.css';?>" />
 <link rel="stylesheet"  type="text/css" href="<?=base_url().'assets/js/validate/jquery.validate.css';?>" />
+<link rel="stylesheet"  type="text/css" href="<?=base_url().'assets/css/fonts/raleway/font.css';?>" />
+<link rel="stylesheet"  type="text/css" href="<?=base_url().'assets/css/fonts/roboto/font.css';?>" />
 <link rel="stylesheet"  type="text/css" href="<?=base_url().'assets/js/validate/style.css';?>" />
 <link rel="stylesheet"  type="text/css" href="<?=base_url().'assets/js/jquery.autocomplete.css';?>" />
 <link rel="shortcut icon" href="<?=base_url().'assets/image/favicon.ico" type="image/x-icon';?>" />
@@ -76,6 +78,7 @@ ul#menu li ul li a {cursor:pointer;}
 <script type="text/javascript" src="<?=base_url().'assets/templates/admin/resources/js/common/hint.js" type="text/javascript';?>"></script>
 <script type="text/javascript" src="<?=base_url().'assets/templates/admin/resources/js/prettyGalery/jquery.prettyGallery.js';?>"></script>
 <script type="text/javascript" src="<?=base_url().'assets/js/formvalidate/jquery.validate.js';?>"></script>
+<script type="text/javascript" src="<?=base_url().'assets/js/angular.min.js';?>"></script>
 
          
 
