@@ -227,7 +227,7 @@ function waktu() {
 }
 .h{
 	 height: 121px;
-    margin-top: 37px;
+    margin-top:-12px !important;
     min-width: 1000px;
     overflow: hidden;
 	background: transparent url(<?php echo base_url()?>assets/css/metro/images/bg-mnu_04.png) repeat-x -15px 5px;
@@ -247,7 +247,7 @@ function waktu() {
 
 }
 .h > .hl > .ov-title > .ov-text{
-	padding-top: 8px;
+	padding-top: 15px;
 	padding-left: 109px;
 }
 .h > .hl > .ov-sub-title{
@@ -255,20 +255,20 @@ function waktu() {
 	width: 380px;
 }
 .h > .hl > .ov-sub-title > .ov-text{
-	padding-left: 112px;
-	padding-top: 8px;
+	padding-left: 110px;
+    padding-top: 15px;
 }
 .h > .hr{
 	/*float: right;*/
 	margin-left: 380px;
 /*	border: solid 1px #dedede;*/
-	width: 65%;
+	/*width: 65%;*/
 }
 .h > .hl > .ov-logo{
 	width: 115px;
 	height: 119px;
 	position: absolute;
-	margin-top: 4px;
+	margin-top: 12px;
 	margin-left: 4px;
 }
 #navigation{
@@ -286,6 +286,7 @@ div.h{
 	margin: 0;
 	top: 0;
 	z-index: 3;
+	width: 100%;
 }
 </style>
 </head>
@@ -329,6 +330,7 @@ div.h{
 		  </ul>
 		</div>
   	</div>
+  	<div class="bgg"></div>
   	<div class="cb">
   	</div>
   </div>	

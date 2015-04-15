@@ -356,7 +356,7 @@ laporan
 					tabindex += 1;
 					var li = $('<li></li>');
 					var div = $('<div></div>').addClass('accordion-item');
-					var anchor = $('<a></a>').attr('tabindex',tabindex).attr('onclick',obj.onclick ).html('<i class="fa icon-hand-right"></i>'+obj.caption)
+					var anchor = $('<a></a>').attr('tabindex',tabindex).attr('onclick',obj.onclick ).html('<i class="fa icon-chevron-right"></i> '+obj.caption)
 					accordionContent2.append(li.append(div.append(anchor)));
 				//	console.log(obj)
  				})
@@ -540,7 +540,7 @@ function GridChecker(){
 
 		// if( $('#navigation').is(':hidden') )
 		// {
-			var mTop = 231;
+			var mTop = 193;
 			if($('.accordionMenu').css('top')!= mTop+'px' ){
 				$('.accordionMenu').animate({
 					top:mTop
