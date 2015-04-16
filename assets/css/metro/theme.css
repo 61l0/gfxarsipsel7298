@@ -32,23 +32,7 @@ tr.grayed{
 background: #9dd53a !important;
 
 }
-.toolbar-filter,.toolbar-search {
-    border: 1px dashed #9dd53a !important;
-    -moz-border-radius:0 !important;
-	-webkit-border-radius:0 !important;
-	border-radius:0 !important;
-	background: #87e0fd; /* Old browsers */
-background: -moz-linear-gradient(top,  #87e0fd 0%, #53cbf1 40%, #05abe0 100%) !important; /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#87e0fd), color-stop(40%,#53cbf1), color-stop(100%,#05abe0)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 ); /* IE6-9 */
 
-	padding: 2px;
-	color: #666 !important;
-}
 .ui-widget-content {
     background: none repeat scroll 0 0 #fafafa;
     border: 1px solid #dedede;
@@ -344,18 +328,7 @@ padding: 2px;
 	text-shadow:none;
 }
 .ui-state-highlight, .ui-menu .ui-menu-item:hover, .ui-button.ui-state-highlight, input.ui-state-highlight[type="button"], input.ui-state-highlight[type="reset"], input.ui-state-highlight[type="submit"], div.ui-state-highlight.button, button.ui-state-highlight, .ui-dialog .ui-dialog-titlebar a, .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next, .wijmo-wijdialog-captionbutton{
-	background: #00b7ea; /* Old browsers */
-background: -moz-linear-gradient(top,  #00b7ea 0%, #009ec3 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b7ea), color-stop(100%,#009ec3)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #00b7ea 0%,#009ec3 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 ); /* IE6-9 */
-
-
-	border: #dedede;
-
+	
 }
 
 center.home{
@@ -412,7 +385,7 @@ a.logout:hover{
 }
 .ui-state-default, .ui-accordion .ui-accordion-header, .ui-accordion .ui-accordion-header.ui-state-active, .ui-accordion .ui-accordion-header.ui-state-hover, .ui-accordion .ui-accordion-header.ui-state-focus, .ui-accordion-right .ui-accordion-header, .ui-accordion-left .ui-accordion-header, .ui-accordion-right .ui-accordion-header.ui-state-active, .ui-accordion-left .ui-accordion-header.ui-state-active, .ui-accordion-right .ui-accordion-header.ui-state-hover, .ui-accordion-left .ui-accordion-header.ui-state-hover, .ui-accordion-right .ui-accordion-header.ui-state-focus, .ui-accordion-left .ui-accordion-header.ui-state-focus, .ui-slider .ui-slider-handle, .ui-tabs .ui-widget-header, div.selector span, div.uploader span.action, .ui-expander .ui-expander-header, .ui-expander .ui-expander-header.ui-state-active, .ui-expander .ui-expander-header.ui-state-hover, .ui-expander .ui-expander-header.ui-state-focus, .ui-expander-left .ui-expander-header, .ui-expander-left .ui-expander-header.ui-state-active, .ui-expander-left .ui-expander-header.ui-state-hover, .ui-expander-left .ui-expander-header.ui-state-focus, .ui-expander-right .ui-expander-header, .ui-expander-right .ui-expander-header.ui-state-active, .ui-expander-right .ui-expander-header.ui-state-hover, .ui-expander-right .ui-expander-header.ui-state-focus, .ui-widget-content .ui-state-default, .ui-widget-content .ui-accordion .ui-accordion-header, .ui-accordion .ui-widget-content .ui-accordion-header, .ui-widget-content .ui-accordion .ui-accordion-header.ui-state-active, .ui-accordion .ui-widget-content .ui-accordion-header.ui-state-active, .ui-widget-content .ui-accordion .ui-accordion-header.ui-state-hover, .ui-accordion .ui-widget-content .ui-accordion-header.ui-state-hover, .ui-widget-content .ui-accordion .ui-accordion-header.ui-state-focus, .ui-accordion .ui-widget-content .ui-accordion-header.ui-state-focus, .ui-widget-content .ui-accordion-right .ui-accordion-header, .ui-accordion-right .ui-widget-content .ui-accordion-header, .ui-widget-content .ui-accordion-left .ui-accordion-header, .ui-accordion-left .ui-widget-content .ui-accordion-header, .ui-widget-content .ui-accordion-right .ui-accordion-header.ui-state-active, .ui-accordion-right .ui-widget-content .ui-accordion-header.ui-state-active, .ui-widget-content .ui-accordion-left .ui-accordion-header.ui-state-active, .ui-accordion-left .ui-widget-content .ui-accordion-header.ui-state-active, .ui-widget-content .ui-accordion-right .ui-accordion-header.ui-state-hover, .ui-accordion-right .ui-widget-content .ui-accordion-header.ui-state-hover, .ui-widget-content .ui-accordion-left .ui-accordion-header.ui-state-hover, .ui-accordion-left .ui-widget-content .ui-accordion-header.ui-state-hover, .ui-widget-content .ui-accordion-right .ui-accordion-header.ui-state-focus, .ui-accordion-right .ui-widget-content .ui-accordion-header.ui-state-focus, .ui-widget-content .ui-accordion-left .ui-accordion-header.ui-state-focus, .ui-accordion-left .ui-widget-content .ui-accordion-header.ui-state-focus, .ui-widget-content .ui-slider .ui-slider-handle, .ui-slider .ui-widget-content .ui-slider-handle, .ui-widget-content .ui-tabs .ui-widget-header, .ui-tabs .ui-widget-content .ui-widget-header, .ui-widget-content div.selector span, div.selector .ui-widget-content span, .ui-widget-content div.uploader span.action, div.uploader .ui-widget-content span.action, .ui-widget-content .ui-expander .ui-expander-header, .ui-expander .ui-widget-content .ui-expander-header, .ui-widget-content .ui-expander .ui-expander-header.ui-state-active, .ui-expander .ui-widget-content .ui-expander-header.ui-state-active, .ui-widget-content .ui-expander .ui-expander-header.ui-state-hover, .ui-expander .ui-widget-content .ui-expander-header.ui-state-hover, .ui-widget-content .ui-expander .ui-expander-header.ui-state-focus, .ui-expander .ui-widget-content .ui-expander-header.ui-state-focus, .ui-widget-content .ui-expander-left .ui-expander-header, .ui-expander-left .ui-widget-content .ui-expander-header, .ui-widget-content .ui-expander-left .ui-expander-header.ui-state-active, .ui-expander-left .ui-widget-content .ui-expander-header.ui-state-active, .ui-widget-content .ui-expander-left .ui-expander-header.ui-state-hover, .ui-expander-left .ui-widget-content .ui-expander-header.ui-state-hover, .ui-widget-content .ui-expander-left .ui-expander-header.ui-state-focus, .ui-expander-left .ui-widget-content .ui-expander-header.ui-state-focus, .ui-widget-content .ui-expander-right .ui-expander-header, .ui-expander-right .ui-widget-content .ui-expander-header, .ui-widget-content .ui-expander-right .ui-expander-header.ui-state-active, .ui-expander-right .ui-widget-content .ui-expander-header.ui-state-active, .ui-widget-content .ui-expander-right .ui-expander-header.ui-state-hover, .ui-expander-right .ui-widget-content .ui-expander-header.ui-state-hover, .ui-widget-content .ui-expander-right .ui-expander-header.ui-state-focus, .ui-expander-right .ui-widget-content .ui-expander-header.ui-state-focus, .ui-widget-header .ui-state-default, .ui-widget-header .ui-accordion .ui-accordion-header, .ui-accordion .ui-widget-header .ui-accordion-header, .ui-widget-header .ui-accordion .ui-accordion-header.ui-state-active, .ui-accordion .ui-widget-header .ui-accordion-header.ui-state-active, .ui-widget-header .ui-accordion .ui-accordion-header.ui-state-hover, .ui-accordion .ui-widget-header .ui-accordion-header.ui-state-hover, .ui-widget-header .ui-accordion .ui-accordion-header.ui-state-focus, .ui-accordion .ui-widget-header .ui-accordion-header.ui-state-focus, .ui-widget-header .ui-accordion-right .ui-accordion-header, .ui-accordion-right .ui-widget-header .ui-accordion-header, .ui-widget-header .ui-accordion-left .ui-accordion-header, .ui-accordion-left .ui-widget-header .ui-accordion-header, .ui-widget-header .ui-accordion-right .ui-accordion-header.ui-state-active, .ui-accordion-right .ui-widget-header .ui-accordion-header.ui-state-active, .ui-widget-header .ui-accordion-left .ui-accordion-header.ui-state-active, .ui-accordion-left .ui-widget-header .ui-accordion-header.ui-state-active, .ui-widget-header .ui-accordion-right .ui-accordion-header.ui-state-hover, .ui-accordion-right .ui-widget-header .ui-accordion-header.ui-state-hover, .ui-widget-header .ui-accordion-left .ui-accordion-header.ui-state-hover, .ui-accordion-left .ui-widget-header .ui-accordion-header.ui-state-hover, .ui-widget-header .ui-accordion-right .ui-accordion-header.ui-state-focus, .ui-accordion-right .ui-widget-header .ui-accordion-header.ui-state-focus, .ui-widget-header .ui-accordion-left .ui-accordion-header.ui-state-focus, .ui-accordion-left .ui-widget-header .ui-accordion-header.ui-state-focus, .ui-widget-header .ui-slider .ui-slider-handle, .ui-slider .ui-widget-header .ui-slider-handle, .ui-widget-header .ui-tabs .ui-widget-header, .ui-tabs .ui-widget-header .ui-widget-header, .ui-widget-header div.selector span, div.selector .ui-widget-header span, .ui-widget-header div.uploader span.action, div.uploader .ui-widget-header span.action, .ui-widget-header .ui-expander .ui-expander-header, .ui-expander .ui-widget-header .ui-expander-header, .ui-widget-header .ui-expander .ui-expander-header.ui-state-active, .ui-expander .ui-widget-header .ui-expander-header.ui-state-active, .ui-widget-header .ui-expander .ui-expander-header.ui-state-hover, .ui-expander .ui-widget-header .ui-expander-header.ui-state-hover, .ui-widget-header .ui-expander .ui-expander-header.ui-state-focus, .ui-expander .ui-widget-header .ui-expander-header.ui-state-focus, .ui-widget-header .ui-expander-left .ui-expander-header, .ui-expander-left .ui-widget-header .ui-expander-header, .ui-widget-header .ui-expander-left .ui-expander-header.ui-state-active, .ui-expander-left .ui-widget-header .ui-expander-header.ui-state-active, .ui-widget-header .ui-expander-left .ui-expander-header.ui-state-hover, .ui-expander-left .ui-widget-header .ui-expander-header.ui-state-hover, .ui-widget-header .ui-expander-left .ui-expander-header.ui-state-focus, .ui-expander-left .ui-widget-header .ui-expander-header.ui-state-focus, .ui-widget-header .ui-expander-right .ui-expander-header, .ui-expander-right .ui-widget-header .ui-expander-header, .ui-widget-header .ui-expander-right .ui-expander-header.ui-state-active, .ui-expander-right .ui-widget-header .ui-expander-header.ui-state-active, .ui-widget-header .ui-expander-right .ui-expander-header.ui-state-hover, .ui-expander-right .ui-widget-header .ui-expander-header.ui-state-hover, .ui-widget-header .ui-expander-right .ui-expander-header.ui-state-focus, .ui-expander-right .ui-widget-header .ui-expander-header.ui-state-focus, .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{
 	border-style: none;
-
+/*	background: midnightblue;*/
 }
 
 .ui-dialog .ui-dialog-titlebar{
@@ -588,7 +561,7 @@ h3.grid-title {
 	color: whitesmoke;
     font-size: 25px;
     font-weight: normal;
-    margin: 6px 29px;
+    margin: 1px 19px;
     text-align: center;
     text-shadow: 0 1px 1px #bfc5b2;
 }
@@ -603,7 +576,7 @@ h3.grid-title {
 .content .toolbar-grid{
 	padding: .3em  1em;
 	margin: 0 auto;
-	width:249px;
+	/*width:249px;*/
 }
 .content .toolbar-grid a {
     display: block;
@@ -611,18 +584,7 @@ h3.grid-title {
     margin-bottom: 5px;
     margin-right: 4px;
 }
-.toolbar-search,.toolbar-filter{
-/*	background: #1559b2;*/
-	padding: 6px;
-	margin: 5px 10px;
-	width: 466px;
-/*	color: #000;*/
-	border: solid 1px #fff; 
-/*	background: #1559b2 ;
-*/	opacity: .8;
-	display: none;
-	margin: 5px auto;
-}
+
 .toolbar-grid select{
 	-moz-border-radius: none;
 }
@@ -652,9 +614,7 @@ h3.grid-title {
 .main-content{
 	/*width: 98%;*/
 }
-.toolbar-filter{
-	text-align: center;
-}
+
 
 .notifikasi-pinjam{
 	background: salmon url(images/notifikasi-new.png) no-repeat top right;
@@ -850,7 +810,8 @@ overflow: hidden;
     margin: 2px !important;*/
     text-align: center;
     width: 11%;
-padding: 17px 3px;
+ padding: 12px 2px;
+
    /* border-radius: 64%;
     padding: 8px 0 0 0 ;
             background: transparent url(images/bg-nav_08.png) repeat center center;*/
@@ -951,11 +912,13 @@ h3.grid-title{
 	position: fixed;
 	font-family: Raleway;
 	color: midnightblue;
+	z-index: 3;
 }
 .toolbar-grid {
     margin: 37px 23px 5px 4px !important;
     position: fixed;
     right: 0;
+    z-index: 3;
 }
 #main_panel_container center {
     padding-top: 74px;
@@ -1014,4 +977,72 @@ h1{
 }
 .EditTable td input, .EditTable td select, .EditTable td textarea{
 	font-family: Roboto;
+}
+.toolbar-filter{
+	/*text-align: center;*/
+
+}
+.toolbar-search,.toolbar-filter{
+position: fixed;
+z-index: 3;
+margin: 40px 0 0 30px;
+display: none;
+	
+}
+
+@media only screen and (max-width: 1024px) {
+    #navigation ul li a {
+    font-family: Raleway;
+    font-size: 9.49px;
+}
+}
+.ac_results li{
+	font-family: Roboto;
+}
+.search-info {
+    font-size: 12px;
+    margin: 107px 0 0 25px;
+    position: absolute;
+    text-decoration: underline;
+    z-index: 2;
+}
+.tbbg {
+/*    background: radial-gradient(ellipse at center center , #b6faff 0%, #7a9bac 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid midnightblue;
+    border-radius: 2px;
+    height: 35px;
+    margin: 35px 0 0 15px;
+    position: fixed;
+    width: 95.5%;
+    z-index: 3;*/
+}
+.ui-jqdialog-titlebar-close .ui-icon,
+#nData .ui-icon,
+#pData .ui-icon,
+#sData .ui-icon,
+#cData  .ui-icon{
+background-image: url("../ui-themes/images/ui-icons_ffffff_256x240.png") !important;
+
+}
+#nData,#pData,
+#sData,#cData{
+	 background: none repeat scroll 0 0 midnightblue !important;
+    color: #fff !important;
+    font-family: Raleway;
+    text-shadow: none;
+    font-weight: normal;
+    border-radius: 0;
+    /*padding: 3px 10px 0 21px;*/
+    /*line-height: 31px;*/
+}
+.ui-dialog .ui-dialog-content{
+	overflow-x: hidden;
+}
+#dialogArea1 > div,
+#dialogArea1 {
+   /* background: none repeat scroll 0 0 yellow;
+    border: medium solid;*/
+    font-family: Roboto;
+    font-size: 12px;
+    padding: 0 !important;
 }

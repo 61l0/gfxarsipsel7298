@@ -583,6 +583,7 @@ function GridChecker(){
 			// 	'float':'none',
 			// 	'margin-top':'auto'
 			// })
+			console.log('Here');
 		},500);
 		
 	}

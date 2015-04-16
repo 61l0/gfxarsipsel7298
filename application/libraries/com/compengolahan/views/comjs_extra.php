@@ -35,7 +35,7 @@ alert('test');
 <?=$class_name;?>grid.btn_grid_edit = function(data,settings){
     var options = {
 		title: 'Form Edit Data',
-        width: '1100',
+        width: '1004',
         height: '500'
     };
 	gf.dialog.layer('<?=site_url('admin/com/pengolahan');?>/edit',data,options);
@@ -45,7 +45,7 @@ alert('test');
 <?=$class_name;?>grid.extra.tambah = function(data,settings){
 	 var options = {
         title: 'Form Tambah Data',
-        width: '1100',
+        width: '1004',
         height: '500'
     };
 	$.extend(options,settings);

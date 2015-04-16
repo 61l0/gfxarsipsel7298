@@ -71,10 +71,10 @@
 	 <a href="javascript:;" onclick="<?=$class_name;?>grid.extra.tambah({});">
 	 	<i class="fa icon-plus-sign"></i>&nbsp;Tambah Data
 	 </a>
-	 <a href="javascript:;" onclick="$('.toolbar-filter').toggle();">
+	 <a href="javascript:;" onclick="$('.toolbar-search').hide();$('.toolbar-filter').toggle();">
 	 	<i class="fa icon-filter"></i>&nbsp;Filter
 	 </a>
-	 <a href="javascript:;" onclick="$('.toolbar-search').toggle();">
+	 <a href="javascript:;" onclick="$('.toolbar-filter').hide();$('.toolbar-search').toggle();">
 	 	<i class="fa icon-search"></i>&nbsp;Cari
 	 </a>
 	 <a href="javascript:;" onclick="$('#gridcompengolahan').trigger('reloadGrid')" style="float:right">
@@ -104,9 +104,9 @@
 <div class="search-info">
 	</div>
 <style type="text/css">
-.toolbar-search, .toolbar-filter{width:466px}
+/*.toolbar-search, .toolbar-filter{width:466px}
 .content .toolbar-grid{width: 334px}
 .search-info{display: none;padding: 4px;margin: 0 auto;text-align: center;
 	font-style: italic;font-size: 130%;
-}
+}*/
 </style>

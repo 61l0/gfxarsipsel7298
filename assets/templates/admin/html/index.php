@@ -311,9 +311,9 @@ div.h{
   				<img src="<?php echo base_url()?>assets/css/metro/images/app-company.png"/>
   			</div>
   		</div>
-  		<div class="line">
+  		<!-- <div class="line">
   			<img src="<?php echo base_url()?>assets/css/metro/images/bg-mark.png"/>
-  		</div>
+  		</div> -->
   	</div>
   	<div class="hr">
   		<div class="calendar">
@@ -352,7 +352,8 @@ div.h{
       <!--e:sidebar-->
 	  <div class="content">
 		<div id="header_caption_content"></div>
-		<div class="main-content">			
+		<div class="main-content">	
+		<div class="tbbg"></div>		
 			<div id="main_panel_container" class="content-box"></div>
 		</div>
       </div>

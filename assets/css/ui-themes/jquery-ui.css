@@ -463,7 +463,7 @@ input.ui-state-highlight[type='submit'] .ui-icon,
 div.ui-state-highlight.button .ui-icon,
 button.ui-state-highlight .ui-icon, .ui-dialog .ui-dialog-titlebar a .ui-icon, .ui-datepicker .ui-datepicker-prev .ui-icon,
 .ui-datepicker .ui-datepicker-next .ui-icon, .wijmo-wijdialog-captionbutton .ui-icon {
-  background-image: url(images/ui-icons_ffffff_256x240.png);
+  background-image: url(images/ui-icons_222222_256x240.png);
 }
 
 /* line 12, ../development/jquery/_icons.scss */
@@ -472,7 +472,7 @@ input.ui-state-success[type='reset'] .ui-icon,
 input.ui-state-success[type='submit'] .ui-icon,
 div.ui-state-success.button .ui-icon,
 button.ui-state-success .ui-icon {
-  background-image: url(images/ui-icons_ffffff_256x240.png);
+  background-image: url(images/ui-icons_222222_256x240.png);
 }
 
 /* line 13, ../development/jquery/_icons.scss */
@@ -481,7 +481,7 @@ input.ui-state-warning[type='reset'] .ui-icon,
 input.ui-state-warning[type='submit'] .ui-icon,
 div.ui-state-warning.button .ui-icon,
 button.ui-state-warning .ui-icon {
-  background-image: url(images/ui-icons_ffffff_256x240.png);
+  background-image: url(images/ui-icons_222222_256x240.png);
 }
 
 /* line 14, ../development/jquery/_icons.scss */
@@ -490,7 +490,7 @@ input.ui-state-error[type='reset'] .ui-icon,
 input.ui-state-error[type='submit'] .ui-icon,
 div.ui-state-error.button .ui-icon,
 button.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {
-  background-image: url(images/ui-icons_ffffff_256x240.png);
+  background-image: url(images/ui-icons_222222_256x240.png);
 }
 
 /* positioning */
@@ -1725,7 +1725,7 @@ button.ui-corner-right,
 }
 /* line 64, ../development/jquery/_accordion.scss */
 .ui-accordion .ui-accordion-header.ui-state-hover .ui-icon {
-  background: #5e9ae2 url(images/ui-icons_ffffff_256x240.png);
+  background: #5e9ae2 url(images/ui-icons_222222_256x240.png);
   background-position: -34px -2px;
   border: 1px solid #2e63a5;
 }
@@ -1742,7 +1742,7 @@ button.ui-corner-right,
 
 /* line 88, ../development/jquery/_accordion.scss */
 .ui-accordion-top .ui-accordion-header.ui-state-hover .ui-icon {
-  background: #5e9ae2 url(images/ui-icons_ffffff_256x240.png);
+  background: #5e9ae2 url(images/ui-icons_222222_256x240.png);
   background-position: -34px -2px;
   border: 1px solid #f6f6f6;
 }
@@ -1791,7 +1791,7 @@ button.ui-corner-right,
 }
 /* line 149, ../development/jquery/_accordion.scss */
 .ui-accordion-right .ui-accordion-header.ui-state-hover .ui-icon, .ui-accordion-left .ui-accordion-header.ui-state-hover .ui-icon {
-  background: #5e9ae2 url(images/ui-icons_ffffff_256x240.png);
+  background: #5e9ae2 url(images/ui-icons_222222_256x240.png);
   background-position: -66px -1px;
   border: 1px solid #ababab;
 }
@@ -2765,7 +2765,7 @@ button::-moz-focus-inner {
 }
 /* line 92, ../development/jquery/_dialog.scss */
 .ui-dialog .ui-dialog-titlebar a .ui-icon {
-  background-image: url(images/ui-icons_ffffff_256x240.png);
+  background-image: url(images/ui-icons_222222_256x240.png);
 }
 /* line 5, ../development/_interaction.scss */
 .ui-dialog .ui-dialog-titlebar a:hover, .ui-dialog .ui-dialog-titlebar a.ui-state-hover {
@@ -3276,7 +3276,7 @@ button::-moz-focus-inner {
 }
 /* line 15, ../development/jquery/_datepicker.scss */
 .ui-datepicker .ui-datepicker-header a .ui-icon {
-  background-image: url(images/ui-icons_ffffff_256x240.png);
+  background-image: url(images/ui-icons_222222_256x240.png);
 }
 /* line 21, ../development/jquery/_datepicker.scss */
 .ui-datepicker .ui-datepicker-prev,
@@ -4392,7 +4392,7 @@ div.checker span.checked {
   -webkit-box-shadow: inset 0 -6px 5px rgba(0, 0, 0, 0.2) 0 1px black;
   -moz-box-shadow: inset 0 -6px 5px rgba(0, 0, 0, 0.2) 0 1px black;
   box-shadow: inset 0 -6px 5px rgba(0, 0, 0, 0.2) 0 1px black;
-  background-image: url(images/ui-icons_ffffff_256x240.png);
+  background-image: url(images/ui-icons_222222_256x240.png);
   background-position: -66px -147px;
 }
 /* line 169, ../development/uniform/_widgets.scss */
@@ -4897,7 +4897,7 @@ div.uploader input {
   -webkit-box-shadow: inset 0 -6px 5px rgba(0, 0, 0, 0.2) 0 1px black;
   -moz-box-shadow: inset 0 -6px 5px rgba(0, 0, 0, 0.2) 0 1px black;
   box-shadow: inset 0 -6px 5px rgba(0, 0, 0, 0.2) 0 1px black;
-  background-image: url(images/ui-icons_ffffff_256x240.png);
+  background-image: url(images/ui-icons_222222_256x240.png);
   background-position: -66px -147px;
 }
 /* line 80, ../development/wijmo/_checkbox.scss */
@@ -6349,7 +6349,7 @@ wijmo-wijtree a.ui-state-active:active {
 }
 /* line 74, ../development/wijmo/_expander.scss */
 .ui-expander-right .ui-expander-header.ui-state-hover .ui-icon {
-  background: #5e9ae2 url(images/ui-icons_ffffff_256x240.png);
+  background: #5e9ae2 url(images/ui-icons_222222_256x240.png);
   background-position: -66px -1px;
   border: 1px solid #ababab;
 }
@@ -6388,7 +6388,7 @@ wijmo-wijtree a.ui-state-active:active {
 }
 /* line 122, ../development/wijmo/_expander.scss */
 .ui-expander-left .ui-expander-header.ui-state-hover .ui-icon {
-  background: #5e9ae2 url(images/ui-icons_ffffff_256x240.png);
+  background: #5e9ae2 url(images/ui-icons_222222_256x240.png);
   background-position: -66px -1px;
   border: 1px solid #ababab;
 }
@@ -6473,7 +6473,7 @@ wijmo-wijtree a.ui-state-active:active {
 }
 /* line 209, ../development/wijmo/_expander.scss */
 .ui-expander .ui-expander-header.ui-state-hover .ui-icon {
-  background: #5e9ae2 url(images/ui-icons_ffffff_256x240.png);
+  background: #5e9ae2 url(images/ui-icons_222222_256x240.png);
   background-position: -34px -2px;
   border: 1px solid #ababab;
 }
@@ -6484,7 +6484,7 @@ wijmo-wijtree a.ui-state-active:active {
 
 /* line 236, ../development/wijmo/_expander.scss */
 .ui-expander-top .ui-expander-header.ui-state-hover .ui-icon {
-  background: #5e9ae2 url(images/ui-icons_ffffff_256x240.png);
+  background: #5e9ae2 url(images/ui-icons_222222_256x240.png);
   background-position: -34px -2px;
   border: 1px solid #ababab;
 }
@@ -6789,7 +6789,7 @@ wijmo-wijtree a.ui-state-active:active {
 /* line 30, ../development/wijmo/_dialog.scss */
 .wijmo-wijdialog-captionbutton .ui-icon {
   margin: 1px;
-  background-image: url(images/ui-icons_ffffff_256x240.png);
+  background-image: url(images/ui-icons_222222_256x240.png);
 }
 
 /* line 2, ../development/wijmo/_calendar.scss */
@@ -6856,7 +6856,7 @@ wijmo-wijtree a.ui-state-active:active {
 }
 /* line 41, ../development/wijmo/_calendar.scss */
 .wijmo-wijcalendar-header .ui-icon {
-  background-image: url(images/ui-icons_ffffff_256x240.png);
+  background-image: url(images/ui-icons_222222_256x240.png);
 }
 /* line 45, ../development/wijmo/_calendar.scss */
 .wijmo-wijcalendar-header > .ui-datepicker-prev .ui-icon {
