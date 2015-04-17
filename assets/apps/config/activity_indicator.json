@@ -1,0 +1,10 @@
+{
+    "name": "activity_indicator",
+    "desc": "Activity Indicator Module",
+    "base": "assets\/apps\/modules\/activity_indicator",
+    "js_files": {
+        "controller": "controller.js",
+		"lang" : "lang.js"
+        
+    }
+}

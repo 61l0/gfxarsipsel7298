@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="arsipsel">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>.:: ARSIP ::.</title>
+<title ng-bind="'.:: ARSIP :: '+ $root.title+'::.'"> </title>
 <!-- Le styles -->
 
 <style type="text/css">
@@ -79,6 +79,7 @@ ul#menu li ul li a {cursor:pointer;}
 <script type="text/javascript" src="<?=base_url().'assets/templates/admin/resources/js/prettyGalery/jquery.prettyGallery.js';?>"></script>
 <script type="text/javascript" src="<?=base_url().'assets/js/formvalidate/jquery.validate.js';?>"></script>
 <script type="text/javascript" src="<?=base_url().'assets/js/angular.min.js';?>"></script>
+<script type="text/javascript" src="<?=base_url().'assets/js/arsipsel.js';?>"></script>
 
          
 
@@ -351,6 +352,12 @@ div.h{
     <?//include('htmlvar/side_menu.php');?>
       <!--e:sidebar-->
 	  <div class="content">
+	  <div id="rootScope" class="container" ng-controller="root" ng-init="init()">
+
+        <div ng-hide="hide_ac_indicator" class="activity_indicator"  ng-controller="activity_indicator" ng-include="activity_indicator()"></div>
+        <!-- <div class="breadcrumbs" ng-controller="breadcrumbs" ng-include="init()"></div> -->
+        <div class="view" ng-view></div>
+        </div>
 		<div id="header_caption_content"></div>
 		<div class="main-content">	
 		<div class="tbbg"></div>		
@@ -368,11 +375,22 @@ div.h{
 
 <script type="text/javascript" src="<?php echo BASE_URL?>assets/js/jquery/jquery.lightbox-0.5.pack.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL?>assets/js/jquery/jquery.lightbox-0.5.css">
+<script src="www_static?t=app.js"></script>
 
+<script src="assets/apps/autoload/lib/angular-route.min.js"></script>
+<script src="assets/apps/autoload/lang/id-ID.js"></script>
+<script src="assets/apps/autoload/helper.js"></script>
+<script src="assets/apps/autoload/application.js"></script>
+<script src="assets/apps/autoload/services.js"></script>
+<script src="assets/apps/autoload/controllers.js"></script>
+<script src="assets/apps/autoload/filters.js"></script>
+<script src="assets/apps/autoload/directives.js"></script>
+<script src="assets/apps/autoload/interceptor.js"></script>
+<script src="assets/apps/autoload/callback.js"></script>
 <script type="text/javascript">
 	$('.ajaxl').ajaxStart(function(){
 		// console.log(arguments)
-		$('.loading').show()
+		Callback.Global_Ajax_Start()
 	});
 	$('.ajaxl').ajaxStop(function(){
 		// console.log(arguments)
@@ -383,3 +401,16 @@ div.h{
 
 	// });
 </script>
+
+<style type="text/css">
+#rootScope {
+    /*background: midnightblue;
+*/    width: 77%;
+    height: 40px;
+    position: fixed;
+    margin: -38px 0 0 223px;
+    color: #fff;
+    border-top: solid 1px ivory;
+    z-index: 3;
+}
+</style>

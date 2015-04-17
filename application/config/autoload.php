@@ -67,7 +67,9 @@ $autoload['libraries'] = array('database','session','form_validation','encrypt',
 */
 
 // $autoload['helper'] = array('url','form');
-$autoload['helper'] = array('panel','section','url','html','main','form','template');
+$autoload['helper'] = array('panel','section','url','html','main','form','template',
+'password', 'jwt', 'acl', 'validation','util'
+	);
 
 
 /*
@@ -83,8 +85,8 @@ $autoload['helper'] = array('panel','section','url','html','main','form','templa
 |
 */
 
-$autoload['config'] = array();
 
+$autoload['config'] = array('jwt');
 
 /*
 | -------------------------------------------------------------------

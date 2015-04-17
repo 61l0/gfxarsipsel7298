@@ -1,0 +1,9 @@
+{
+    "name": "root",
+    "desc": "Root Controller Module",
+    "base": "assets\/apps\/modules\/root",
+    "js_files": {
+        "controller": "controller.js",
+		"lang" : "lang.js"
+    }
+}

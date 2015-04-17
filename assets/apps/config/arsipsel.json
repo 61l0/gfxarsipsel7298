@@ -1,0 +1,10 @@
+{
+	"name": "arsipsel",
+    "desc": "Arsipsel Module",
+    "base": "assets\/apps\/modules\/arsipsel",
+    "js_files": {
+        "controller": "controller.js",
+        "route": "route.js",
+		"lang" : "lang.js"
+    }
+}
