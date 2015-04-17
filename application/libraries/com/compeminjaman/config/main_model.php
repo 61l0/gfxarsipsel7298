@@ -6,7 +6,7 @@ $config['model_main']['query'] = array(
     'query_table'=>array(
 		    'select'=>array('a.*,b.judul,'.$sql,false),
 		    'from'=>array($config['model_main']['table_name'].' a'),
-			'join'=>array('arsip_data b','a.id_data=b.id_data'),
+			'join'=>array('arsip_data b','a.id_data=b.id_data','left'),
 	    ), 
 	'query_filter' => array(
 		 'status'=>array(
@@ -16,13 +16,14 @@ $config['model_main']['query'] = array(
          ),			
 		 'judul'=>array(
             'type'=>'where'
-            ,'field'=>'a.judul'
+            ,'field'=>'b.judul'
             ,'name'=>'judul'
          ),			
 	),
 );
 $config['model_main']['query_count'] = array(
         'select' => array( "count('a.id_data') as count"),
+            'join'=>array('arsip_data b','a.id_data=b.id_data','left'),
         'from'=>array($config['model_main']['table_name'].' a'),
 );
 ?>
