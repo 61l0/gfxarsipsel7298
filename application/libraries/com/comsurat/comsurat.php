@@ -358,7 +358,9 @@ class Comsurat extends Grid{
 			$attachment_list = $this->CI->db->get('arsip_attachment')->result_object();
 
 			foreach ($attachment_list as $attachment) {
-				$img_src = FCPATH . $attachment->path;
+				$upload_path = FCPATH . 'assets/media/file/attachments/';
+
+				$img_src = $upload_path . $attachment->path;
 				$gambar .= '<div style="margin:0 auto;width:18cm;height:25cm;text-align:center"><img src="'.$img_src.'" style="width:100%"/></div><br/>';
 			}
 			$html="<html>
