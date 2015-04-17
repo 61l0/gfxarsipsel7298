@@ -281,7 +281,7 @@ class Comsurat extends Grid{
 					'parent_id' => $this->CI->input->get('parent_id'),
 					'attachment_for' => $this->CI->input->get('attachment_for'),
 					'filename' => $this->CI->input->get('qqfile'),
-					'path' => $upload_path . $result['filename'],
+					'path' =>  $result['filename'],
 					'date_uploaded' => date('Y-m-d',time())
 				);
 				
@@ -295,8 +295,10 @@ class Comsurat extends Grid{
 		{
 			$this->CI->load->library('image_lib');
 			$config['image_library'] = 'gd2';
-			$config['source_image'] = FCPATH.str_replace('__SEP__', '/', $param);
-			$config['new_image']     = FCPATH.'assets/media/file/attachments/'.md5($param).'.jpg';
+			$upload_path = FCPATH . 'assets/media/file/attachments/';
+
+			$config['source_image'] = $upload_path . $param;
+			$config['new_image']     = FCPATH.'assets/media/file/attachments/'.md5($param).'_thumb.jpg';
        	 	$config['maintain_ratio']   = TRUE;
 			$config['create_thumb'] = FALSE;
 			$config['maintain_ratio'] = TRUE;

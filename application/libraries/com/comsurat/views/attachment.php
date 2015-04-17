@@ -139,7 +139,7 @@ a.img-ln{
 		$('.tb-attachment').attr('next_number',parseInt(no)+1);
     }
     function imgThumb(path){
-    	path = path.split('/').join('__SEP__');
+    	//path = path.split('/').join('__SEP__');
     	//console.log(path);
     	return '<div class="img-thumb-cnt"><img src="<?php echo base_url()?>admin/com/surat/attachment/thumb/'+path+'"/></div>';
     }
@@ -157,7 +157,7 @@ a.img-ln{
 				var row = data[i];
 				var rowHtml = '<tr class="tb-data-'+row.id_attachment+'">'+
 								'<td align="center" class="bordered"><input type="checkbox" class="ckAll" rowid="'+row.id_attachment+'"/></td>'+
-								'<td class="bordered">'+imgThumb(row.path)+'<a class="img-ln" target="_blank" href="<?php echo base_url()?>'+row.path.replace(/ /g, '%20')+'">'+row.filename+'</a></td>'+
+								'<td class="bordered">'+imgThumb(row.path)+'<a class="img-ln" target="_blank" href="<?php echo base_url()?>assets/media/file/attachments/'+row.path+'">'+row.filename+'</a></td>'+
 								'<td class="bordered">'+delButton(row.id_attachment)+'</td>'+
 							'</tr>';
 				$('table.tb-attachment tbody').append(rowHtml).show();
