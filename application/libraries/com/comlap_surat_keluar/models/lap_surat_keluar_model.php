@@ -1,5 +1,5 @@
 <?php
-class Lap_surat_masuk_model extends CI_Model {
+class Lap_surat_keluar_model extends CI_Model {
     function __construct (){
         parent::__construct();
 	}
@@ -22,8 +22,8 @@ class Lap_surat_masuk_model extends CI_Model {
 	}	
 
 	function unit_pengolah(){
-		$this->db->order_by('name','asc');
-		$data = $this->db->get('arsip_unit_pengolah')->result();
+		$this->db->select("id_skpd id_unit_pengolah,nama_lengkap name")->order_by('nama_lengkap','asc');
+		$data = $this->db->get('m_skpd')->result();
 		// dump($data);
 		return $data;
 	}
@@ -57,22 +57,6 @@ class Lap_surat_masuk_model extends CI_Model {
 	} 
 	
 	function get_data_laporan(){
-
-		// if( $bulan != '' && $tahun != ''){
-			// $this->db->where('a.tanggal like',$tahun.'-'.$bulan.'%');
-		// }
-		
-		// if($bulan != '' && $tahun == ''){
-			// $this->db->where('a.tanggal like','%'.'-'.$bulan.'%');
-		// }
-		
-		// if($bulan ==''  && $tahun != ''){
-			// $this->db->where('a.tanggal like',$tahun.'-'.'%');
-		// }
-			
-		// $this->db->select('distinct(b.id_kode_masalah),a.*,b.*');
-		// $this->db->from('arsip_surat a');
-		// $this->db->join('arsip_kode_masalah b','a.id_kode_masalah=b.id_kode_masalah');
 		$data = $this->db->where('id_parent',0)->get('arsip_kode_masalah')->result();
 		return $data;
 	}	
@@ -89,7 +73,7 @@ class Lap_surat_masuk_model extends CI_Model {
 		//untuk menghitung jumlah surat masuk
 		$this->db->select('a.*,year(a.tanggal) as tgl, b.kode,b.name');
 		$this->db->where_in('a.id_kode_masalah',$val);
-		$this->db->where('a.type_surat','masuk');
+		$this->db->where('a.type_surat','keluar');
 		$this->db->from('arsip_surat a');
 		$this->db->join('arsip_kode_masalah b','b.id_kode_masalah=a.id_kode_masalah');
 		$surat_masuk = $this->db->get_where()->result();

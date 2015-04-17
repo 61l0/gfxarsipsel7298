@@ -108,8 +108,8 @@ class Penyerahan_model extends CI_Model {
 	function get_skpd(){
 		$this->db->select('a.id_skpd, a.nama_lengkap');
 		$this->db->from('m_skpd a');
-		$this->db->join('m_skpd_sotk b','a.id_skpd=b.id_skpd','left');
-		$this->db->where('b.id_aturan_skpd',1);
+		// $this->db->join('m_skpd_sotk b','a.id_skpd=b.id_skpd','left');
+		// $this->db->where('b.id_aturan_skpd',1);
 		$this->db->order_by('a.nama_lengkap','asc');
 		$data = $this->db->get()->result();
 		return $data;

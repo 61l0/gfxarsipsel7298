@@ -22,8 +22,8 @@ class Lap_surat_rekap_model extends CI_Model {
 	}	
 
 	function unit_pengolah(){
-		$this->db->order_by('name','asc');
-		$data = $this->db->get('arsip_unit_pengolah')->result();
+		$this->db->select("id_skpd id_unit_pengolah,nama_lengkap name")->order_by('nama_lengkap','asc');
+		$data = $this->db->get('m_skpd')->result();
 		// dump($data);
 		return $data;
 	}
@@ -83,7 +83,6 @@ class Lap_surat_rekap_model extends CI_Model {
 	} 
 
 	function get_data_laporan_jml($klasifikasi, $bulan, $tahun){
-
 		$data = $this->display_children($aa=0,$klasifikasi);
 		$arr = array_values($data);
 		// dump($arr);
@@ -91,26 +90,41 @@ class Lap_surat_rekap_model extends CI_Model {
 		$objTmp = (object) array('aFlat' => array());
 		array_walk_recursive($arr, create_function('&$v, $k, &$t', '$t->aFlat[] = $v;'), $objTmp);
 		$val = $objTmp->aFlat;
-		/*
-		 if( $bulan != '' && $tahun != ''){
-			 $this->db->where('tanggal like',$tahun.'-'.$bulan.'%');
-		 }
 		
-		 if($bulan != '' && $tahun == ''){
-			 $this->db->where('tanggal like','%'.'-'.$bulan.'%');
-		 }
+		// if($pengolah != '' && $bulan != '' && $tahun != ''){
+			// $this->db->where('a.pengolah',$pengolah);
+			// $this->db->where('a.tgl_input like',$tahun.'-'.$bulan.'%');
+		// }
 		
-		 if($bulan ==''  && $tahun != ''){
-			 $this->db->where('tanggal like',$tahun.'-'.'%');
-		 }
-		*/
+		// if($pengolah == '' && $bulan != '' && $tahun == ''){
+			// $this->db->where('a.tgl_input like','%'.'-'.$bulan.'%');
+		// }
+		// if($pengolah == '' && $bulan != '' && $tahun != ''){
+			// $this->db->where('a.tgl_input like',$tahun.'-'.$bulan.'%');
+		// }
+		
+		// if($tahun =='' && $bulan != '' && $tahun != ''){
+			// $this->db->where('a.tgl_input like','%'.'-'.$bulan.'-'.'%');
+		// }
+		// if($bulan =='' && $pengolah == '' && $tahun != ''){
+			// $this->db->where('a.tgl_input like',$tahun.'-'.'%');
+		// }
+		// if($bulan =='' && $pengolah != '' && $tahun == ''){
+			// $this->db->where('a.pengolah',$pengolah);
+		// }
+		// if($bulan =='' && $pengolah != '' && $tahun != ''){
+			// $this->db->where('a.pengolah',$pengolah);
+			// $this->db->where('a.tgl_input like',$tahun.'-'.'%');
+		// }
+		// if($tahun =='' && $bulan != '' && $pengolah != ''){
+			// $this->db->where('a.pengolah',$pengolah);
+			// $this->db->where('a.tgl_input like','%'.'-'.$bulan.'%');
+		// }
 		
 		//untuk menghitung jumlah arsip
 		$this->db->select('id_surat');
 		$this->db->where_in('id_kode_masalah',$val);
 		$arr_id_surat = $this->db->get_where('arsip_surat')->result_array();
-		
-
 		if($arr_id_surat){
 			$objTmp1 = (object) array('aFlat1' => array());
 			array_walk_recursive($arr_id_surat, create_function('&$v, $k, &$t', '$t->aFlat1[] = $v;'), $objTmp1);
@@ -121,8 +135,6 @@ class Lap_surat_rekap_model extends CI_Model {
 			$this->db->where_in('id_surat',$id_surat);
 			$this->db->where('type_surat','masuk');
 			$surat_masuk = $this->db->get_where('arsip_surat')->result();
-		//	dump($this->db->last_query());
-			
 			//untuk menghitung jumlah surat keluar
 			$this->db->where_in('id_surat',$id_surat);
 			$this->db->where('type_surat','keluar');
@@ -156,7 +168,7 @@ class Lap_surat_rekap_model extends CI_Model {
 			$boks = $this->db->get('arsip_surat')->result();					
 
 			// $jumlah_data_arsip = array('jml_arsip'=>count($arr_id_surat));
-			$jumlah_surat = array('jml_cabinet'=>count(@$cabinet),'jml_rak'=>count(@$rak),'jml_boks'=>count(@$boks),'jml_rubrik'=>count(@$rubrik),'jml_dosir'=>count(@$dosir),'jml_seri'=>count(@$seri),'jml_surat_masuk'=>count(@$surat_masuk),'jml_surat_keluar'=>count(@$surat_keluar),'tahun'=>@$surat_masuk[0]->tanggal);
+			$jumlah_surat = array('jml_cabinet'=>count($cabinet),'jml_rak'=>count($rak),'jml_boks'=>count($boks),'jml_rubrik'=>count($rubrik),'jml_dosir'=>count($dosir),'jml_seri'=>count($seri),'jml_surat_masuk'=>count($surat_masuk),'jml_surat_keluar'=>count($surat_keluar),'tahun'=>$surat_masuk[0]->tanggal);
 			// $this->array_push_associative($jumlah_peminjam);
 		}
 		// $data_awal = $this->db->select('id_kode_masalah,kode,name as masalah')->where('id_parent',0)->get('arsip_kode_masalah')->result_array();	

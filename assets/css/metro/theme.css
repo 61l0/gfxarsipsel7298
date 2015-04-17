@@ -1044,5 +1044,13 @@ background-image: url("../ui-themes/images/ui-icons_ffffff_256x240.png") !import
     border: medium solid;*/
     font-family: Roboto;
     font-size: 12px;
-    padding: 0 !important;
+    padding: 2px !important;
+}
+.toolbar-search.comsurat{
+    margin-left: 215px;
+    margin-top: 37px;
+}
+
+.content-box.lap-mode .toolbar-filter{
+	position: relative;
 }

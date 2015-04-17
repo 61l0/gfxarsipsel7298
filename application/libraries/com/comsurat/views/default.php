@@ -80,15 +80,11 @@
 </script>
 <h3 class="grid-title"><i class="fa icon-envelope"></i>&nbsp;Surat Masuk &amp; Keluar</h3>
 <div class="toolbar-grid" style="width:247px">
-	<label style="float:left">Jenis Surat : &nbsp;</label>
-	<?php echo form_dropdown('pilsurat',array('masuk'=>'Masuk','keluar'=>'Keluar'), $this->session->userdata('cgd_typesurat'));?>
 	
 	<a href="javascript:;" onclick="$('#gridcomsurat').trigger('reloadGrid');" style="float:right">
 	 	<i class="fa icon-refresh"></i>&nbsp;Refresh
 	 </a>
-	<div style="clear:both"></div>
-</div>
-<div class="toolbar-grid">
+
 	 <a href="javascript:;" onclick="<?=$class_name;?>grid.extra.tambah({type_surat:$('select[name=pilsurat]').val()});">
 	 	<i class="fa icon-plus-sign"></i>&nbsp;Tambah Data
 	 </a>
@@ -98,8 +94,12 @@
 	 </a>
 	 <div class="cb"></div>
 </div>
-
-<div class="toolbar-search">
+<div class="toolbar-filter" style="display:block">
+	<label style="float:left">Jenis Surat : &nbsp;</label>
+	<?php echo form_dropdown('pilsurat',array('masuk'=>'Masuk','keluar'=>'Keluar'), $this->session->userdata('cgd_typesurat'));?>
+	
+</div>
+<div class="toolbar-search comsurat">
 <select name='pilih_cari' id='pilih_cari'>
 	<!-- <option value=''>--pilih--</option> -->
 	<option value='no_surat'>Nomor Surat</option>	

@@ -174,8 +174,8 @@ class Laporanbulanan_model extends CI_Model {
 	   return $ret;
 	}	
 	function unit_pengolah(){
-		$this->db->order_by('name','asc');
-		$data = $this->db->get('arsip_unit_pengolah')->result();
+		$this->db->select("id_skpd id_unit_pengolah,nama_lengkap name")->order_by('nama_lengkap','asc');
+		$data = $this->db->get('m_skpd')->result();
 		// dump($data);
 		return $data;
 	}

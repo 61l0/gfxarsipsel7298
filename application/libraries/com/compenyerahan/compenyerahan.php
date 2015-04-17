@@ -25,7 +25,7 @@ class Compenyerahan extends Grid{
 		
 	
 			
-		if($_SESSION['user_group'] == 3){
+		if($_SESSION['user_group'] == 6){
 			unset($params->model['query']['query_filter']);
 				$params->model['query']['query_filter']=array(
 					'id_skpd'=>array(
