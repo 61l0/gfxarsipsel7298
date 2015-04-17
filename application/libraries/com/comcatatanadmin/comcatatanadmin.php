@@ -154,7 +154,7 @@ class Comcatatanadmin extends Grid{
 			if($this->CI->form_validation->run() == FALSE){
 				$hasil = array('result'=>'failed','message'=>validation_errors(),'oper'=>$oper);
 			}else{
-				$id_pengirim = $this->CI->model_catatanadmin->get_skpd($_SESSION['user_id']);
+				$id_pengirim = $_SESSION['id_skpd'];
 				$hasil = $this->CI->model_catatanadmin->simpan(@$id_pengirim);
 			}
 		}else{

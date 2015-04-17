@@ -1,28 +1,7 @@
 <style>
 .ui-datepicker{z-index:99999}
 </style>
-<script>
-$('#typepilih1').click(function () {
-	var cek = $('#typepilih1').val();
-      if ($("#tr_personal").is(":hidden")) {
-	  
-		$("#tr_umum").hide();
-        $("#tr_personal").slideDown("slow");
-      }
-    });
 
-$('#typepilih2').click(function () {
-	var cek = $('#typepilih2').val();
-      if ($("#tr_umum").is(":hidden")) {
-		
-		
-		$("#tr_personal").hide();
-        $("#tr_umum").slideDown("slow");
-      }
-    });
-
-
-</script>
 <div id="responceArea" />
 <form method="post" action="" id="formcatatan">
 <?=form_hidden('oper',@$oper);?>
@@ -92,3 +71,25 @@ $('#typepilih2').click(function () {
 	</tr>
 	</table>
 </form>
+<script>
+$('#typepilih1').click(function () {
+	var cek = $('#typepilih1').val();
+      if ($("#tr_personal").is(":hidden")) {
+	  
+		$("#tr_umum").hide();
+        $("#tr_personal").slideDown("slow");
+      }
+    });
+
+$('#typepilih2').click(function () {
+	var cek = $('#typepilih2').val();
+      if ($("#tr_umum").is(":hidden")) {
+		
+		
+		$("#tr_personal").hide();
+        $("#tr_umum").slideDown("slow");
+      }
+    });
+
+
+</script>
