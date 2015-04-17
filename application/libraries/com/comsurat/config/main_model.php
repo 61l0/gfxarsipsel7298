@@ -11,11 +11,11 @@ if(!in_array($type_surat, $avail_type_surat))
 
 $config['model_main']['query'] = array(
     'query_table'=>array(
-		    'select'=>array("b.*,c.name as nama_masalah"),
-		    'from'=>array($config['model_main']['table_name'].' b'),
+		    'select'=>array("a.*,c.name as nama_masalah"),
+		    'from'=>array($config['model_main']['table_name'].' a'),
 			// array('method'=>'join','params'=>array('m_skpd b ','a.id_pengirim=b.id_skpd')),
-			array('method'=>'join','params'=>array('arsip_kode_masalah c ','b.kode=c.kode','left')),
-			'where' => array('b.type_surat',$type_surat)
+			array('method'=>'join','params'=>array('arsip_kode_masalah c ','a.kode=c.kode','left')),
+			'where' => array('a.type_surat',$type_surat)
 	    )
 );
 

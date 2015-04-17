@@ -38,7 +38,7 @@ class Comsurat extends Grid{
 				$params->model['query']['query_filter']=array(
 					$cari_judul=>array(
 						'type'=>'like'
-						,'field'=>'b.'.$typecari
+						,'field'=>'a.'.$typecari
 						,'name'=>'judul'// harus sesuai dengan yg di post
 						,'extra'=>'after'
 						//,'value'=>$cari_judul
