@@ -20,7 +20,7 @@ if(! head_content){
 }
 		
 </script>
-<table align='center' border=0 class="toolbar-filter">
+<table align='center' border=0 class="toolbar-filter form">
 <tr><td colspan=9 align='center'>LAPORAN DATA PENCARIAN ARSIP->LAPORAN BULANAN</td></tr>
 <tr><td colspan=9><hr></td></tr>
 <tr>

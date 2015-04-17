@@ -4,7 +4,7 @@
 	 
 	 <div class="cb"></div>
 </div>
-<div class="toolbar-filter">
+<div class="toolbar-filter form">
 	<span>Pilih Depo : &nbsp;</span>
 	<select name='pilihdepo' id='pilihdepo'>
 		<option value=''>ALL</option>

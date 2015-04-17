@@ -14,14 +14,7 @@
 <h3 class="grid-title"><i class="fa icon-trash"></i>&nbsp;Pemusnahan / Retensi</h3>
 
 <div class="toolbar-grid">
-	<label>Filter : &nbsp;</label>
-	<select id="filterGrid">
-		<option value="all" selected="selected">All</option>
-		<option value="inaktif">Inaktif</option>
-		<option value="musnahkan">Sudah Dimusnahkan</option>
-		<option value="tinjau">Sudah Dinilai Kembali</option>
-		<option value="permanen">Permanen</option>
-	</select>
+	
 	<a style="float:right" onclick="<?=$class_name;?>grid.extra.reloadGrid($('select#filterGrid').val())" href="javascript:;">
 	 	<i class="fa icon-refresh"></i>&nbsp;Refresh
 	 </a>
@@ -33,6 +26,16 @@
 	</a> -->
 	
 	 <div class="cb"></div>
+</div>
+<div class="toolbar-filter" style="display:block"> 
+<label>Filter : &nbsp;</label>
+	<select id="filterGrid">
+		<option value="all" selected="selected">All</option>
+		<option value="inaktif">Inaktif</option>
+		<option value="musnahkan">Sudah Dimusnahkan</option>
+		<option value="tinjau">Sudah Dinilai Kembali</option>
+		<option value="permanen">Permanen</option>
+	</select>
 </div>
 <style type="text/css">
 .content .toolbar-grid{width: 308px;padding: 12px;}

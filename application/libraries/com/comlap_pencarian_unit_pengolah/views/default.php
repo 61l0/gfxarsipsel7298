@@ -26,7 +26,7 @@ if(! head_content){
 }
 		
 </script>
-<table align='center' border=0 class="toolbar-filter">
+<table align='center' border=0 class="toolbar-filter form">
 <tr><td colspan=9 align='center'>LAPORAN DAFTAR PENCARIAN DATA ARSIP->UNIT PENGOLAH</td></tr>
 <tr><td colspan=9><hr></td></tr>
 <tr><td>Unit Pengolah</td><td>:</td>

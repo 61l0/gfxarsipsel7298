@@ -66,10 +66,10 @@
 	 <a href="javascript:;" onclick="<?=$class_name;?>grid.extra.tambah({});">
 	 	<i class="fa icon-plus-sign"></i>&nbsp;Tambah Data
 	 </a>
-	 <a href="javascript:;" onclick="$('.toolbar-filter').toggle();">
+	 <a href="javascript:;" onclick="$('.toolbar-search').hide();$('.toolbar-filter').toggle();">
 	 	<i class="fa icon-filter"></i>&nbsp;Filter
 	 </a>
-	 <a href="javascript:;" onclick="$('.toolbar-search').toggle();">
+	 <a href="javascript:;" onclick="$('.toolbar-filter').hide();$('.toolbar-search').toggle();">
 	 	<i class="fa icon-search"></i>&nbsp;Cari
 	 </a>
 	 <div class="cb"></div>

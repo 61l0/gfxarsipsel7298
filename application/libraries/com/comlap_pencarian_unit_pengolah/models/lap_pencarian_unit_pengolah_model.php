@@ -1,8 +1,8 @@
 <?php
 class Lap_pencarian_unit_pengolah_model extends CI_Model {
-    function __construct (){
-        parent::__construsct();
-	}
+ //    function __construct (){
+ //        parent::__construsct();
+	// }
 
 	function depo(){
 		$this->db->select('id_lokasi_simpan, name');

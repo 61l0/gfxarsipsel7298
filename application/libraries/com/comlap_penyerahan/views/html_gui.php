@@ -4,7 +4,7 @@
 	 
 	 <div class="cb"></div>
 </div>
-<div class="toolbar-filter">
+<div class="toolbar-filter form">
 	
 	<table width="100%" align="center" cellpadding="4" colspacing="4">
 
