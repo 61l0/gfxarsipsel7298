@@ -1052,5 +1052,5 @@ background-image: url("../ui-themes/images/ui-icons_ffffff_256x240.png") !import
 }
 
 .content-box.lap-mode .toolbar-filter{
-	position: relative;
+	/*position: relative;*/
 }
