@@ -122,9 +122,10 @@ a.img-ln{
     		alert('Silahkan pilih gambar yang akan dicetak terlebih dahulu.');
     	}
     }
-    function delButton(id)
+    function delButton(row)
     {
-    	return '<div class="ui-pg-div ui-inline-edit" style="float: left; cursor: pointer;" title="Hapus"><span class="ui-icon ui-icon-trash" onclick="delete_attachment({id_attachment:'+id+',attachment_for:\'arsip_lap_skpd\'});"></span></div>';
+    	console.log(row)
+    	return '<div class="ui-pg-div ui-inline-edit" style="float: left; cursor: pointer;" title="Hapus"><span class="ui-icon ui-icon-trash" onclick="delete_attachment({id_attachment:'+row.id_attachment+',attachment_for:\''+row.attachment_for+'\'});"></span></div>';
     }
     function grd_append_data(row){
     	//console.log(row);
@@ -133,7 +134,7 @@ a.img-ln{
     	var rowHtml = '<tr class="tb-data-'+row.id_attachment+'">'+
 								'<td align="center" class="bordered"><input type="checkbox" class="ckAll" rowid="'+row.id_attachment+'"/></td>'+
 								'<td class="bordered">'+imgThumb(row.path)+'<a class="img-ln" target="_blank" href="<?php echo base_url()?>'+row.path.replace(/ /g, '%20')+'">'+row.filename+'</a></td>'+
-								'<td class="bordered">'+delButton(row.id_attachment)+'</td>'+
+								'<td class="bordered">'+delButton(row)+'</td>'+
 							'</tr>';
 		$('table.tb-attachment tbody').append(rowHtml).show();
 		$('.tb-attachment').attr('next_number',parseInt(no)+1);
@@ -158,7 +159,7 @@ a.img-ln{
 				var rowHtml = '<tr class="tb-data-'+row.id_attachment+'">'+
 								'<td align="center" class="bordered"><input type="checkbox" class="ckAll" rowid="'+row.id_attachment+'"/></td>'+
 								'<td class="bordered">'+imgThumb(row.path)+'<a class="img-ln" target="_blank" href="<?php echo base_url()?>assets/media/file/attachments/'+row.path+'">'+row.filename+'</a></td>'+
-								'<td class="bordered">'+delButton(row.id_attachment)+'</td>'+
+								'<td class="bordered">'+delButton(row)+'</td>'+
 							'</tr>';
 				$('table.tb-attachment tbody').append(rowHtml).show();
 				no+=1;
