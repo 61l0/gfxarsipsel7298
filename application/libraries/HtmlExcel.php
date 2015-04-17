@@ -4,7 +4,7 @@ Copyright Malink Corporation Inc
 Simple Class for generating HTML table to Microsoft Office Excel BIFF Format
 Credit : cristminix@gmail.com
 */
-set_include_path(CLASSES_PATH . 'ExcelWriter');
+set_include_path(CLASSES_PATH.'ExcelWriter/');
 require_once CLASSES_PATH . 'PHPExcel.php';
 require_once 'Spreadsheet/Excel/Writer.php';
 
@@ -22,7 +22,7 @@ class HtmlExcel extends PHPExcel_Reader_HTML{
 	var $_php_excel_object = '';
     var $_custom_color = array();
     var $_color_index = 51;
-
+    var $_page_setup;
 	public function __construct($title,$token,$input_filename,$output_filename,$count,$extra_count=0,$update_every=100)
 	{
 		parent::__construct();
@@ -72,7 +72,6 @@ class HtmlExcel extends PHPExcel_Reader_HTML{
     {
         $style_format  = $this->_workbook->addFormat();
         
-        $style_format->setFontFamily('Calibri');
         $border = array(
             'none' => 0,
             'thin' => 1,
@@ -91,6 +90,11 @@ class HtmlExcel extends PHPExcel_Reader_HTML{
                     break;
                 case "text-wraping":
                     $style_format->setTextWrap();
+                    break;
+
+                case "font-family":
+                    $style_format->setFontFamily($rule);
+                    
                     break;
                 case 'color':
 
@@ -117,7 +121,11 @@ class HtmlExcel extends PHPExcel_Reader_HTML{
                     $style_format->setSize(str_replace(array('px','pt','em'), '', $rule));
                     break;
                 case 'font-weight' :
-                    $style_format->setBold();
+                    if($rule == 'bold')
+                    {
+                        $style_format->setBold();
+                    }
+                    
                     break;
                 case 'border':
                     
@@ -185,27 +193,27 @@ class HtmlExcel extends PHPExcel_Reader_HTML{
 
     public function getPercentage()
     {
-		return (int)( $this->_i_count/$this->_count * 100 );
+		//return (int)( $this->_i_count/$this->_count * 100 );
     }
     public function _storePercentage($create=FALSE)
     {
-    	if($create)
-    	{
-    		if($this->ci->db->where('token',$this->_token)->get($this->_table)->num_rows() <= 0)
-    			$this->ci->db->insert( $this->_table,array(
-    				'token'=>$this->_token,
-    				'status'=>'IN_PROGRESS',
-    				'date_started' => date('Y-m-d H:i:s'),
-    				'progress'=>0));
-    		else
-    			$this->ci->db->where('token',$this->_token)
-	    			 ->update($this->_table,array('status'=>'IN_PROGRESS','progress'=>0,'date_started' => date('Y-m-d H:i:s')));
-    	}
-    	else
-    	{	
-    	    	$this->ci->db->where('token',$this->_token)
-    	    			 ->update($this->_table,array('date_ended' => date('Y-m-d H:i:s'),'status'=>'IN_PROGRESS','progress'=>$this->getPercentage()));
-	    }
+    	// if($create)
+    	// {
+    	// 	if($this->ci->db->where('token',$this->_token)->get($this->_table)->num_rows() <= 0)
+    	// 		$this->ci->db->insert( $this->_table,array(
+    	// 			'token'=>$this->_token,
+    	// 			'status'=>'IN_PROGRESS',
+    	// 			'date_started' => date('Y-m-d H:i:s'),
+    	// 			'progress'=>0));
+    	// 	else
+    	// 		$this->ci->db->where('token',$this->_token)
+	    // 			 ->update($this->_table,array('status'=>'IN_PROGRESS','progress'=>0,'date_started' => date('Y-m-d H:i:s')));
+    	// }
+    	// else
+    	// {	
+    	//     	$this->ci->db->where('token',$this->_token)
+    	//     			 ->update($this->_table,array('date_ended' => date('Y-m-d H:i:s'),'status'=>'IN_PROGRESS','progress'=>$this->getPercentage()));
+	    // }
     }
     function _strToHex($string){
         $hex = '';
@@ -218,7 +226,25 @@ class HtmlExcel extends PHPExcel_Reader_HTML{
     }
     public function _markComplete()
     {
-    	$this->ci->db->where('token',$this->_token)->update($this->_table,array('date_ended'=>date('Y-m-d H:i:s'),'progress' => 100,'status'=>'COMPLETE'));
+    	//$this->ci->db->where('token',$this->_token)->update($this->_table,array('date_ended'=>date('Y-m-d H:i:s'),'progress' => 100,'status'=>'COMPLETE'));
+    }
+    function _checkBitmap($sheet,$row,$col,&$cellContent,$style)
+    {
+        $cellContent = trim($cellContent);
+        if(preg_match('/\[img\]/g', $cellContent))
+        {
+            $cellContent = str_replace('[img]', '', $cellContent);
+            // $cellContent = $content;
+            // print_r($content);
+            // exit;
+        }
+        // else
+        // {
+        //     $content = false;
+        // }
+        return substr($cellContent,0,5) == '[img]' ? $sheet->insertBitmap( $row, $col , FCPATH . substr($cellContent, 5) ,2,2): $sheet->writeString($row, $col, $cellContent,$style);// . '-KKK';
+        // $str = (string)$cellContent;
+        // return preg_match('/logo_lap/g', $str) ? 'MATCH' : 'NOT';
     }
     function _flushCell($sheet, $column, $row, &$cellContent, $style=0)
     {
@@ -237,18 +263,39 @@ class HtmlExcel extends PHPExcel_Reader_HTML{
         if (is_string($cellContent)) {
             //	Simple String content
             if (trim($cellContent) > '') {
-            	//print_r($this->_worksheet);
-            	if(is_numeric($cellContent) && substr($cellContent,0,1)!='0')
+             //    $check_bitmap = $this->_checkBitmap($cellContent);
+
+             //    if($check_bitmap)
+            	// {
+             //        $bitmap = $check_bitmap;
+                    
+             //        $sheet->insertBitmap( $row, $col , $bitmap );//, integer $x=0 , integer $y=0 , integer $scale_x=1 , integer $scale_y=1 )
+                    
+             //        /*$sheet->writeString($row, $column, $cellContent,$style);*/
+             //    }
+            	// else 
+
+                if(is_numeric($cellContent) && substr($cellContent,0,1)!='0')
     	        	$sheet->writeNumber($row, $column, $cellContent,$style);
             	else
                 {   
 
-                    if($this->_strToHex($cellContent) == 'C2A0'){
-                       // echo 'HERE <br/>'; 
+                    if($this->_strToHex($cellContent) == 'C2A0')
+                    {
                         $sheet->writeString($row, $column, '',$style);
-                    }else
-    	        	    $sheet->writeString($row, $column, $cellContent,$style);
+                    }
+                    else
+                    {
+                        $this->_checkBitmap($sheet,$row, $column ,$cellContent,$style);
+    	        	    //$sheet->writeString($row, $column, );
+                    }
                 }
+            }
+            else
+            {
+                $cellContent = ' ';
+                $this->_checkBitmap($sheet,$row, $column ,$cellContent,$style);
+
             }
         } else {
             //	We have a Rich Text run
@@ -627,12 +674,77 @@ class HtmlExcel extends PHPExcel_Reader_HTML{
         $this->_processDomElement($dom, $this->_worksheet, $row, $column, $content);
 
     }
+
+    public function page_setup($setup)
+    {
+        // $paper_list = array(
+        //     'USLetter'  => 1,
+        //     'A4'        => 9,
+        //     'B11'       => 3,
+        //     'A4'        => 4,
+        //     'LGL'       => 5
+        // );
+
+        $this->_worksheet->hideGridLines();
+        if($setup['orientation'] == 'landscape')
+        {
+             $this->_worksheet->setLandscape();
+        }
+        // if(isset($setup['paper']) )
+        // {
+        //      $this->_worksheet->setPaper($paper_list[$setup['paper']]);
+        // }
+        // else
+        // {
+        //      $this->_worksheet->setPaper($paper_list['A4']);
+
+        // }
+         $this->_worksheet->setPaper(9);
+        
+        
+    }
+    public function set_mode($mode)
+    {
+        $setup = array(
+            'orientation'   => 'landscape',
+            'paper'         => 'A4'
+        );
+        
+        if($mode == 'kondisi_barang')
+        {
+            $setup['orientation'] = 'portrait';
+        }
+        
+        $this->page_setup($setup);
+        
+
+        if($mode == 'peminjaman')
+        {
+            $this->_worksheet->setMarginTop(0.098);
+            $this->_worksheet->setMarginLeft(0.19);
+            $this->_worksheet->setMarginRight(0.2);
+            $this->_worksheet->setMarginBottom(0.75);
+        }
+        else if($mode == 'pengembalian')
+        {
+            $this->_worksheet->setMarginTop(0.35);
+            $this->_worksheet->setMarginLeft(0.22);
+            $this->_worksheet->setMarginRight(0.2);
+            $this->_worksheet->setMarginBottom(0.75);
+        }
+
+        
+    }
+
+    function get_worksheet()
+    {
+        return $this->_worksheet;
+    }
     function _pageSetup()
     {
-        $this->_worksheet->setLandscape();
-        $this->_worksheet->setPaper(5);
-        $this->_worksheet->hideGridLines();
-
+        // $this->_worksheet->setLandscape();
+        // $this->_worksheet->setPaper(5);
+        // $this->_worksheet->hideGridLines();
     }
     public function generateFile()
     {
@@ -640,7 +752,7 @@ class HtmlExcel extends PHPExcel_Reader_HTML{
     }
     public function getJobInfo()
     {
-        return $this->ci->db->where('token',$this->_token)->get($this->_table)->row();
+        //return $this->ci->db->where('token',$this->_token)->get($this->_table)->row();
     }
     public function redirectDownload()
     {
