@@ -25,7 +25,7 @@ class Comcatatanadmin extends Grid{
 			// $params->gridlib['grid']['opt']['postData']['id_pengirim'] = $id_pengirim;
 		// }	
 		
-		if($_SESSION['user_group'] == 3){
+		if($_SESSION['user_group'] == 6){
 			unset($params->model['query']['query_filter']);
 			$params->model['query']['query_filter']=array(
 				'id_pengirim'=>array(
