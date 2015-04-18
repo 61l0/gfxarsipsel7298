@@ -137,6 +137,9 @@ class Comcatatanadmin extends Grid{
 		 $this->CI->load->com($this->lib['class_name'],'view',array('name'=>'tambah_data','data'=>$this->content));
 	}	
 	function formaction(){
+
+			// print_r($_FILES);
+			// die();
 		$oper = $this->CI->input->post('oper');
 		$typepilih = $this->CI->input->post('typepilih');
 		if($oper != 'del'){	
@@ -160,7 +163,95 @@ class Comcatatanadmin extends Grid{
 		}else{
 				$id_pengirim = $this->CI->model_catatanadmin->get_skpd($_SESSION['user_id']);
 				$hasil = $this->CI->model_catatanadmin->simpan(@$id_pengirim);
-		}	
+		}
+
+		// upload
+
+		$this->CI->load->library('fileupload');
+			
+		$upload_path = FCPATH . 'assets/media/file/attachments/';
+
+		// echo realpath($upload_path);
+		$oper = $this->CI->input->post('oper') ;
+		if ( $oper == 'add') 
+		{
+			//print_r($_FILES);
+
+			if( $_FILES['attachment'] )
+			{
+				$ok = move_uploaded_file($_FILES['attachment']['tmp_name'], $upload_path . $_FILES['attachment']['name']);
+				//$result = $this->CI->fileupload->handleUpload( $upload_path);
+				$parent_id = $this->CI->db->insert_id();
+				$attachment_for = 'catatan_admin';
+				$filename;
+				// $response = array(
+				// 	'fullpath'	=> '',
+				// 	'success'	=> TRUE
+				// );
+				if($ok)
+				{
+					$attachment = array(
+						'parent_id' => $parent_id,
+						'attachment_for' => $attachment_for,
+						'filename' => $_FILES['attachment']['name'] ,
+						'path' =>  $_FILES['attachment']['name'],
+						'date_uploaded' => date('Y-m-d',time())
+					);
+					
+
+					$this->CI->db->insert('arsip_attachment',$attachment);
+					$attachment['id_attachment'] = $this->CI->db->insert_id();
+				}
+				//echo json_encode(array_merge($result,$attachment));	
+			}
+		}
+		else if ($oper == 'edit') 
+		{
+			
+			if( $_FILES['attachment'] )
+			{
+				$ok = move_uploaded_file($_FILES['attachment']['tmp_name'], $upload_path . $_FILES['attachment']['name']);
+				//$result = $this->CI->fileupload->handleUpload( $upload_path);
+				$parent_id = $this->CI->input->post('id_catatan_admin');
+				$attachment_for = 'catatan_admin';
+				// $filename;
+				// $response = array(
+				// 	'fullpath'	=> '',
+				// 	'success'	=> TRUE
+				// );
+				$exist = $this->CI->db->where('parent_id',$parent_id)
+								  ->where('attachment_for',$attachment_for)
+								  ->get('arsip_attachment')
+								  ->num_rows() > 0;
+				if($ok)
+				{
+					$attachment = array(
+						'parent_id' => $parent_id,
+						'attachment_for' => $attachment_for,
+						'filename' => $_FILES['attachment']['name'] ,
+						'path' =>  $_FILES['attachment']['name'],
+						'date_uploaded' => date('Y-m-d',time())
+					);
+					
+					if(!$exist)
+					{
+						$this->CI->db->insert('arsip_attachment',$attachment);
+						$attachment['id_attachment'] = $this->CI->db->insert_id();
+					}
+					else
+					{
+						$this->CI->db->where('parent_id',$parent_id)
+										  ->where('attachment_for',$attachment_for)
+										  ->update('arsip_attachment',$attachment);
+
+					}
+
+					
+				}
+				//echo json_encode(array_merge($result,$attachment));	
+			}
+		}
+		
 		echo json_encode($hasil);
 	}	
 	function edit(){
@@ -185,5 +276,4 @@ class Comcatatanadmin extends Grid{
 
 		echo json_encode($responce);
 	}					
-}	
-?>
+}

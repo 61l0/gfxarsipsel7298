@@ -1,7 +1,7 @@
 
 	<table border=0 class="table-flat" width=500>
 		<tr>
-			<td>pengirim</td>
+			<td>Pengirim</td>
 			<td>:</td>
 			<td>
 			<?=@$data[0]->nama_pengirim?>
@@ -21,7 +21,9 @@
 		</tr>
 			<td>Uraian</td><td>:</td><td><?=@$data[0]->uraian?></td>			
 		</tr>	
-			
+		</tr>
+			<td>File</td><td>:</td><td><a target="_blank" href="<?=base_url().'assets/media/file/attachments/'.@$data[0]->path?>"><?= @$data[0]->filename?></a></td>			
+		</tr>		
 
 	</table>
 

@@ -58,16 +58,10 @@ if(!<?=$class_name;?>grid.extra){
 
 <?=$class_name;?>grid.extra.simpan_data_edit = function(data,settings){
 
-	var str = $("form").serialize();
-	$.ajax({
-		url : '<?=site_url($com_url)?>/formaction',
-		data : str,
-		type : 'POST',
-		dataType : 'json',
+	$("form").attr('action','<?=site_url($com_url)?>/formaction').ajaxSubmit({
 		success : function(msg){
 			if(msg.result=='failed'){
 				$('#responceArea').html(msg.message).css("color","red");
-;	
 			}else{
 				jQuery('#dialogArea1').dialog('close');
 				jQuery("#gridcomcatatanadmin").trigger('reloadGrid');	
@@ -75,6 +69,23 @@ if(!<?=$class_name;?>grid.extra){
 			
 		}
 	});
+	// var str = $("form").serialize();
+// 	$.ajax({
+// 		url : '<?=site_url($com_url)?>/formaction',
+// 		data : str,
+// 		type : 'POST',
+// 		dataType : 'json',
+// 		success : function(msg){
+// 			if(msg.result=='failed'){
+// 				$('#responceArea').html(msg.message).css("color","red");
+// ;	
+// 			}else{
+// 				jQuery('#dialogArea1').dialog('close');
+// 				jQuery("#gridcomcatatanadmin").trigger('reloadGrid');	
+// 			}
+			
+// 		}
+// 	});
 }
 
 
@@ -84,17 +95,10 @@ if(!<?=$class_name;?>grid.extra){
 
 }
 <?=$class_name;?>grid.extra.simpan_data = function(data,settings){
-
-	var str = $("form").serialize();	
-	$.ajax({
-		url : '<?=site_url($com_url)?>/formaction',
-		data : str,
-		type : 'POST',
-		dataType : 'json',
+	$("form").attr('action','<?=site_url($com_url)?>/formaction').ajaxSubmit({
 		success : function(msg){
 			if(msg.result=='failed'){
 				$('#responceArea').html(msg.message).css("color","red");
-;	
 			}else{
 				jQuery('#dialogArea1').dialog('close');
 				jQuery("#gridcomcatatanadmin").trigger('reloadGrid');	
@@ -102,4 +106,21 @@ if(!<?=$class_name;?>grid.extra){
 			
 		}
 	});
+// 	var str = $("form").serialize();	
+// 	$.ajax({
+// 		url : '<?=site_url($com_url)?>/formaction',
+// 		data : str,
+// 		type : 'POST',
+// 		dataType : 'json',
+// 		success : function(msg){
+// 			if(msg.result=='failed'){
+// 				$('#responceArea').html(msg.message).css("color","red");
+// ;	
+// 			}else{
+// 				jQuery('#dialogArea1').dialog('close');
+// 				jQuery("#gridcomcatatanadmin").trigger('reloadGrid');	
+// 			}
+			
+// 		}
+// 	});
 }

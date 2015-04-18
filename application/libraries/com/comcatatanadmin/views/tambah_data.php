@@ -24,7 +24,7 @@ $('#typepilih2').click(function () {
 
 </script>
 <div id="responceArea" />
-<form method="post" action="" id="formpeminjaman">
+<form method="post"  id="formcatatanadmin" enctype="multipart/form-data">
 <?=form_hidden('oper',@$oper);?>
 	<table border=0 class="table-flat" width='100%' height='100%'>
 		<tr>
@@ -42,7 +42,7 @@ $('#typepilih2').click(function () {
 					<tr>	
 						<td></td>
 						<td></td>
-						<td>Ditujukan</td><td>:</td>
+						<td>Ditujukan/Instansi/SKPD</td><td>:</td>
 						<td colspan=10>
 							<input type='hidden' name='id_skpd' id='id_skpd'>
 							<input type='text' name='instansi' id='instansi' disabled>
@@ -60,6 +60,8 @@ $('#typepilih2').click(function () {
 							<textarea cols=60 rows=7 name='uraian' id='uraian'></textarea>
 						</td>			
 					</tr>	
+
+					
 				</table>	
 			</td>	
 		</tr>
@@ -85,8 +87,25 @@ $('#typepilih2').click(function () {
 			</td>	
 		</tr>
 		<tr>
+			<td></td>
+			<td></td>
+			<td colspan='10'>
+				
+		
+				<table><tr>
+						<td></td>
+						<td></td>
+						<td>File</td><td>:</td><td>
+							<input type="file" name="attachment"/>
+						</td>			
+					</tr>	
+					
+				</table>	
+			</td>			
+		</tr>	
+		<tr>
 		<td colspan=3>
-		<input type='button' class="bt-blue-common" onclick="<?=$class_name;?>grid.extra.simpan_data();" value='SIMPAN'>
+		<input type='button' class="bt-blue-common" onclick="<?=$class_name;?>grid.extra.simpan_data();" value='KIRIM'>
 		<input type='button' class="bt-blue-common" onclick="jQuery('#dialogArea1').dialog('close');" value='KEMBALI'>
 		</td>
 	</tr>

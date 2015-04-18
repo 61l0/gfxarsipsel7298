@@ -51,22 +51,25 @@ class Model_catatanadmin extends CI_Model {
 	}	
 
 	function get_data($id){
-		$this->db->select('a.*,c.nama_lengkap,b.nama_lengkap as nama_pengirim');
+		$this->db->select('a.*,c.nama_lengkap,b.nama_lengkap as nama_pengirim,d.path,d.filename');
 		$this->db->where('id_catatan_admin',$id);	
 		$this->db->from('catatan_administrator a');
 		$this->db->join('m_skpd b','a.id_pengirim=b.id_skpd','left');
 		$this->db->join('m_skpd c','a.id_penerima=c.id_skpd','left');
+		$this->db->join('arsip_attachment d','d.parent_id=a.id_catatan_admin','left');
 		$data = $this->db->get()->result();
 
 
 		return $data;
 	}	
 	function view($id){
-		$this->db->select('a.*,b.nama_lengkap as nama_penerima, c.nama_lengkap as nama_pengirim');
+		$this->db->select('a.*,b.nama_lengkap as nama_penerima, c.nama_lengkap as nama_pengirim,d.path,d.filename');
 		$this->db->where('id_catatan_admin',$id);	
 		$this->db->from('catatan_administrator a');
 		$this->db->join('m_skpd b','a.id_penerima=b.id_skpd','left');
 		$this->db->join('m_skpd c','a.id_pengirim=c.id_skpd','left');
+		$this->db->join('arsip_attachment d','d.parent_id=a.id_catatan_admin','left');
+		
 		$data = $this->db->get()->result();
 		// dump($this->db->last_query());
 		return $data;

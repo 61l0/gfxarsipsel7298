@@ -4,7 +4,7 @@ Helper = {
 	// },
 	Get_Root_Scope : function(){
 		var appElement = document.querySelector('#rootScope');
-    	return angular.element(appElement).scope() || {showAcIndicator:function(){console.log(appElement)}};
+    	return angular.element(appElement).scope() || {showAcIndicator:function(){}};
 	},
 	/*CONVERT REGULAR NUM TO CURRENCY */
 	IDR_Currency : function (amount, decimalSeparator, thousandsSeparator, nDecimalDigits){

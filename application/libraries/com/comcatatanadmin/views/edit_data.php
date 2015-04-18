@@ -3,7 +3,7 @@
 </style>
 
 <div id="responceArea" />
-<form method="post" action="" id="formcatatan">
+<form method="post" action="" id="formcatatan" enctype="multipart/form-data">
 <?=form_hidden('oper',@$oper);?>
 <?=form_hidden('id_catatan_admin',@$id_catatan_admin);?>
 	<table border=0 class="table-flat" width='100%'>
@@ -46,7 +46,7 @@
 		<tr id='tr_umum' <? if(@$data_edit[0]->type == 'personal'){?> style='display:none;' <? } ?>>
 			<td></td>
 			<td></td>
-			<td colspan=10>
+			<td colspan='10'>
 				<table>
 					<tr>
 						<td></td>
@@ -64,7 +64,23 @@
 			</td>	
 		</tr>
 		<tr>
-		<td colspan=3>
+			<td></td>
+			<td></td>
+			<td colspan='10'>
+				
+		
+				<table><tr>
+						<td></td>
+						<td></td>
+						<td>File</td><td>:</td><td>
+							<input type="file" name="attachment"/>
+						</td>			
+					</tr>	
+					
+				</table>	
+			</td>			
+		</tr>	
+		<td colspan='12'>
 		<input type='button' class="bt-blue-common" onclick="<?=$class_name;?>grid.extra.simpan_data_edit();" value='SIMPAN'>
 		<input type='button' class="bt-blue-common" onclick="jQuery('#dialogArea1').dialog('close');" value='KEMBALI'>	
 		</td>

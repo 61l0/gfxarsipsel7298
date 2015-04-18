@@ -1,6 +1,6 @@
-catatan skpd = tambah upload pdf(opsional)
+catatan skpd = tambah upload pdf(opsional)[FIXED]
 tambh validasi
-tombol simpan dignt kirim
+tombol simpan dignt kirim [FIXED]
 copyright dibuat otomatis thn yg aktif [FIXED]
 
 
