@@ -91,7 +91,7 @@ a.img-ln{
         	onSubmit: function(id, fileName){},
 		    onProgress: function(id, fileName, loaded, total){},
 		    onComplete: function(id, fileName, data){
-		    	grd_append_data(data);
+		    	grd_append_data(data,true);
 		    	setTimeout(function(){
 		    		$($('ul.qq-upload-list li').get(id)).fadeOut('slow');
 		    		//console.log($($('ul.qq-upload-list li').get(id)));
@@ -132,13 +132,19 @@ a.img-ln{
     	console.log(row)
     	return '<div class="ui-pg-div ui-inline-edit" style="float: left; cursor: pointer;" title="Hapus"><span class="ui-icon ui-icon-trash" onclick="delete_attachment({id_attachment:'+row.id_attachment+',attachment_for:\''+row.attachment_for+'\'});"></span></div>';
     }
-    function grd_append_data(row){
+    function grd_append_data(row,first){
     	//console.log(row);
+    	row.thumb = row.path;
+    	if(first == true)
+    	{
+    		row.path = 'assets/media/file/attachments/' + row.path;
+    		//row.thumb;
+    	}
     	$('.tb-data-empty').hide();
     	var no = $('.tb-attachment').attr('next_number');
     	var rowHtml = '<tr class="tb-data-'+row.id_attachment+'">'+
 								'<td align="center" class="bordered"><input type="checkbox" class="ckAll" rowid="'+row.id_attachment+'"/></td>'+
-								'<td class="bordered">'+imgThumb(row.path)+'<a class="img-ln" target="_blank" href="<?php echo base_url()?>'+row.path.replace(/ /g, '%20')+'">'+row.filename+'</a></td>'+
+								'<td class="bordered">'+imgThumb(row.thumb)+'<a class="img-ln" target="_blank" href="<?php echo base_url()?>'+row.path.replace(/ /g, '%20')+'">'+row.filename+'</a></td>'+
 								'<td class="bordered">'+delButton(row)+'</td>'+
 							'</tr>';
 		$('table.tb-attachment tbody').append(rowHtml).show();

@@ -91,7 +91,7 @@ jQuery(document).ready(function(){
 			</td>
 		</tr>	
 	
-		<tr <? if($group==3){?> style="display:none" <? } ?> >
+		<tr <? if($group==6){?> style="display:none" <? } ?> >
 			<td>Dari</td>
 			<td>:</td>
 			<td colspan="4">

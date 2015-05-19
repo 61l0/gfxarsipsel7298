@@ -41,11 +41,16 @@
 $active_group = 'default';
 $active_record = TRUE;
 
+// $db['default']['hostname'] = '127.0.0.1';
+// $db['default']['username'] = 'root';
+// $db['default']['password'] = '';
+
 $db['default']['hostname'] = '192.168.1.1';
 $db['default']['username'] = 'bbd33';
 $db['default']['password'] = 'jingga';
+
 $db['default']['database'] = "db_arsipsel";
-// $db['default']['database'] = "db_anggaran";
+
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

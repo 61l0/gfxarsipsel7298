@@ -24,6 +24,7 @@
 		<? } ?>
 	</select></td>
 		</tr>
+		<?php if($_SESSION['user_group']!=6):?>
 		<tr><td>Instansi</td><td>:</td>
 			<td>
 				
@@ -45,11 +46,14 @@
 				</select>
 				<?php endif?>
 		   </td>
-		
+		</tr>
+		<?php else:?>
+			
+		<?php endif?>
 	</table>
 	<div>
 		<form id="myForm" action="<?=site_url('admin/com/lap_penyerahan');?>/excel_<?php echo $mode ?>" target="_blank" method="post">
-		<input type="hidden" id="mode" name="mode" value="text"/>
+		<input type="hidden" id="mode" name="mode" value="<?php echo $_SESSION['user_group']==6?'select':'text'?>"/>
 		<!-- 	
 			<input type="hidden" id="klasifikasi2" name="klasifikasi2" > -->
 		<!-- 	<input type="hidden" id="bulan" name="bulan" > -->
@@ -57,7 +61,7 @@
 	<!-- 		<input type="hidden" id="depo" name="depo" >
 			<input type="hidden" id="lokasi" name="lokasi" > -->
 			<input type="hidden" id="id_kode_masalah" name="id_kode_masalah" >
-			<input type="hidden" id="id_unit_pengolah" name="id_unit_pengolah" >
+			<input type="hidden" id="id_unit_pengolah" value="<?php echo $_SESSION['user_group']==6?$_SESSION['id_skpd']:''?>" name="id_unit_pengolah" >
 	<!-- 		<input type="hidden" id="status" name="status" > -->
 			<input type="submit" class="bt-blue-common" value="PROSES">
 <!-- 

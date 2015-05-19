@@ -300,7 +300,8 @@ class Comsurat extends Grid{
 				$this->CI->db->insert('arsip_attachment',$attachment);
 				$attachment['id_attachment'] = $this->CI->db->insert_id();
 			}
-			echo json_encode(array_merge($result,$attachment));
+			$result = array_merge($result,$attachment);
+			echo json_encode($result);
 		}
 		else if($oper=='thumb')
 		{

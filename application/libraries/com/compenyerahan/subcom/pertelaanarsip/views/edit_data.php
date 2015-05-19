@@ -133,7 +133,7 @@ $(function(){
 			<td><input type='text' name='tanggal' id='tanggal' value='<?=date('d-m-Y',strtotime($data[0]->tanggal))?>'></td>
 			
 
-			<?php if($_SESSION['user_group'] == 3 ):?>
+			<?php if($_SESSION['user_group'] == 6 ):?>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>

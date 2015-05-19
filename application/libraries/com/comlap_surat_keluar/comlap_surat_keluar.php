@@ -41,7 +41,7 @@ class comlap_surat_keluar{
 		if($_SESSION['user_group'] != 2 && !empty($pengolah))
 		{
 			$data['instansi'] = $this->CI->db->where('id_skpd',$pengolah)->select('nama_lengkap as instansi')->get('m_skpd')->row()->instansi;
-			$this->CI->db->where("d.id_skpd='$pengolah'");
+			$this->CI->db->where("d.id_skpd",$pengolah);
 			$data['mode'] = 'skpd';
 
 		}

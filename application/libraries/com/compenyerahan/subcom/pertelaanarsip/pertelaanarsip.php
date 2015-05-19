@@ -81,7 +81,7 @@ class Pertelaanarsip extends Grid {
 			$this->CI->form_validation->set_message('greater_than', '%s Harus lebih besar dari 0.');
 
 		//	$this->CI->form_validation->set_rules('pertelaan','Disertasi Pertelaan','trim|required');
-			if($_SESSION['user_group']!=3){
+			if($_SESSION['user_group']!=6){
 				//$this->CI->form_validation->set_rules('id_unit_pengolah','Instansi','trim|required');
 			}
 			if($this->CI->form_validation->run() == FALSE){

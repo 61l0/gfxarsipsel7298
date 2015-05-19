@@ -130,7 +130,12 @@ class comlap_penyerahan{
 			
 			'order_by'=>array('a.id_ba desc'),
 		*/
+
 		$data = $request;
+		$skpd_txt = $this->CI->db->select('nama_lengkap')
+		                         ->where('id_skpd',$data['id_unit_pengolah'])->get('m_skpd')->row()->nama_lengkap;	
+		// echo $skpd_txt;
+		// die();
 		$this->CI->db->distinct()->select('a.id_ba, a.kepada,b.nama_lengkap skpd, a.instansi,a.tanggal_ba as tanggal')
 					 			 ->from('arsip_ba a')
 					  			 ->join('m_skpd b','a.id_skpd=b.id_skpd','left');
@@ -143,8 +148,14 @@ class comlap_penyerahan{
 		}
 		else if($data['mode'] == 'select')
 		{
+			//echo 'here';exit();
 			if($data['id_unit_pengolah'] != 'ALL' && !empty($data['id_unit_pengolah'] )){
-				$this->CI->db->or_like("a.instansi",$data['unit_pengolah_text']);
+				if($_SESSION['user_group'] == 6){
+					$this->CI->db->or_like("a.id_skpd",$data['id_unit_pengolah']);
+					$data['unit_pengolah_text'] = $skpd_txt;
+				}	
+				else	
+					$this->CI->db->or_like("a.instansi",$data['unit_pengolah_text']);
 				// $this->CI->db->or_where("1=",'0');
 				// $this->CI->db->or_where("b.id_skpd",$data['id_unit_pengolah'],'OR');
 			}

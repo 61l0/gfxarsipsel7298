@@ -163,7 +163,7 @@ class Compenyerahan extends Grid{
 			$this->CI->form_validation->set_rules('kode_komponen','Kode Komponen','trim|required');
 			$this->CI->form_validation->set_rules('tahun','Tahun','trim|required');
 			$this->CI->form_validation->set_rules('pertelaan','Disertasi Pertelaan','trim|required');
-			if($_SESSION['user_group']!=3){
+			if($_SESSION['user_group']!=6){
 				$this->CI->form_validation->set_rules('instansi','Instansi','trim|required');
 			}
 			if($this->CI->form_validation->run() == FALSE){

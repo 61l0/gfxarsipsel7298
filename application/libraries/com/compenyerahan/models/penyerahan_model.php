@@ -25,7 +25,7 @@ class Penyerahan_model extends CI_Model {
 		$id_skpd = $this->input->post('id_skpd');
 		$instansi = $this->input->post('instansi');
 
-		if($_SESSION['user_group'] == 3){
+		if($_SESSION['user_group'] == 6){
 			$id_skpd = $_SESSION['id_skpd'];
 		}
 		if($oper != 'del'){

@@ -130,7 +130,7 @@ $(function(){
 			<td>Tanggal Berkas </td>
 			<td>:</td>
 			<td><input type='text' name='tanggal' id='tanggal' ></td>
-			<?php if($_SESSION['user_group'] == 3 ):?>
+			<?php if($_SESSION['user_group'] == 6 ):?>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			

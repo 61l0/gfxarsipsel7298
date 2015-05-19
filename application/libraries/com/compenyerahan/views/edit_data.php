@@ -106,7 +106,7 @@ jQuery(document).ready(function(){
 				<textarea cols=60 rows=7 name='uraian' id='uraian'><?=@$data[0]->uraian?></textarea>
 			</td>
 		</tr> -->
-		<tr <? if($group==3){?> style="display:none" <? } ?> >
+		<tr <? if($group==6){?> style="display:none" <? } ?> >
 			<td>Dari</td>
 			<td>:</td>
 			<td colspan="4">
