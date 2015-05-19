@@ -4,6 +4,12 @@ class User_model extends CI_Model {
         parent::__construct();
 	}
 	function userAccount(){
+		$id_unit_pengolah = $this->input->post('id_unit_pengolah');
+
+		if(empty($id_unit_pengolah) || $this->input->post('group_id') < 3 )
+		{
+			$id_unit_pengolah = '40';
+		}
 		$this->db->where('user_id',$this->input->post('user_id'));
 		$hasil = $this->db->get('c_user')->row();
 		if($hasil->user_password === $this->input->post('user_password')){
@@ -13,7 +19,7 @@ class User_model extends CI_Model {
 			// $this->db->set('user_password',$this->input->post('user_password'));
 			//$this->db->set('instansi',$this->input->post('instansi'));
 			// $this->db->set('id_skpd_sotk',$this->input->post('id_skpd_sotk'));
-			$this->db->set('id_unit_pengolah',$this->input->post('id_unit_pengolah'));
+			$this->db->set('id_unit_pengolah',$id_unit_pengolah);
 			$this->db->set('nama_pengguna',$this->input->post('nama_pengguna'));
 			$this->db->where('user_id',$this->input->post('user_id'));
 			$this->db->update('c_user');
@@ -24,7 +30,7 @@ class User_model extends CI_Model {
 			$this->db->set('user_password',sha1($this->input->post('user_password')));
 			// $this->db->set('instansi',$this->input->post('instansi'));
 			// $this->db->set('id_skpd_sotk',$this->input->post('id_skpd_sotk'));
-			$this->db->set('id_unit_pengolah',$this->input->post('id_unit_pengolah'));
+			$this->db->set('id_unit_pengolah',$id_unit_pengolah);
 			$this->db->set('nama_pengguna',$this->input->post('nama_pengguna'));
 			$this->db->where('user_id',$this->input->post('user_id'));
 			$this->db->update('c_user');

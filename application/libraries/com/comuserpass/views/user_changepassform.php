@@ -102,21 +102,23 @@ if(! head_content){
 <!-- </div> -->
 <!--end:content-->
 <style type="text/css">
+ 
   #useraccount-form{
-
-    width: 79%;
-    display: block;
-    margin-left: 235px;
-    border: 1px dashed #9dd53a;
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid green;
     float: left;
+    margin-left: 235px;
+    margin-top: 74px;
     padding: 3px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    width: 74%;
   }
-  .main-content{
-
-  }
+  #useraccount-form input[type="text"],
+  #useraccount-form input[type="password"]
+   {
+    font-family: Roboto !important;
+    font-size: 12px;
+    padding: 4px 7px;
+}
   table.table-form-flat{
     border:none;
   }

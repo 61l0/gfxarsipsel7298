@@ -72,7 +72,12 @@ a.img-ln{
 	</tbody>
 </table>
 </div>
-
+<?php if($_SESSION['id_skpd'] != '40'){ ?>
+<style type="text/css">
+	div[title=Hapus].ui-pg-div.ui-inline-edit,
+	.qq-upload-button{display: none !important;}
+</style>
+<?php } ?>
 <script type="text/javascript">
 	 function createUploader(){            
         var uploader = new qq.FileUploader({

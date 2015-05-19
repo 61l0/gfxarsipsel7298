@@ -62,8 +62,13 @@ h3.accordionSection {
 }
 
 .ui-jqdialog-title{
-	/*text-transform: uppercase;
-	font-weight: bold;*/
+	display: block;
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: 12px !important;
+    text-align: center;
+    text-shadow: -1px 0 3px midnightblue;
+    width: 100%;
 }
 .ui-jqgrid tr.ui-state-highlight{
 background: #4096ee; /* Old browsers */
@@ -564,6 +569,7 @@ h3.grid-title {
     margin: 1px 19px;
     text-align: center;
     text-shadow: 0 1px 1px #bfc5b2;
+    z-index: -1;
 }
 
 .content{
@@ -910,13 +916,13 @@ h3.grid-title{
 	position: fixed;
 	font-family: Raleway;
 	color: midnightblue;
-	z-index: 3;
+	/*z-index: 3;*/
 }
 .toolbar-grid {
     margin: 37px 23px 5px 4px !important;
     position: fixed;
     right: 0;
-    z-index: 3;
+    /*z-index: 3;*/
 }
 #main_panel_container center {
     padding-top: 74px;
@@ -943,18 +949,20 @@ h1{
 	font-family: Raleway !important;
 
 }
-.content .toolbar-grid a{
-
+.content .toolbar-grid a {
     background: none repeat scroll 0 0 midnightblue;
     border-bottom: 1px solid midnightblue;
-
     border-left: 1px solid midnightblue;
-    border-radius: 1px;
+    border-radius: 6%;box-shadow: 0 0 3px peachpuff;
     border-top: 1px solid midnightblue;
-    color: #cec9a9;
+    
+    color: #fff;
     font-family: Raleway;
     font-size: 12px;
     padding: 4px 6px;
+}
+.content .toolbar-grid a:hover{
+	background:green;
 }
 .ui-jqgrid .ui-jqgrid-htable th div{
 	font-size: 12px;
@@ -982,7 +990,7 @@ h1{
 }
 .toolbar-search,.toolbar-filter{
 position: fixed;
-z-index: 3;
+/*z-index: 3;*/
 margin: 40px 0 0 30px;
 display: none;
 	
@@ -1030,8 +1038,13 @@ background-image: url("../ui-themes/images/ui-icons_ffffff_256x240.png") !import
     text-shadow: none;
     font-weight: normal;
     border-radius: 0;
+    border-radius: 6%;box-shadow: 0 0 3px peachpuff;
     /*padding: 3px 10px 0 21px;*/
     /*line-height: 31px;*/
+}
+#nData:hover,#pData:hover,
+#sData:hover,#cData:hover{
+	background:green !important;
 }
 .ui-dialog .ui-dialog-content{
 	overflow-x: hidden;
@@ -1068,4 +1081,13 @@ background-image: url("../ui-themes/images/ui-icons_ffffff_256x240.png") !import
 .accordion-item a i.fa{
 	position: absolute;
 	margin: 2px 0 0 -19px;
+}
+
+.EditTable td input, .EditTable td select, .EditTable td textarea{
+	font-weight: normal !important;
+	font-size:12px;
+}
+#navigation ul li a{
+	text-shadow: 1px 1px 1px honeydew;
+    font-weight: bold;
 }

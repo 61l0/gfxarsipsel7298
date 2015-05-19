@@ -18,7 +18,18 @@ class Comsurat extends Grid{
 		$typecari = $this->CI->input->post('typecari');
 		$cari_judul = $this->CI->input->post('judul');
 		//$this->CI->load->helper('form');
-		
+		if($_SESSION['user_group'] == 6){
+			unset($params->model['query']['query_filter']);
+			$params->model['query']['query_filter']=array(
+				'id_pengirim'=>array(
+					'type'=>'where'
+					,'field'=>'a.id_skpd'
+					,'name'=>'id_skpd'
+					,'value'=>$_SESSION['id_skpd']
+					),
+			);
+			
+		}
 		if($typecari == 'no_surat'){
 			if($cari_judul != ""){
 				unset($params->model['query']['query_filter']);

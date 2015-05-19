@@ -149,3 +149,47 @@ $routeProvider.when('/admin/com/lap_penyerahan/gui/rekap', {
     controller: 'arsipsel',
     templateUrl: $base + 'generic/empty.html'
 });
+
+$routeProvider.when('/admin/com/menu', {
+    title : 'Daftar Menu',
+    controller: 'arsipsel',
+    templateUrl: $base + 'generic/empty.html'
+});
+
+$routeProvider.when('/admin/com/groupmenu', {
+    title : 'Daftar Menu Tiap Pengguna',
+    controller: 'arsipsel',
+    templateUrl: $base + 'generic/empty.html'
+});
+
+$routeProvider.when('/admin/com/groupuser', {
+    title : 'Group Pengguna',
+    controller: 'arsipsel',
+    templateUrl: $base + 'generic/empty.html'
+});
+
+$routeProvider.when('/admin/com/user', {
+    title : 'Daftar Pengguna',
+    controller: 'arsipsel',
+    templateUrl: $base + 'generic/empty.html'
+});
+
+$routeProvider.when('/admin/com/online', {
+    title : 'User Online',
+    controller: 'arsipsel',
+    templateUrl: $base + 'generic/empty.html'
+});
+
+
+$routeProvider.when('/admin/com/infopengguna', {
+    title : 'Informasi Pengguna',
+    controller: 'arsipsel',
+    templateUrl: $base + 'generic/empty.html'
+});
+
+
+$routeProvider.when('/admin/com/userpass', {
+    title : 'Ganti Password',
+    controller: 'arsipsel',
+    templateUrl: $base + 'generic/empty.html'
+});

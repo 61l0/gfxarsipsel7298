@@ -53,17 +53,19 @@ if(! head_content){
 </script>
 <style type="text/css">
   #form_confirm{
-
-    width: 79%;
-    display: block;
-    margin-left: 235px;
-    border: 1px dashed #9dd53a;
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid green;
     float: left;
+    margin-left: 235px;
+    margin-top: 74px;
     padding: 3px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    width: 74%;
   }
+  #form_confirm input[type="text"] {
+    font-family: Roboto !important;
+    font-size: 12px;
+    padding: 4px 7px;
+}
   .main-content{
 
   }

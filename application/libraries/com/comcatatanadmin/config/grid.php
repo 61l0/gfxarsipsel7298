@@ -23,6 +23,7 @@ $config['gridlib']['arr_colModel']["id_catatan_admin"] = array(
 	'editable'=>true,
 	);
 
+	
 $config['gridlib']['arr_colModel']["act"] = array(
 	'name'=>"act",
 	'index'=>"act",

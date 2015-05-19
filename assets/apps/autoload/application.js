@@ -12,9 +12,9 @@ config(['$routeProvider', '$httpProvider','$locationProvider', function($routePr
         templateUrl: 'assets/templates/generic/home.html'
     });
 
-    $routeProvider.otherwise({
-        redirectTo: '/halaman-tidak-ditemukan'
-    });
+    // $routeProvider.otherwise({
+    //     redirectTo: '/halaman-tidak-ditemukan'
+    // });
     
     
     App.injectRoutes($routeProvider);
