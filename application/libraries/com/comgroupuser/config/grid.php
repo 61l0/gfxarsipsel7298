@@ -26,7 +26,7 @@ $config['gridlib']['arr_colModel']["group_name"] = array(
 	'index'=>"group_name",
 	'label'=>"Nama Grup",
 	'editable'=>true,
-	'width'=>80,
+	'width'=>30,
 	'formoptions'=>array('elmsuffix'=>'(*)'),
 	'edittype'=>'text',
 	'editoptions'=>array('size'=>40),
