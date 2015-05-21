@@ -23,7 +23,12 @@ $config['gridlib']['arr_colModel']["id_catatan_admin"] = array(
 	'editable'=>true,
 	);
 
-	
+$config['gridlib']['arr_colModel']["type"] = array(
+	'name'=>"type",
+	'index'=>"type",
+	'hidden'=>true,
+	'editable'=>false,
+	);	
 $config['gridlib']['arr_colModel']["act"] = array(
 	'name'=>"act",
 	'index'=>"act",
@@ -62,7 +67,23 @@ $config['gridlib']['arr_colModel']["judul"] = array(
 	'edittype'=>'text',
 	'editoptions'=>array('size'=>50), 
 	);
-	
+$config['gridlib']['arr_colModel']["path"] = array(
+	'name'=>"path",
+	'index'=>"path",
+	'label'=>"path",
+	'width'=>200,
+	'editable'=>false,
+	'hidden'=>true,
+	);	
+$config['gridlib']['arr_colModel']["file"] = array(
+	'name'=>"file",
+	'index'=>"file",
+	'label'=>"FILE",
+	'width'=>200,
+	'editable'=>true,
+	'edittype'=>'text',
+	'editoptions'=>array('size'=>50), 
+	);	
 $config['gridlib']['arr_colModel']["tanggal"] = array(
 	'name'=>"tanggal",
 	'index'=>"tanggal",

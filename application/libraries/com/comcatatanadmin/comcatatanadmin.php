@@ -210,6 +210,7 @@ class Comcatatanadmin extends Grid{
 			
 			if( $_FILES['attachment'] )
 			{
+				//$new_name = 
 				$ok = move_uploaded_file($_FILES['attachment']['tmp_name'], $upload_path . $_FILES['attachment']['name']);
 				//$result = $this->CI->fileupload->handleUpload( $upload_path);
 				$parent_id = $this->CI->input->post('id_catatan_admin');

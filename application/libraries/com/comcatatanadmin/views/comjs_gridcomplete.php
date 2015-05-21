@@ -13,6 +13,32 @@
 			row.tanggal = $.datepicker.formatDate('dd-mm-yy',new Date(row.tanggal.split(' ')[0]))
 			if(row.tanggal == 'NaN-NaN-NaN')
 				row.tanggal = '-'
+			
+
+			
+
+			if(row.type != 'personal')
+			{
+				row.nama_penerima = 'ALL';
+				console.log(row);
+			} 
+			else
+			{
+				if(row.nama_penerima.length == 0)
+				{
+					row.nama_penerima = '-';
+				}		
+			}
+			if(row.file.length == 0)
+			{
+				row.file = '-';
+			}
+			else
+			{
+				row.file = '<a target="_blank" href="assets/media/file/attachments/'+row.path+'"><u>'+row.file+'</u></a>'
+			}
+
+
 			jQuery("#"+<?=$class_name;?>grid.id).jqGrid('setRowData',cl,row);
 
 			var fnView = "<?=$class_name;?>grid.btn_grid_view({id_catatan_admin:"+row.id_catatan_admin+", oper:'view'});";
@@ -22,7 +48,7 @@
 			insView.append(spView);
 			$("tr#"+cl+" td[aria-describedby='"+<?=$class_name;?>grid.id+"_act'] ").append(insView);
 		
-			<?php if($_SESSION['id_skpd'] == '40'){ ?>
+			<?php if($_SESSION['user_group'] == '2'){ ?>
 			
 			var fnEdit = "<?=$class_name;?>grid.btn_grid_edit({id_catatan_admin:"+row.id_catatan_admin+",oper:'edit'});";
 			var insEdit = jQuery("<div />").addClass("ui-pg-div ui-inline-edit").css("float","left").css("cursor","pointer").attr("title","Ubah");

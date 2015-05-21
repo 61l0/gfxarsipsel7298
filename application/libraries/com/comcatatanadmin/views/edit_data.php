@@ -72,7 +72,12 @@
 				<table><tr>
 						<td></td>
 						<td></td>
-						<td>File</td><td>:</td><td>
+						<td valign="top">File</td><td valign="top">:</td><td>
+							<? if(!empty($data_edit[0]->filename)){?>
+							<a target="_blank" href="assets/media/file/attachments/<?=$data_edit[0]->path?>"><?=$data_edit[0]->filename?></a>
+							<br/>
+							<br/>
+							<? } ?>
 							<input type="file" name="attachment"/>
 						</td>			
 					</tr>	
