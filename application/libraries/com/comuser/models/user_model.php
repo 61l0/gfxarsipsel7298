@@ -6,7 +6,7 @@ class User_model extends CI_Model {
 	function userAccount(){
 		$id_unit_pengolah = $this->input->post('id_unit_pengolah');
 
-		if(empty($id_unit_pengolah) || $this->input->post('group_id') < 3 )
+		if($this->input->post('group_id') == 3 )
 		{
 			$id_unit_pengolah = '40';
 		}

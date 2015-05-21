@@ -4,6 +4,8 @@ if(!<?=$class_name;?>grid.extra){
 
 <?=$class_name;?>grid.extra.loadsub = function(data){
 		//console.log(data);
+
+		console.log(data)
 		data.rowdata = {id:data.id};
 
 		

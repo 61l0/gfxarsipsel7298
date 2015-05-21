@@ -11,4 +11,11 @@
 .ui-jqgrid-view .ui-userdata.ui-state-default{
 	display: none;
 }
+
+
+
+#gview_gridcommstskpd .ui-state-default.ui-jqgrid-hdiv{
+	display: none !important;
+
+}
 </style>
