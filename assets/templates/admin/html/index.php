@@ -316,13 +316,16 @@ div.h{
   			<img src="<?php echo base_url()?>assets/css/metro/images/bg-mark.png"/>
   		</div> -->
   	</div>
+  	<script type="text/javascript">
+  	$.skpd_data = <?php echo json_encode($_SESSION['skpd_data']);?>;
+  	</script>
   	<div class="hr">
   		<div class="calendar">
   			<i class="fa icon-calendar"></i>&nbsp;<?=loadCom('comsidebar/comsidebar','getDateToDay');?>&nbsp;<span id="output"></span>
   		</div>
   		  <div class="profileNav ">
   		  	<a href="javascript:;">
-  		  		<i class="fa icon-user"></i>&nbsp;<?=$_SESSION['nama_pengguna'];?>&nbsp;(<?=$group_name;?>)
+  		  		<i class="fa icon-user"></i>&nbsp;<?=$_SESSION['nama_pengguna'];?>&nbsp;(<?=ucfirst($group_name) . (empty($_SESSION['skpd_data']->nama_lengkap) ? '':' ' . $_SESSION['skpd_data']->nama_lengkap) ;?>)
   		  	</a>
   		  	&nbsp;
   		  	<a href="<?=site_url('login/out');?>" class="logout"><i class="fa icon-hand-right">&nbsp;</i>Logout</a> 
