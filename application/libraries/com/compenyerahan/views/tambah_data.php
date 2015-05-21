@@ -104,7 +104,7 @@ jQuery(document).ready(function(){
 			<td>Kepada</td>
 			<td>:</td>
 			<td  colspan=10>
-				<input type='text' name='kepada' id='kepada' style="width:350px">
+				<input type='text' name='kepada' id='kepada' style="width:350px" <? if($group==6){?> readonly value="Kantor Arsip Daerah" <? } ?>>
 			</td>
 		</tr>	
 	<tr>
