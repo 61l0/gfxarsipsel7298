@@ -28,7 +28,7 @@ $config['gridlib']['arr_colModel']["user_name"] = array(
 	'index'=>"user_name",
 	'label'=>"NAMA USER",
 	'editable'=>true,
-	'width'=>100,
+	'width'=>20,
 	'formoptions'=>array('elmsuffix'=>'(*)'),
 	'edittype'=>'text',
 	'editoptions'=>array('size'=>40),
@@ -39,7 +39,7 @@ $config['gridlib']['arr_colModel']["nama_lengkap"] = array(
 	'index'=>"nama_lengkap",
 	'label'=>"SKPD",
 	'editable'=>true,
-	'width'=>90,
+	'width'=>40,
 	'formoptions'=>array('elmsuffix'=>'(*)'),
 	'edittype'=>'text',
 	'editoptions'=>array('size'=>40),
@@ -63,11 +63,10 @@ $config['gridlib']['arr_colModel']["last_activity"] = array(
 	'index'=>"last_activity",
 	'label'=>"Last Activity",
 	'editable'=>true,
-	'width'=>80,
+	'width'=>40,
 	'formoptions'=>array('elmsuffix'=>'(*)'),
 	'edittype'=>'text',
 	'editoptions'=>array('size'=>40),
  	'editrules'=>array('required'=>true),
  	// 'hidden'=>true
 	);
-?>

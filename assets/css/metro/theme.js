@@ -177,7 +177,8 @@ laporan
 		'laporan': 'icon-bar-chart',
 		'pengaturanpengguna':'icon-group',
 		'pengaturanmenu':'icon-th-list',
-		'pengguna':'icon-user'
+		'pengguna':'icon-user',
+		'logaktifitaspengguna':'icon-flag',
 	}
 	$('#navigation ul li a span img').each(function () {
 		//var src = $(this).attr('src').replace(/\.png$/,'').split('/');

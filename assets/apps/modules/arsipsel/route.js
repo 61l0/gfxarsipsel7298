@@ -1,9 +1,15 @@
 
+$routeProvider.when('/admin/com/logpengguna', {
+    title : 'Log Aktifitas Pengguna',
+    controller: 'arsipsel',
+    templateUrl: $base + 'generic/empty.html'
+});
 $routeProvider.when('/admin/com/jqhome', {
     title : 'Home',
     controller: 'arsipsel',
     templateUrl: $base + 'generic/empty.html'
 });
+
 $routeProvider.when('/admin/com/mstjenis', {
     title : 'Master Jenis',
     controller: 'arsipsel',
