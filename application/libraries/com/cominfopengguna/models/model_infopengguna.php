@@ -5,9 +5,10 @@ class Model_infopengguna extends CI_Model {
         parent::__construct();
 	}
     function info($user_id){
-		$this->db->select('*');
+		$this->db->select('a.*,b.group_name,c.nama_lengkap as skpd');
 		$this->db->where('user_id',$user_id);
 		$this->db->join('c_group b','b.id_group=a.group_id','left');
+		$this->db->join('m_skpd c','c.id_skpd=a.id_unit_pengolah','left');
 		$this->db->from('c_user a');
 		$hasil = $this->db->get()->row_array();
 		return $hasil;

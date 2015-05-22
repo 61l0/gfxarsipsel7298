@@ -106,7 +106,7 @@ color: #fff;
             <td width="25%">SKPD</td>
             <td width="73%">
 			<?//=form_input('nama',set_value('nama',@$data['nama']),'size=40','disabled');?>
-			<input type='text' name='nama' size='50' disabled='disabled' value='<?=@$data['nama']?>' class='text'>
+			<input type='text' name='nama' size='50' disabled='disabled' value='<?=@$data['skpd']?>' class='text'>
 			</td>
           </tr>
 		 <tr>
