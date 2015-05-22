@@ -22,6 +22,10 @@ class Model_pemusnahan extends CI_Model {
 				$this->db->set('status',$oper);
 				$this->db->update('arsip_data');
 				$this->responce = array('result'=>'succes','message'=>'Data  Berhasil Diedit','oper'=>$oper);
+			
+
+				$id = $this->input->post('id_data');
+            	$this->log_pengguna->push('pemusnahan','Pemusnahan & Retensi','musnahkan',$id);
 			break;
 		}	
 			return $this->responce;	
@@ -45,6 +49,9 @@ class Model_pemusnahan extends CI_Model {
 
 		$this->db->update('arsip_data');
 		return array('result'=>'succes','message'=>'Data  Berhasil Diedit','oper'=>'tinjau');
+
+		$id = $id_data ;
+        $this->log_pengguna->push('pemusnahan','Pemusnahan & Retensi','tinjau',$id);
 	}
 	function get_count_all(){
 		$this->db->select('count(id_surat) as jml');

@@ -57,6 +57,9 @@ class Penyerahan_model extends CI_Model {
 			//	$this->db->set('file',$this->input->post('berita_acr'));
 				$this->db->insert('arsip_ba');
 				$this->responce['rows'] = array('result'=>'succes','message'=>'Data berhasil Diinput','oper'=>$oper);
+			
+				$id = $this->db->insert_id();
+            	$this->log_pengguna->push('penyerahan','Penyerahan & Akuisisi','add',$id);
 			break;
 			
 			case 'edit':
@@ -75,12 +78,18 @@ class Penyerahan_model extends CI_Model {
 				$this->db->update('arsip_ba');
 				// dump($this->db->last_query());
 				$this->responce['rows'] = array('result'=>'succes','message'=>'Data berhasil Diedit','oper'=>$oper);
+			
+				$id = $this->input->post('id_ba');
+            	$this->log_pengguna->push('penyerahan','Penyerahan & Akuisisi','edit',$id);
 			break;
 			
 			case 'del':
 				$this->db->where('id_ba',$this->input->post('id_ba'));
 				$this->db->delete('arsip_ba');
 				$this->responce['rows'] = array('result'=>'succes','message'=>'Data berhasil Didelet','oper'=>$oper);
+			
+				$id = $this->input->post('id_ba');
+            	$this->log_pengguna->push('penyerahan','Penyerahan & Akuisisi','delete',$id);
 			break;
 		}	
 		

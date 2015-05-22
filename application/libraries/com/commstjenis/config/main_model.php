@@ -8,5 +8,3 @@ $config['model_main']['query'] = array(
 		    'from'=>array($config['model_main']['table_name'].' a'),
 	    ), 
 );
-
-?>

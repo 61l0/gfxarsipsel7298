@@ -31,6 +31,9 @@ class Model_catatanadmin extends CI_Model {
 				$this->db->set('uraian',$uraian);	
 				$this->db->insert('catatan_administrator');
 				$this->responce['rows'] = array('result'=>'succes','message'=>'Data  Berhasil Diinput','oper'=>$oper);
+				
+				$id = $this->db->insert_id();
+				$this->log_pengguna->push('catatanadmin','Catatan Administrator','add',$id);
 			break;	
 			case 'edit':
 				$this->db->where('id_catatan_admin',$this->input->post('id_catatan_admin'));
@@ -40,11 +43,18 @@ class Model_catatanadmin extends CI_Model {
 				$this->db->set('uraian',$uraian);
 				$this->db->update('catatan_administrator');
 				$this->responce['rows'] = array('result'=>'succes','message'=>'Data  Berhasil Diedit','oper'=>$oper);
+
+				$id = $this->input->post('id_catatan_admin');
+				$this->log_pengguna->push('catatanadmin','Catatan Administrator','edit',$id);
+
 			break;
 			case 'del':
 				$this->db->where('id_catatan_admin',$this->input->post('id_catatan_admin'));
 				$this->db->delete('catatan_administrator');
 				$this->responce['rows'] = array('result'=>'succes','message'=>'Data  Berhasil Dihapus','oper'=>$oper);
+			
+				$id = $this->input->post('id_catatan_admin');
+				$this->log_pengguna->push('catatanadmin','Catatan Administrator','delete',$id);
 			break;
 		}	
 			return $this->responce;	

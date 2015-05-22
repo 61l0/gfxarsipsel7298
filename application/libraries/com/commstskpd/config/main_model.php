@@ -10,4 +10,3 @@ $config['model_main']['query'] = array(
 	  //  'where'=>array('c.status','on'),
     ), 
 );
-?>

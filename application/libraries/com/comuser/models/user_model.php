@@ -36,6 +36,10 @@ class User_model extends CI_Model {
 			$this->db->update('c_user');
 		}
 		$responce = array('result'=>'succes','message'=>'Data berhasil diubah','oper'=>'edit','rows'=>array());
+		
+		$id = $this->input->post('user_id');
+        $this->log_pengguna->push('user','Daftar Pengguna','edit',$id);
+
 		return $responce;
 	}
 	function group(){

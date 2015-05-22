@@ -54,6 +54,10 @@ class Model_surat extends CI_Model {
 				/// CREATE DISPOSISI RECORD HERE
 				if($surat['type_surat'] == 'masuk')
 					$this->db->insert('arsip_lap_skpd_disposisi',array('id_lap_skpd'=> $this->db->insert_id()));
+			
+
+				$id = $this->db->insert_id();
+            	$this->log_pengguna->push('surat','Surat Masuk & Keluar','add',$id);
 			break;	
 			case 'edit':
 				$this->db->where('id_lap_skpd',$this->input->post('id_lap_skpd'));	
@@ -63,6 +67,9 @@ class Model_surat extends CI_Model {
 				//die('komporgas');
 				$this->db->update('arsip_lap_skpd');
 				$this->responce['rows'] = array('result'=>'succes','message'=>'Data  Berhasil Diedit','oper'=>$oper);
+			
+				$id = $this->input->post('id_lap_skpd');
+            	$this->log_pengguna->push('surat','Surat Masuk & Keluar','edit',$id);
 			break;
 			case 'del':
 				$this->db->where('id_lap_skpd',$this->input->post('id_lap_skpd'));
@@ -71,6 +78,10 @@ class Model_surat extends CI_Model {
 				$this->db->where('id_lap_skpd',$this->input->post('id_lap_skpd'));
 				$this->db->delete('arsip_lap_skpd_disposisi');
 				$this->responce['rows'] = array('result'=>'succes','message'=>'Data  Berhasil Dihapus','oper'=>$oper);
+			
+
+				$id = $this->input->post('id_lap_skpd');
+            	$this->log_pengguna->push('surat','Surat Masuk & Keluar','delete',$id);
 			break;
 		}	
 			return $this->responce;	

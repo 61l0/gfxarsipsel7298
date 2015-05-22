@@ -141,6 +141,8 @@ class Pengolahan_model extends CI_Model {
 			
 				$this->responce['rows'] = array('result'=>'succes','message'=>'Data  berhasil Diinput','oper'=>$oper);
 				
+				$id = $this->db->insert_id();
+            	$this->log_pengguna->push('pengolahan','Pengolahan','add',$id);
 			break;
 			
 			case 'edit':
@@ -171,12 +173,18 @@ class Pengolahan_model extends CI_Model {
 				
 				
 				$this->responce['rows']= array('result'=>'succes','message'=>'Data  berhasil Diedit','oper'=>$oper);
+			
+				$id = $this->input->post('id_data');
+            	$this->log_pengguna->push('pengolahan','Pengolahan','edit',$id);
 			break;
 			case 'del':
 				$this->db->where('id_data',$this->input->post('id_data'));
 				$this->db->delete('arsip_data');
 				// dump($this->db->last_query());
 				$this->responce['rows']= array('result'=>'succes','message'=>'Data  berhasil Didelet','oper'=>$oper);
+			
+				$id = $this->input->post('id_data');
+            	$this->log_pengguna->push('pengolahan','Pengolahan','edit',$id);
 			break;
 			
 			

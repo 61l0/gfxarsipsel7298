@@ -48,7 +48,12 @@
 			insView.append(spView);
 			$("tr#"+cl+" td[aria-describedby='"+<?=$class_name;?>grid.id+"_act'] ").append(insView);
 		
-			<?php if($_SESSION['user_group'] == '2'){ ?>
+			var is_admin = <?php echo $_SESSION['user_group'] == '2'?'true':'false'?>;
+			var id_skpd  = <?php echo $_SESSION['id_skpd'] ?>;
+			var match_id_pengirim = row.id_pengirim == id_skpd;
+
+
+			if(is_admin || match_id_pengirim){
 			
 			var fnEdit = "<?=$class_name;?>grid.btn_grid_edit({id_catatan_admin:"+row.id_catatan_admin+",oper:'edit'});";
 			var insEdit = jQuery("<div />").addClass("ui-pg-div ui-inline-edit").css("float","left").css("cursor","pointer").attr("title","Ubah");
@@ -64,7 +69,7 @@
 			insDel.append(spDel);
 			$("tr#"+cl+" td[aria-describedby='"+<?=$class_name;?>grid.id+"_act'] ").append(insDel);
 			
-			<?php } ?>
+			}
 	}
 };
 

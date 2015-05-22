@@ -54,7 +54,7 @@ $autoload['packages'] = array(APPPATH.'third_party');
 
 // $autoload['libraries'] = array('database');
 // $autoload['libraries'] = array('com/com_main','database','session','form_validation','encrypt','datetimelib');
-$autoload['libraries'] = array('database','session','form_validation','encrypt','lib/datetimelib');
+$autoload['libraries'] = array('database','session','form_validation','encrypt','lib/datetimelib','log_pengguna');
 
 
 /*

@@ -12,18 +12,30 @@ $config['gridlib']['arr_colModel']["id_log"] = array(
 	'hidden'=>true,
 	'key'=>true,
 	);
-$config['gridlib']['arr_colModel']["act"] = array(
-	'name'=>"act",
-	'index'=>"act",
-	'label'=>"AKSI",
-	'align'=>"center",
+$config['gridlib']['arr_colModel']["com"] = array(
+	'name'=>"com",
+	'index'=>"com",
+	'label'=>"Komponen",
+	'hidden'=>true,
 	'width'=>30,
-	'viewable'=>false,
-	'search'=>false,
+	);
+$config['gridlib']['arr_colModel']["menu"] = array(
+	'name'=>"menu",
+	'index'=>"menu",
+	'label'=>"Menu",
+	'width'=>30,
+	);
+
+$config['gridlib']['arr_colModel']["operation"] = array(
+	'name'=>"operation",
+	'index'=>"operation",
+	'label'=>"Operasi",
+	'width'=>30,
 	);
 $config['gridlib']['arr_colModel']["user_id"] = array(
 	'name'=>"user_id",
 	'index'=>"user_id",
+	'hidden'=>true,
 	'label'=>"User ID",
 	'width'=>30,
 	);
@@ -39,18 +51,7 @@ $config['gridlib']['arr_colModel']["user_group"] = array(
 	'label'=>"User Group",
 	'width'=>30,
 	);
-$config['gridlib']['arr_colModel']["oper"] = array(
-	'name'=>"oper",
-	'index'=>"oper",
-	'label'=>"Operasi",
-	'width'=>30,
-	);
-$config['gridlib']['arr_colModel']["module"] = array(
-	'name'=>"module",
-	'index'=>"module",
-	'label'=>"Modul",
-	'width'=>30,
-	);
+
 
 $config['gridlib']['arr_colModel']["id_data"] = array(
 	'name'=>"id_data",

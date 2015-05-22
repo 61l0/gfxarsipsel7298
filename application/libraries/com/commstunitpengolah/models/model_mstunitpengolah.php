@@ -32,6 +32,9 @@ class Model_mstunitpengolah extends CI_Model {
 				
 				
 				$this->responce['rows'] = array('result'=>'succes','message'=>'Data  Berhasil Diinput','oper'=>$oper);
+
+				$id = $this->db->insert_id();
+            	$this->log_pengguna->push('mstunitpengolah','Master Instansi','add',$id);
 			break;	
 			case 'edit':
 				$this->db->where('id_skpd',$this->input->post('id_skpd'));				
@@ -43,6 +46,9 @@ class Model_mstunitpengolah extends CI_Model {
 				// $this->db->update('arsip_unit_pengolah');
 				
 				$this->responce['rows'] = array('result'=>'succes','message'=>'Data  Berhasil Diedit','oper'=>$oper);
+
+				$id = $this->input->post('id_skpd');
+            	$this->log_pengguna->push('mstunitpengolah','Master Instansi','edit',$id);
 			break;
 			case 'del':
 				$this->db->where('id_skpd',$this->input->post('id_skpd'));
@@ -51,6 +57,9 @@ class Model_mstunitpengolah extends CI_Model {
 				// $this->db->where('id_unit_pengolah',$this->input->post('id_skpd'));
 				// $this->db->delete('arsip_unit_pengolah');
 				$this->responce['rows'] = array('result'=>'succes','message'=>'Data  Berhasil Dihapus','oper'=>$oper);
+
+				$id = $this->input->post('id_skpd');
+            	$this->log_pengguna->push('mstunitpengolah','Master Instansi','delete',$id);
 			break;
 		}	
 			return $this->responce;	

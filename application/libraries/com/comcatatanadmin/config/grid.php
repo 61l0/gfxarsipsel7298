@@ -37,7 +37,13 @@ $config['gridlib']['arr_colModel']["act"] = array(
 	'width'=>50,
 	'viewable'=>false
 	);
-
+$config['gridlib']['arr_colModel']["id_pengirim"] = array(
+	'name'=>"id_pengirim",
+	'index'=>"id_pengirim",
+	'label'=>"id_pengirim",
+	'hidden'=>true,
+	'editable'=>false,
+	);
 $config['gridlib']['arr_colModel']["nama_pengirim"] = array(
 	'name'=>"nama_pengirim",
 	'index'=>"nama_pengirim",

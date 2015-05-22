@@ -18,5 +18,3 @@ $config['model_main']['query'] = array(
          ),
     ),
 );
-
-?>

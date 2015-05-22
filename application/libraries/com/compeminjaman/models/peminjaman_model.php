@@ -98,6 +98,9 @@ class Peminjaman_model extends CI_Model {
 				$this->db->set('nama_petugas',$nama_petugas);
 				$this->db->insert('arsip_peminjaman');
 				$this->responce['rows'] = array('result'=>'succes','message'=>'Data  berhasil Diinput','oper'=>$oper);
+			
+				$id = $this->db->insert_id();
+            	$this->log_pengguna->push('peminjaman','Peminjaman & Pelayanan','add',$id);	
 			break;
 			
 			case 'edit':
@@ -122,12 +125,18 @@ class Peminjaman_model extends CI_Model {
 				$this->db->set('nama_petugas',$nama_petugas);
 				$this->db->update('arsip_peminjaman');
 				$this->responce['rows']= array('result'=>'succes','message'=>'Data  berhasil Diedit','oper'=>$oper);
+				
+				$id = $this->input->post('id_peminjaman');
+            	$this->log_pengguna->push('peminjaman','Peminjaman & Pelayanan','edit',$id);	
 			break;
 			case 'del':
 				$this->db->where('id_peminjaman',$this->input->post('id_peminjaman'));
 				$this->db->delete('arsip_peminjaman');
 				// dump($this->db->last_query());
 				$this->responce['rows']= array('result'=>'succes','message'=>'Data  berhasil Didelet','oper'=>$oper);
+				
+				$id = $this->input->post('id_peminjaman');
+            	$this->log_pengguna->push('peminjaman','Peminjaman & Pelayanan','delete',$id);
 			break;
 			
 			
