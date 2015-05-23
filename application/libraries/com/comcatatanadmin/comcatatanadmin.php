@@ -166,7 +166,7 @@ class Comcatatanadmin extends Grid{
 		}
 
 		// upload
-
+		$this->CI->load->helper('inflector');
 		$this->CI->load->library('fileupload');
 			
 		$upload_path = FCPATH . 'assets/media/file/attachments/';
@@ -179,7 +179,8 @@ class Comcatatanadmin extends Grid{
 
 			if( $_FILES['attachment'] )
 			{
-				$ok = move_uploaded_file($_FILES['attachment']['tmp_name'], $upload_path . $_FILES['attachment']['name']);
+				$new_name = uniqid() . '-' . underscore($_FILES['attachment']['name']);
+				$ok = move_uploaded_file($_FILES['attachment']['tmp_name'], $upload_path . $new_name);
 				//$result = $this->CI->fileupload->handleUpload( $upload_path);
 				$parent_id = $this->CI->db->insert_id();
 				$attachment_for = 'catatan_admin';
@@ -194,7 +195,7 @@ class Comcatatanadmin extends Grid{
 						'parent_id' => $parent_id,
 						'attachment_for' => $attachment_for,
 						'filename' => $_FILES['attachment']['name'] ,
-						'path' =>  $_FILES['attachment']['name'],
+						'path' =>  $new_name,
 						'date_uploaded' => date('Y-m-d',time())
 					);
 					
@@ -210,8 +211,8 @@ class Comcatatanadmin extends Grid{
 			
 			if( $_FILES['attachment'] )
 			{
-				//$new_name = 
-				$ok = move_uploaded_file($_FILES['attachment']['tmp_name'], $upload_path . $_FILES['attachment']['name']);
+				$new_name = uniqid() . '-' . underscore($_FILES['attachment']['name']);
+				$ok = move_uploaded_file($_FILES['attachment']['tmp_name'], $upload_path . $new_name);
 				//$result = $this->CI->fileupload->handleUpload( $upload_path);
 				$parent_id = $this->CI->input->post('id_catatan_admin');
 				$attachment_for = 'catatan_admin';
@@ -230,7 +231,7 @@ class Comcatatanadmin extends Grid{
 						'parent_id' => $parent_id,
 						'attachment_for' => $attachment_for,
 						'filename' => $_FILES['attachment']['name'] ,
-						'path' =>  $_FILES['attachment']['name'],
+						'path' =>  $new_name,
 						'date_uploaded' => date('Y-m-d',time())
 					);
 					
