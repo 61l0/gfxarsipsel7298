@@ -799,13 +799,7 @@ overflow: hidden;
     /*margin: 0 auto;*/
     height: auto !important; 
 }
-    .m-list	, ul.paging
-    {
-        /*width: 103.125% !important;*/ /* 990px */
-        overflow: hidden !important;
-       /* margin-left: -1.562% !important;*/ /* 15px */
-      /*  margin-bottom: -1.875em !important;*/ /* 30px */
-    }
+
         .m-item , ul.paging > li
         {
            /*border: 1px dotted #f3f3f3;*/
@@ -813,7 +807,7 @@ overflow: hidden;
  /*   height: 77px;
     margin: 2px !important;*/
     text-align: center;
-    width: 11%;
+    min-width: 62px;
  padding: 12px 2px;
 
    /* border-radius: 64%;
@@ -1090,4 +1084,19 @@ background-image: url("../ui-themes/images/ui-icons_ffffff_256x240.png") !import
 #navigation ul li a{
 	text-shadow: 1px 1px 1px honeydew;
     font-weight: bold;
+}
+#navigation{
+	/*overflow: auto;*/
+	float: left;
+
+}
+#navigation ul.paging{
+	float: left; 
+	display: flex;
+}
+#mnav271{
+	min-width: 50px;
+}
+#mnav359,#mnav553{
+	min-width: 66px;
 }
