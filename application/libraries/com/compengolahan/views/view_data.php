@@ -129,6 +129,11 @@
 			<?php 
 				$origpath = BASE_URL.'assets/media/file/arsip_galery/'.@$lihat_data[0]->id_data.'/'.@$rowx->foto;
 				$path 	= BASE_URL.'assets/media/file/arsip_galery/'.@$lihat_data[0]->id_data.'/_thumbs/thumbs_'.@$rowx->foto;
+
+				$proxy_path = 'admin/com/proxyurl/load/arsip_galery/'.base64_encode($lihat_data[0]->id_data.'/_thumbs/thumbs_'.@$rowx->foto);
+
+				$path = $proxy_path;
+
 				$fcpath = FCPATH . 'assets/media/file/arsip_galery/'.@$lihat_data[0]->id_data.'/_thumbs/thumbs_'.@$rowx->foto;
 				if( !file_exists($fcpath) )
 				{

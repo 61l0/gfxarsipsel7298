@@ -123,6 +123,10 @@ jQuery(document).ready(function() {
 					if(1): 
 						$path = BASE_URL.'assets/media/file/arsip_galery/'.@$rowx->id_data.'/'.@$rowx->foto;
 						
+						$proxy_path = 'admin/com/proxyurl/load/arsip_galery/'.base64_encode($rowx->id_data.'/'.@$rowx->foto);
+
+						$path = $proxy_path;
+
 						$image_thumb .= '<span id="image_'.@$rowx->id_galery.'"><img src="'.(is_file($path_to_file)?$path:'assets/image/no_image_preview.jpg').'" width="300">';
 						$image_thumb .= '<br /><a onclick="Remove_Image('.@$rowx->id_galery.');" class="fm-button ui-state-default ui-corner-all fm-button-icon-left"><span class="ui-icon ui-icon-trash"></span>Hapus</a></span>';
 					endif;

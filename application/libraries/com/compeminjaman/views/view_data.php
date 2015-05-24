@@ -102,6 +102,10 @@
 				{
 					$path = BASE_URL.'assets/css/metro/images/image-404.jpg';
 				}
+
+				$proxy_path = 'admin/com/proxyurl/load/arsip_galery/'.base64_encode($data[0]->id_data.'/_thumbs/thumbs_'.@$rowx->foto);
+
+				$path = $proxy_path;
 			?>
 				<div class="pick-img">
 					<div class="tb">

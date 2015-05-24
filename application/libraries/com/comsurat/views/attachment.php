@@ -144,7 +144,7 @@ a.img-ln{
     	var no = $('.tb-attachment').attr('next_number');
     	var rowHtml = '<tr class="tb-data-'+row.id_attachment+'">'+
 								'<td align="center" class="bordered"><input type="checkbox" class="ckAll" rowid="'+row.id_attachment+'"/></td>'+
-								'<td class="bordered">'+imgThumb(row.thumb)+'<a class="img-ln" target="_blank" href="<?php echo base_url()?>'+row.path.replace(/ /g, '%20')+'">'+row.filename+'</a></td>'+
+								'<td class="bordered">'+imgThumb(row.thumb)+'<a class="img-ln" target="_blank" href="admin/com/proxyurl/load/attachments/'+row.path64+'">'+row.filename+'</a></td>'+
 								'<td class="bordered">'+delButton(row)+'</td>'+
 							'</tr>';
 		$('table.tb-attachment tbody').append(rowHtml).show();
@@ -169,7 +169,7 @@ a.img-ln{
 				var row = data[i];
 				var rowHtml = '<tr class="tb-data-'+row.id_attachment+'">'+
 								'<td align="center" class="bordered"><input type="checkbox" class="ckAll" rowid="'+row.id_attachment+'"/></td>'+
-								'<td class="bordered">'+imgThumb(row.path)+'<a class="img-ln" target="_blank" href="<?php echo base_url()?>assets/media/file/attachments/'+row.path+'">'+row.filename+'</a></td>'+
+								'<td class="bordered">'+imgThumb(row.path)+'<a class="img-ln" target="_blank" href="admin/com/proxyurl/load/attachments/'+row.path64+'">'+row.filename+'</a></td>'+
 								'<td class="bordered">'+delButton(row)+'</td>'+
 							'</tr>';
 				$('table.tb-attachment tbody').append(rowHtml).show();

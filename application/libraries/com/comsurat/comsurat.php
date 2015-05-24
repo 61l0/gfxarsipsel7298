@@ -254,7 +254,10 @@ class Comsurat extends Grid{
 
 	function attachment($oper="ls",$param="")
 	{
-		//die($oper);
+		if(!isset($_SESSION['user_id']))
+		{
+			die('Sorry, we are unable to process your request, Please Contact Administrator !');
+		}
 		$parent_id = $this->CI->input->post('parent_id');
 		$attachment_for = $this->CI->input->post('attachment_for');
 		$view_data = array(
@@ -266,6 +269,12 @@ class Comsurat extends Grid{
 			$attachment_list = $this->CI->db->where(array('parent_id'=>$parent_id,'attachment_for'=>$attachment_for))
 										  ->get('arsip_attachment')
 										  ->result_object();
+
+			foreach ($attachment_list as &$r) 
+			{
+				$r->path64 =  base64_encode($r->path);
+				
+			}
 			$view_data['attachment_list'] = $attachment_list;
 										  
 			$this->CI->load->com($this->lib['class_name'],'view',array('name'=>'attachment','data'=>$view_data));
@@ -301,6 +310,8 @@ class Comsurat extends Grid{
 				$attachment['id_attachment'] = $this->CI->db->insert_id();
 			}
 			$result = array_merge($result,$attachment);
+
+			$result['path64'] = base64_encode($result['path']);
 			echo json_encode($result);
 		}
 		else if($oper=='thumb')

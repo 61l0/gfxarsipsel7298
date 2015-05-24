@@ -6,6 +6,8 @@ $path = DOC_PATH_ROOT . 'assets/media/file/arsip_galery/'.@$rowx->id_data.'/'.@$
 $image_thumb = '';
 if(is_file($path)){
 	$path = BASE_URL.'assets/media/file/arsip_galery/'.@$rowx->id_data.'/'.@$rowx->foto;
+	$proxy_path = 'admin/com/proxyurl/load/arsip_galery/'.base64_encode($rowx->id_data.'/'.@$rowx->foto);
+    $path = $proxy_path;
 }
 ?>	
 	<div class="pick-img">					
