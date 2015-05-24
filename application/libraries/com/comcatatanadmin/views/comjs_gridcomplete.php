@@ -35,7 +35,7 @@
 			}
 			else
 			{
-				row.file = '<a target="_blank" href="assets/media/file/attachments/'+row.path+'"><u>'+row.file+'</u></a>'
+				row.file = '<a target="_blank" href="admin/com/proxyurl/load/attachments/'+row.path64+'"><u>'+row.file+'</u></a>'
 			}
 
 

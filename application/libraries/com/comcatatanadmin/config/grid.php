@@ -81,6 +81,14 @@ $config['gridlib']['arr_colModel']["path"] = array(
 	'editable'=>false,
 	'hidden'=>true,
 	);	
+$config['gridlib']['arr_colModel']["path64"] = array(
+	'name'=>"path64",
+	'index'=>"path64",
+	'label'=>"path64",
+	'width'=>200,
+	'editable'=>false,
+	'hidden'=>true,
+	);
 $config['gridlib']['arr_colModel']["file"] = array(
 	'name'=>"file",
 	'index'=>"file",

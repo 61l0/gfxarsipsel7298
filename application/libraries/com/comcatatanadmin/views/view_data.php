@@ -22,7 +22,7 @@
 			<td>Uraian</td><td>:</td><td><?=@$data[0]->uraian?></td>			
 		</tr>	
 		</tr>
-			<td>File</td><td>:</td><td><a target="_blank" href="<?=base_url().'assets/media/file/attachments/'.@$data[0]->path?>"><?= @$data[0]->filename?></a></td>			
+			<td>File</td><td>:</td><td><a target="_blank" href="admin/com/proxyurl/load/attachments/<?php echo base64_encode($data[0]->path)?>"><?= @$data[0]->filename?></a></td>			
 		</tr>		
 
 	</table>

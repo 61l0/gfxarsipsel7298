@@ -110,7 +110,15 @@ class Comcatatanadmin extends Grid{
 	}
 	function griddata(){
 		parent::griddata();
-		// dump($this->CI->db->last_query());
+		$grid_data = json_decode($this->CI->output->get_output());
+		$this->CI->output->set_output('');
+
+		foreach( $grid_data->rows as $key => $row )
+		{
+			$grid_data->rows[$key]->path64 = base64_encode($grid_data->rows[$key]->path);
+		}
+		$this->CI->output->set_output(json_encode($grid_data));
+		unset($grid_data); 
 	}
 	
 	function index_segments($params=false){
