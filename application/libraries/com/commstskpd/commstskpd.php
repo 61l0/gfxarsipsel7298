@@ -30,6 +30,6 @@ class Commstskpd extends Grid {
 			'return'=>true
 		);
 		$this->content['comjs_features']['gridcomplete'] = $this->CI->load->com('commstskpd','view',$conf_view_features);
-		unset($this->content['comjs_features']['toolbar']);
+		//unset($this->content['comjs_features']['toolbar']);
 	}
 }

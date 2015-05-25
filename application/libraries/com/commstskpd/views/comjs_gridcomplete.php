@@ -15,8 +15,7 @@
 		var dummy = jQuery("<div />").append(inssv);
 		jQuery("#"+<?=$class_name;?>grid.id).jqGrid('setRowData',ids[i],{ins:dummy.html()});
 	}
-	jQuery(".ui-inline-edit").bind("mouseover",function(){jQuery(this).addClass('ui-state-hover');});
-	jQuery(".ui-inline-edit").bind("mouseout",function(){jQuery(this).removeClass('ui-state-hover');});
+
 
 	$('#gview_gridcommstskpd .ui-state-default.ui-jqgrid-hdiv').hide();
 	$('#gbox_gridcommstskpd').css({
@@ -32,5 +31,10 @@
 
 	$('#gbox_gridcommstskpd').css({width:'auto'});
 	$('table#gridcommstskpd').css({width:'100%'});
+
+
+	var pager = $('#gridcommstskpdPager_center .ui-pg-selbox');
+	
+	pager.hide()
 };
 
